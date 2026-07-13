@@ -6,6 +6,9 @@ export const metadata = {
   title: "The Travel Nurse Guide",
   description:
     "Straight answers on pay, contracts, taxes, and housing, plus vetted resources from people who've actually done it.",
+  // Preview lives on workers.dev until Drew's real domain is attached.
+  // Remove this at launch so search engines can index the site.
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({ children }) {

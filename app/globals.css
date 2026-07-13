@@ -1,6 +1,5 @@
 /* ============================================================
    The Travel Nurse Guide — design system
-   Ported from the approved static mockups (mockups/ folder).
    Palette rules: navy #1B2A4A darks, bright teal accents,
    ONE pink only (raspberry #D6336C). No em dashes in copy.
    ============================================================ */
@@ -57,7 +56,7 @@ nav .brand:hover{transform:scale(1.06)}
 
 /* ============ LANDING HERO ============ */
 .hero{position:relative;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;color:#fff}
-.hero-bg{position:absolute;inset:0;background:url('/revised-tn.png') center right/cover no-repeat;animation:kb 26s ease-in-out infinite alternate;z-index:0}
+.hero-bg{position:absolute;inset:0;background:url('/revised-tn.jpg') center right/cover no-repeat;animation:kb 26s ease-in-out infinite alternate;z-index:0}
 @keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.1)}}
 .hero-overlay{position:absolute;inset:0;z-index:1;
   background:linear-gradient(110deg,
@@ -140,37 +139,37 @@ h1 .hl{color:var(--rose-deep);background:linear-gradient(105deg, var(--rose-deep
 
 .ph-guides{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
   linear-gradient(100deg, rgba(27,42,74,.94) 0%, rgba(30,44,76,.84) 28%, rgba(110,70,82,.5) 55%, rgba(213,72,82,.3) 74%, rgba(233,125,126,.14) 88%, rgba(233,125,126,0) 100%),
-  url('/guides-header.png') center right/cover no-repeat, var(--navy)}
+  url('/guides-header.jpg') center right/cover no-repeat, var(--navy)}
 .ph-market{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
   linear-gradient(100deg, rgba(27,42,74,.94) 0%, rgba(30,44,76,.84) 28%, rgba(110,70,82,.5) 55%, rgba(213,72,82,.3) 74%, rgba(233,125,126,.14) 88%, rgba(233,125,126,0) 100%),
-  url('/market-header.png') center right/cover no-repeat, var(--navy)}
+  url('/market-header.jpg') center right/cover no-repeat, var(--navy)}
 .ph-partners{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
   linear-gradient(100deg, rgba(27,42,74,.94) 0%, rgba(30,44,76,.84) 28%, rgba(110,70,82,.5) 55%, rgba(213,72,82,.3) 74%, rgba(233,125,126,.14) 88%, rgba(233,125,126,0) 100%),
-  url('/partner-header.png') center right/cover no-repeat, var(--navy)}
+  url('/partner-header.jpg') center right/cover no-repeat, var(--navy)}
 .ph-resources{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
   linear-gradient(100deg, rgba(27,42,74,.94) 0%, rgba(30,44,76,.84) 28%, rgba(110,70,82,.5) 55%, rgba(213,72,82,.3) 74%, rgba(233,125,126,.14) 88%, rgba(233,125,126,0) 100%),
-  url('/resources-header.png') center right/cover no-repeat, var(--navy)}
+  url('/resources-header.jpg') center right/cover no-repeat, var(--navy)}
 .ph-community{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
   linear-gradient(100deg, rgba(27,42,74,.94) 0%, rgba(30,44,76,.84) 28%, rgba(110,70,82,.5) 55%, rgba(213,72,82,.3) 74%, rgba(233,125,126,.14) 88%, rgba(233,125,126,0) 100%),
-  url('/community-header.png') center right/cover no-repeat, var(--navy)}
+  url('/community-header.jpg') center right/cover no-repeat, var(--navy)}
 .ph-faq{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
   linear-gradient(100deg, rgba(27,42,74,.94) 0%, rgba(30,44,76,.84) 28%, rgba(110,70,82,.5) 55%, rgba(213,72,82,.3) 74%, rgba(233,125,126,.14) 88%, rgba(233,125,126,0) 100%), var(--navy)}
 @media(max-width:900px){
   .ph-guides{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
     linear-gradient(100deg, rgba(27,42,74,.95) 0%, rgba(27,42,74,.8) 45%, rgba(110,70,82,.55) 75%, rgba(213,72,82,.4) 100%),
-    url('/guides-header.png') center right/cover no-repeat, var(--navy)}
+    url('/guides-header.jpg') center right/cover no-repeat, var(--navy)}
   .ph-market{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
     linear-gradient(100deg, rgba(27,42,74,.95) 0%, rgba(27,42,74,.8) 45%, rgba(110,70,82,.55) 75%, rgba(213,72,82,.4) 100%),
-    url('/market-header.png') center right/cover no-repeat, var(--navy)}
+    url('/market-header.jpg') center right/cover no-repeat, var(--navy)}
   .ph-partners{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
     linear-gradient(100deg, rgba(27,42,74,.95) 0%, rgba(27,42,74,.8) 45%, rgba(110,70,82,.55) 75%, rgba(213,72,82,.4) 100%),
-    url('/partner-header.png') center right/cover no-repeat, var(--navy)}
+    url('/partner-header.jpg') center right/cover no-repeat, var(--navy)}
   .ph-resources{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
     linear-gradient(100deg, rgba(27,42,74,.95) 0%, rgba(27,42,74,.8) 45%, rgba(110,70,82,.55) 75%, rgba(213,72,82,.4) 100%),
-    url('/resources-header.png') center right/cover no-repeat, var(--navy)}
+    url('/resources-header.jpg') center right/cover no-repeat, var(--navy)}
   .ph-community{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
     linear-gradient(100deg, rgba(27,42,74,.95) 0%, rgba(27,42,74,.8) 45%, rgba(110,70,82,.55) 75%, rgba(213,72,82,.4) 100%),
-    url('/community-header.png') center right/cover no-repeat, var(--navy)}
+    url('/community-header.jpg') center right/cover no-repeat, var(--navy)}
 }
 
 /* market header pulse strip */
@@ -435,10 +434,10 @@ mark.hlm{background-color:transparent;color:inherit;font-weight:600;border-radiu
 .snap:nth-child(even){transform:rotate(1.2deg)}
 .snap:hover{transform:rotate(0) translateY(-4px);box-shadow:0 18px 40px rgba(27,42,74,.12)}
 .snap .ph{aspect-ratio:4/5;border-radius:9px;background:radial-gradient(200px 170px at 72% 22%, rgba(101,191,190,.28), transparent 70%),linear-gradient(160deg,#26395F,#1B2A4A)}
-.snap-1 .ph{background:url('/community-photo-1.png') center/cover no-repeat, radial-gradient(200px 170px at 72% 22%, rgba(101,191,190,.28), transparent 70%), linear-gradient(160deg,#26395F,#1B2A4A)}
-.snap-2 .ph{background:url('/community-photo-2.png') center/cover no-repeat, radial-gradient(200px 170px at 72% 22%, rgba(101,191,190,.28), transparent 70%), linear-gradient(160deg,#26395F,#1B2A4A)}
-.snap-3 .ph{background:url('/community-photo-3.png') center/cover no-repeat, radial-gradient(200px 170px at 72% 22%, rgba(101,191,190,.28), transparent 70%), linear-gradient(160deg,#26395F,#1B2A4A)}
-.snap-4 .ph{background:url('/community-photo-4.png') center/cover no-repeat, radial-gradient(200px 170px at 72% 22%, rgba(101,191,190,.28), transparent 70%), linear-gradient(160deg,#26395F,#1B2A4A)}
+.snap-1 .ph{background:url('/community-photo-1.jpg') center/cover no-repeat, radial-gradient(200px 170px at 72% 22%, rgba(101,191,190,.28), transparent 70%), linear-gradient(160deg,#26395F,#1B2A4A)}
+.snap-2 .ph{background:url('/community-photo-2.jpg') center/cover no-repeat, radial-gradient(200px 170px at 72% 22%, rgba(101,191,190,.28), transparent 70%), linear-gradient(160deg,#26395F,#1B2A4A)}
+.snap-3 .ph{background:url('/community-photo-3.jpg') center/cover no-repeat, radial-gradient(200px 170px at 72% 22%, rgba(101,191,190,.28), transparent 70%), linear-gradient(160deg,#26395F,#1B2A4A)}
+.snap-4 .ph{background:url('/community-photo-4.jpg') center/cover no-repeat, radial-gradient(200px 170px at 72% 22%, rgba(101,191,190,.28), transparent 70%), linear-gradient(160deg,#26395F,#1B2A4A)}
 .snap figcaption{margin-top:10px;padding:0 4px}
 .snap figcaption b{display:block;font-family:'Space Grotesk';font-weight:600;font-size:13.5px;color:var(--navy)}
 .snap figcaption span{font-size:12px;color:var(--muted);font-family:'Space Grotesk';letter-spacing:.05em;text-transform:uppercase}
