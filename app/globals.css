@@ -524,16 +524,36 @@ footer{background:var(--navy-deep);color:#C2C9CC;padding:60px 0 34px}
 .mbar{position:fixed;left:0;right:0;bottom:0;z-index:115;display:none;
   background:rgba(27,42,74,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   border-top:1px solid rgba(125,233,232,.18);padding:8px 6px calc(8px + env(safe-area-inset-bottom))}
-.mbar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;color:#9BA3A8;
-  font-family:'Space Grotesk';font-size:10.5px;font-weight:500;letter-spacing:.03em;padding:4px 0;transition:color .15s}
-.mbar a svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.mbar a.on{color:var(--teal-l)}
+.mbar a,.mbar .mmore{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;color:#9BA3A8;
+  font-family:'Space Grotesk';font-size:10.5px;font-weight:500;letter-spacing:.03em;padding:4px 0;transition:color .15s;
+  background:none;border:none;cursor:pointer}
+.mbar a svg,.mbar .mmore svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.mbar .mmore svg circle{fill:currentColor;stroke:none}
+.mbar a.on,.mbar .mmore.on{color:var(--teal-l)}
+
+/* "More" slide-up sheet (mobile only) */
+.msheet-backdrop,.msheet{display:none}
 @media(max-width:900px){
   .mbar{display:flex}
   body{padding-bottom:calc(66px + env(safe-area-inset-bottom))}
   .fb-btn{bottom:calc(80px + env(safe-area-inset-bottom))}
   .fb-panel{bottom:calc(140px + env(safe-area-inset-bottom))}
+  .msheet-backdrop{display:block;position:fixed;inset:0;z-index:118;background:rgba(27,42,74,.45);
+    backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);animation:mfade .2s ease both}
+  .msheet{display:flex;flex-direction:column;gap:2px;position:fixed;left:10px;right:10px;
+    bottom:calc(74px + env(safe-area-inset-bottom));z-index:119;background:#fff;border:1px solid var(--card-line);
+    border-radius:18px;padding:10px;box-shadow:0 24px 60px rgba(27,42,74,.35);
+    animation:msheetup .28s cubic-bezier(.2,.7,.2,1) both}
 }
+.msheet a{display:flex;align-items:center;gap:13px;padding:11px 12px;border-radius:12px;transition:background .15s}
+.msheet a:hover,.msheet a:active{background:var(--paper)}
+.msheet .mic{flex:none;width:40px;height:40px;border-radius:11px;background:rgba(101,191,190,.13);
+  display:grid;place-items:center;color:var(--teal-deep)}
+.msheet .mic svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.msheet b{display:block;font-family:'Space Grotesk';font-weight:600;font-size:15px;color:var(--navy)}
+.msheet small{font-size:12.5px;color:var(--muted)}
+@keyframes mfade{from{opacity:0}to{opacity:1}}
+@keyframes msheetup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
 /* ============ EFFECTS ============ */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
