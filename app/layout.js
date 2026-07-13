@@ -1,6 +1,7 @@
 import "./globals.css";
 import ProgressBar from "@/components/ProgressBar";
 import Feedback from "@/components/Feedback";
+import MobileNav from "@/components/MobileNav";
 
 export const metadata = {
   title: "The Travel Nurse Guide",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <ProgressBar />
         {children}
         <Feedback />
+        <MobileNav />
       </body>
     </html>
   );
