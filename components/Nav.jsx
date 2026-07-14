@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Brand from "./Brand";
 
-export default function Nav({ active = "", cta }) {
+export default function Nav({ active = "", cta, ctaOnMobile = true }) {
   const { href = "/partners", label = "Partner with us", filled = false } = cta || {};
   const links = [
     { label: "Guides", href: "/guides" },
@@ -27,7 +27,7 @@ export default function Nav({ active = "", cta }) {
           </div>
         </div>
       </div>
-      <Link className={`nav-cta${filled ? " filled" : ""}`} href={href}>{label}</Link>
+      <Link className={`nav-cta${filled ? " filled" : ""}${ctaOnMobile ? "" : " m-hide"}`} href={href}>{label}</Link>
     </nav>
   );
 }

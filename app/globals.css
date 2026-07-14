@@ -53,8 +53,8 @@ nav .brand:hover{transform:scale(1.06)}
 .nav-cta.filled{color:var(--navy-deep);background:var(--teal)}
 .nav-cta.filled:hover{background:var(--teal-l);border-color:var(--teal-l)}
 @media(max-width:900px){.nav-links{display:none}}
-/* phones: the bottom nav + in-page CTAs cover it; the top-right button is redundant */
-@media(max-width:680px){.nav-cta{display:none}}
+/* phones: pages can opt their top-right CTA out when an in-page CTA makes it redundant */
+@media(max-width:680px){.nav-cta.m-hide{display:none}}
 
 /* ============ LANDING HERO ============ */
 .hero{position:relative;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;color:#fff}

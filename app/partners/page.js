@@ -14,7 +14,7 @@ export default function Partners() {
       <Fx spots=".card,.wcard,.q2,.step" magnets=".btn-teal,.nav-cta,.pform button" />
 
       <header className="page-head ph-partners">
-        <Nav cta={{ href: "#contact", label: "Start the conversation", filled: true }} />
+        <Nav cta={{ href: "#contact", label: "Start the conversation", filled: true }} ctaOnMobile={false} />
         <div className="container">
           <span className="eyebrow-s">For brands</span>
           <h1 style={{ maxWidth: "22ch" }}>Get recommended to <span className="hl">37,000 travel nurses</span>.</h1>
