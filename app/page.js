@@ -2,6 +2,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Fx from "@/components/Fx";
+import SubscribeForm from "@/components/SubscribeForm";
 
 const Arr = () => <span className="arr">→</span>;
 
@@ -203,15 +204,7 @@ export default function Home() {
             <p className="lead">The cheat sheet, the pay benchmarks, and the vetted resources, in your inbox.</p>
             <div className="capture" id="getguide" style={{ maxWidth: 540, margin: "26px auto 0", textAlign: "left" }}>
               <div className="label"><span className="tag">Free</span> Get the insider guide to your first travel contract.</div>
-              <form className="form" onSubmit={undefined} action="#">
-                <input type="email" placeholder="Your email" aria-label="Your email" />
-                <select aria-label="Your specialty" defaultValue="">
-                  <option value="">Specialty…</option>
-                  <option>ICU</option><option>ER</option><option>Med-Surg</option>
-                  <option>OR</option><option>L&D</option><option>Tele</option><option>Other</option>
-                </select>
-                <button type="button">Send me the guide <Arr /></button>
-              </form>
+              <SubscribeForm />
               <div className="micro"><b>Free guide,</b> instant access. Unsubscribe anytime.</div>
             </div>
           </div>

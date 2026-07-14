@@ -1,15 +1,32 @@
 "use client";
 import { useState } from "react";
 
-// Floating feedback widget, site-wide. Mock only: submit shows a thank-you,
-// nothing is sent anywhere yet.
+// Floating feedback widget, site-wide. POSTs to /api/contact (kind: feedback);
+// while the backend is dormant it says so instead of faking a thank-you.
 export default function Feedback() {
   const [open, setOpen] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [sent, setSent] = useState(false); // false | "busy" | "done" | "soon" | "error"
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    setSent(true);
+    if (sent === "busy") return;
+    setSent("busy");
+    const f = e.target;
+    try {
+      const r = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          kind: "feedback",
+          category: f.querySelector("#fb-cat").value,
+          message: f.querySelector("#fb-msg").value,
+        }),
+      });
+      const d = await r.json().catch(() => ({}));
+      setSent(r.ok ? "done" : d.code === "soon" ? "soon" : "error");
+    } catch {
+      setSent("error");
+    }
   };
 
   return (
@@ -20,8 +37,12 @@ export default function Feedback() {
             <span className="fb-title">Share feedback</span>
             <button type="button" className="fb-x" aria-label="Close feedback" onClick={() => { setOpen(false); setSent(false); }}>×</button>
           </div>
-          {sent ? (
+          {sent === "done" ? (
             <p className="fb-thanks">Got it. Thank you for helping make the site better.</p>
+          ) : sent === "soon" ? (
+            <p className="fb-thanks">The feedback inbox isn&apos;t wired up quite yet. Hold that thought and try again soon.</p>
+          ) : sent === "error" ? (
+            <p className="fb-thanks">That didn&apos;t send. Give it another try in a minute.</p>
           ) : (
             <form className="fb-form" onSubmit={submit}>
               <label htmlFor="fb-cat">Category</label>

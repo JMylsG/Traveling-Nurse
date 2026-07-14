@@ -4,9 +4,18 @@ import Feedback from "@/components/Feedback";
 import MobileNav from "@/components/MobileNav";
 
 export const metadata = {
+  metadataBase: new URL("https://traveling-nurse.jmguanso1.workers.dev"),
   title: "The Travel Nurse Guide",
   description:
     "Straight answers on pay, contracts, taxes, and housing, plus vetted resources from people who've actually done it.",
+  openGraph: {
+    title: "The Travel Nurse Guide",
+    description:
+      "Straight answers on pay, contracts, taxes, and housing, plus vetted resources from people who've actually done it.",
+    siteName: "The Travel Nurse Guide",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
   // Preview lives on workers.dev until Drew's real domain is attached.
   // Remove this at launch so search engines can index the site.
   robots: { index: false, follow: false },

@@ -1,0 +1,18 @@
+# Copy this file to .dev.vars (gitignored) for local testing.
+# For production, set each as a secret:  npx wrangler secret put <NAME>
+# The forms stay dormant (soft "opening soon" notice) until these exist.
+
+# Kit (ConvertKit) v4 API key -> powers /api/subscribe (email capture).
+# Kit dashboard: Settings > Developer > API Keys. A "specialty" custom
+# field on subscribers is recommended (the form sends it).
+KIT_API_KEY=""
+
+# Resend API key -> powers /api/contact (partner form + feedback widget).
+RESEND_API_KEY=""
+
+# Where partner inquiries and feedback are delivered (Drew's email).
+CONTACT_TO=""
+
+# Optional verified sender, e.g. "TNG Website <site@drewsdomain.com>".
+# Defaults to Resend's onboarding sender, fine for testing.
+CONTACT_FROM=""

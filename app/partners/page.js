@@ -2,6 +2,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Fx from "@/components/Fx";
+import PartnerForm from "@/components/PartnerForm";
 
 export const metadata = { title: "Partner with us · The Travel Nurse Guide" };
 
@@ -118,14 +119,7 @@ export default function Partners() {
           <span className="eyebrow-s">Start the conversation</span>
           <h2 className="h2">Win the relationship. The deals follow.</h2>
           <p className="lead">Tell us who you want to reach. A short note is enough, we&apos;ll reply with times for an intro call.</p>
-          <form className="pform" action="#">
-            <input type="text" placeholder="Your name" aria-label="Your name" />
-            <input type="text" placeholder="Company" aria-label="Company" />
-            <input type="email" placeholder="Work email" aria-label="Work email" />
-            <input type="text" placeholder="What do you offer nurses?" aria-label="What do you offer nurses" />
-            <textarea placeholder="Anything else we should know?" aria-label="Message" />
-            <button type="button">Send it over <Arr /></button>
-          </form>
+          <PartnerForm />
           <p className="micro">We reply to every serious inquiry. If it&apos;s not a fit, we&apos;ll tell you straight.</p>
         </div>
       </div>
