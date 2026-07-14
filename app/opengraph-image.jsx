@@ -30,16 +30,10 @@ export default async function OgImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
-          <div
-            style={{
-              width: 52,
-              height: 52,
-              borderRadius: 999,
-              border: "11px solid #65BFBE",
-              borderTopColor: "#7DE9E8",
-              display: "flex",
-            }}
-          />
+          <svg width="58" height="58" viewBox="0 0 100 100">
+            <path d="M37 14.3 A 38 38 0 0 0 37 85.7" fill="none" stroke="#EFF3F4" strokeWidth="12" strokeLinecap="round" />
+            <path d="M63 14.3 A 38 38 0 0 1 63 85.7" fill="none" stroke="#65BFBE" strokeWidth="12" strokeLinecap="round" />
+          </svg>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 26, letterSpacing: 4, display: "flex" }}>THE TRAVEL NURSE</div>
             <div style={{ fontSize: 17, letterSpacing: 7, color: "#7DE9E8", display: "flex" }}>GUIDE</div>
