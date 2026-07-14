@@ -124,6 +124,7 @@ h1 .hl{color:var(--rose-deep);background:linear-gradient(105deg, var(--rose-deep
 .proof .item b{font-family:'Space Grotesk';font-weight:600;color:#fff;font-size:14px}
 .proof .dot{width:5px;height:5px;border-radius:50%;background:var(--teal)}
 @media(max-width:680px){
+  .hero-bg{background-position:71% center}
   .hero-overlay{background:linear-gradient(180deg,rgba(27,42,74,.7),rgba(27,42,74,.92))}
   .hero-body{padding:0 24px}
   .hero .sub{font-size:17px}
