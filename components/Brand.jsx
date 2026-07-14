@@ -13,7 +13,7 @@ export default function Brand({ link = true }) {
   const inner = (
     <>
       <BrandMark />
-      <div className="wm">THE TRAVEL NURSE<small>GUIDE</small></div>
+      <div className="wm">THE TRAVEL NURSE <small>GUIDE</small></div>
     </>
   );
   if (!link) return <div className="brand">{inner}</div>;

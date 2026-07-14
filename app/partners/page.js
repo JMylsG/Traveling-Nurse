@@ -21,7 +21,7 @@ export default function Partners() {
             Ads get scrolled past. Recommendations get acted on. This community is run by a working
             travel nurse, and when a brand earns a spot here, nurses listen.
           </p>
-          <p className="trustline"><span className="tick">✓</span> Already trusted by HeartStart CPR, Same Day CPR, Steve Insurance, and Tallewise</p>
+          <p className="trustline"><span className="tick">✓</span> Already trusted by HeartStart CPR, Same Day CPR, Steve Does Insurance, and Tallewise</p>
           <a className="btn-teal" href="#contact">Start the conversation <Arr /></a>
           <p className="head-note">No media kits, no pressure. A short call to see if it&apos;s a fit.</p>
         </div>
@@ -85,7 +85,7 @@ export default function Partners() {
         <div className="container">
           <span className="eyebrow-s">In good company</span>
           <h2 className="h2">Brands already working with us.</h2>
-          <div className="logos"><span>HeartStart CPR</span><span>Same Day CPR</span><span>Steve Insurance</span><span>Tallewise</span></div>
+          <div className="logos"><span>HeartStart CPR</span><span>Same Day CPR</span><span>Steve Does Insurance</span><span>Tallewise</span></div>
           <div className="quotes2 stagger" style={{ marginTop: 38 }}>
             <div className="q2">
               <p>&quot;Working with Drew put us in front of exactly the nurses we wanted to reach. The response felt like word of mouth, not advertising.&quot;</p>

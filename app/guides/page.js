@@ -58,13 +58,13 @@ export default function Guides() {
           <div className="head">
             <span className="eyebrow-s">Guide 01</span>
             <h2 className="h2">Pay: read the whole package, not the hourly rate.</h2>
-            <p className="lead">A travel contract is a taxable base rate plus tax-free stipends. Two offers with the same &quot;hourly&quot; can differ by hundreds a week.</p>
+            <p className="lead">A travel contract is usually a taxable base rate plus tax-free stipends, unless you don&apos;t qualify for the stipends or choose all-taxable pay. Two offers with the same &quot;hourly&quot; can still differ by hundreds a week.</p>
           </div>
           <div className="cols">
             <div className="pts stagger">
-              <div className="pt"><span className="ic">01</span><div><h3>Know the three parts</h3><p><b>Taxable base</b> (often low, $20 to $30/hr), <b>housing stipend</b>, and <b>meals and incidentals</b>. The stipends are where the real money lives.</p></div></div>
-              <div className="pt"><span className="ic">02</span><div><h3>Compare weekly take-home</h3><p>Ask every recruiter for the same number: <mark className="hlm">gross weekly on a 36-hour week</mark>, with stipends itemized. Never compare &quot;blended rates&quot; from two different agencies.</p></div></div>
-              <div className="pt"><span className="ic">03</span><div><h3>Low base cuts both ways</h3><p>A lower taxable base means more take-home now, but overtime, holiday pay, and PTO are calculated on it. Know what you&apos;re trading.</p></div></div>
+              <div className="pt"><span className="ic">01</span><div><h3>Compare weekly pay carefully</h3><p>Ask every recruiter for the same number: <mark className="hlm">gross weekly on a 36-hour week</mark>, with stipends itemized. Net pay is just an estimate from your recruiter.</p></div></div>
+              <div className="pt"><span className="ic">02</span><div><h3>Know the three parts</h3><p><b>Taxable base</b> (often low, $20 to $30/hr), <b>housing stipend</b>, and <b>meals and incidentals</b>. The stipends are where the real money lives.</p></div></div>
+              <div className="pt"><span className="ic">03</span><div><h3>The IRS and GSA set the guardrails</h3><p>Many travelers and tax experts treat an RN base under <b>$20/hr</b> as an IRS red flag. On the other end, the GSA caps how much an agency can pay you in tax-free stipends.</p></div></div>
               <div className="pt"><span className="ic">04</span><div><h3>Check the market first</h3><p>Look up the community average for your specialty and state before the call, so you know a lowball when you hear one. <Link className="inline-link" href="/market">See real pay rates <Arr /></Link></p></div></div>
             </div>
             <div className="aside math">
@@ -87,14 +87,14 @@ export default function Guides() {
           <div className="head">
             <span className="eyebrow-s">Guide 02</span>
             <h2 className="h2">Contracts: the clauses that cost you money.</h2>
-            <p className="lead">Most contract pain comes from four clauses nobody reads. Read these four and you&apos;re ahead of ninety percent of first-timers.</p>
+            <p className="lead">Most contract pain comes from four clauses nobody reads. Read these four and you&apos;re ahead of 90 percent of first-timers.</p>
           </div>
           <div className="cols">
             <div className="pts stagger">
               <div className="pt"><span className="ic">01</span><div><h3>Guaranteed hours</h3><p>Without them, the hospital can cancel your shifts and your stipends shrink with them. Push for <mark className="hlm">36 guaranteed hours</mark> or a cap on cancelled shifts per contract.</p></div></div>
-              <div className="pt"><span className="ic">02</span><div><h3>Cancellation policy</h3><p>What happens if the facility ends the contract early, and what happens if you do. Look for the notice window and any payback of bonuses or housing.</p></div></div>
+              <div className="pt"><span className="ic">02</span><div><h3>Cancellation policy</h3><p>What happens if the facility ends the contract early, and what happens if you do. Look for the notice window and the penalties for cancellations.</p></div></div>
               <div className="pt"><span className="ic">03</span><div><h3>Float clause</h3><p>Many contracts let the facility float you to other units. Make sure it&apos;s limited to units you&apos;re actually competent and credentialed for.</p></div></div>
-              <div className="pt"><span className="ic">04</span><div><h3>Extension and rate changes</h3><p>Rates can drop mid-contract if the bill rate drops. Ask whether your rate is locked for the full term, in writing.</p></div></div>
+              <div className="pt"><span className="ic">04</span><div><h3>Must be in the contract</h3><p>If it is not written in the contract, it is not guaranteed to happen. A recruiter&apos;s promise in email, text, or a phone call means nothing until it makes it into the contract.</p></div></div>
             </div>
             <div className="aside flag">
               <span className="at">Red flags · walk away or push back</span>
@@ -116,14 +116,14 @@ export default function Guides() {
           <div className="head">
             <span className="eyebrow-s">Guide 03</span>
             <h2 className="h2">Taxes: stipends are only tax-free if you do this.</h2>
-            <p className="lead">The IRS lets your stipends stay tax-free when you maintain a real tax home and duplicate expenses. Get this wrong and an audit gets expensive.</p>
+            <p className="lead">The IRS lets your stipends stay tax-free when you meet all three requirements. Get any one of them wrong and an audit gets expensive.</p>
           </div>
           <div className="cols">
             <div className="pts stagger">
-              <div className="pt"><span className="ic">01</span><div><h3>Keep a real tax home</h3><p>A place you pay to maintain (rent, mortgage, utilities) and return to between contracts. Paying rent to your parents only counts if it&apos;s real, documented rent.</p></div></div>
-              <div className="pt"><span className="ic">02</span><div><h3>The 50-mile rule is a myth</h3><p>There is no IRS rule that says 50 miles makes you a traveler. What matters is that the assignment requires <mark className="hlm">rest away from your tax home</mark>.</p></div></div>
-              <div className="pt"><span className="ic">03</span><div><h3>Watch the 12-month clock</h3><p>Stay in one metro area longer than a year and it can become your new tax home, which makes the stipends taxable. Rotate markets.</p></div></div>
-              <div className="pt"><span className="ic">04</span><div><h3>Use a travel-tax specialist</h3><p>A regular preparer will miss this stuff. A travel-nurse tax specialist usually pays for themselves in the first return.</p></div></div>
+              <div className="pt"><span className="ic">01</span><div><h3>Maintain a tax home</h3><p>A place you pay to maintain (rent, mortgage, utilities) and return to between contracts. Paying rent to your parents only counts if it&apos;s real, documented rent.</p></div></div>
+              <div className="pt"><span className="ic">02</span><div><h3>Duplicate your expenses</h3><p>While you collect tax-free stipends, you pay fair market value for housing at the assignment and keep paying for your tax home. That duplication is what qualifies you.</p></div></div>
+              <div className="pt"><span className="ic">03</span><div><h3>Distance: the 50-mile rule is a myth</h3><p>The IRS sets no specific distance. Fifty miles is an agency rule of thumb, nothing more. The real standard is that the assignment requires <mark className="hlm">rest away from your tax home</mark> to meet the demands of the work.</p></div></div>
+              <div className="pt"><span className="ic">04</span><div><h3>Consult a tax expert</h3><p>A regular preparer will miss this stuff. A travel-nurse tax specialist usually pays for themselves in the first return.</p></div></div>
             </div>
             <div className="aside math">
               <span className="at">Keep these · your audit file</span>
@@ -149,10 +149,10 @@ export default function Guides() {
           </div>
           <div className="cols">
             <div className="pts stagger">
-              <div className="pt"><span className="ic">01</span><div><h3>Stipend beats agency housing, usually</h3><p>Agency-placed housing is convenient but eats the whole stipend. If you find safe housing for less, <mark className="hlm">you keep the difference</mark>, tax-free.</p></div></div>
-              <div className="pt"><span className="ic">02</span><div><h3>Look where travelers look</h3><p>Furnished monthly rentals, travel-nurse housing groups, and month-to-month sublets near the hospital. Thirteen weeks is a strange length, so filter for flexible terms.</p></div></div>
-              <div className="pt"><span className="ic">03</span><div><h3>Verify before you pay anything</h3><p>Live video walkthrough, reverse image search the listing photos, and confirm the landlord actually owns the place. A real landlord will not mind.</p></div></div>
-              <div className="pt"><span className="ic">04</span><div><h3>Think commute, parking, safety</h3><p>Night shift changes the math. Check the drive at the hours you&apos;ll actually make it, and ask about parking before you sign.</p></div></div>
+              <div className="pt"><span className="ic">01</span><div><h3>Research housing before you sign</h3><p>Check availability and cost near the facility before you accept the contract. A strong rate in a town with no monthly rentals is not a strong rate.</p></div></div>
+              <div className="pt"><span className="ic">02</span><div><h3>Verify before you pay anything</h3><p>Scammers work travelers hard, and urgency is their favorite tool. Never send money before you&apos;ve seen the place, in person or on a live video walkthrough, and confirm the landlord actually owns it.</p></div></div>
+              <div className="pt"><span className="ic">03</span><div><h3>Get a lease and keep receipts</h3><p>If the IRS ever audits your stipends, a real rental agreement and <mark className="hlm">proof of every payment</mark> is what satisfies them. Handshake deals do not.</p></div></div>
+              <div className="pt"><span className="ic">04</span><div><h3>Use platforms built for travelers</h3><p>Travel nurse housing platforms like <b>Vidle</b> (sponsored) filter for furnished, monthly, flexible terms, so you&apos;re not fighting twelve-month leases.</p></div></div>
             </div>
             <div className="aside flag">
               <span className="at">Scam signals · do not send money</span>
@@ -175,12 +175,12 @@ export default function Guides() {
             <span className="eyebrow-s">Before you apply</span>
             <h2 className="h2">Keep your certs current, the easy way.</h2>
             <p className="lead">Expired BLS or ACLS can hold up a start date. These are the companies our nurses actually use, each one vetted by people who&apos;ve used them.</p>
+            <p className="lead" style={{ marginTop: 10 }}><b>New:</b> AHA CPR Verification Stations are automated, self-guided testing units. Finish the online portion first, then the station&apos;s voice-assisted manikins run your hands-on skills check and issue your AHA eCard the same day. No instructor, no scheduling.</p>
           </div>
-          <div className="vetgrid stagger">
-            <div className="vetcard"><b>HeartStart CPR</b><span>BLS and CPR certification, online and in person.</span><span className="vet">Vetted by nurses</span></div>
-            <div className="vetcard"><b>Same Day CPR</b><span>BLS, ACLS, and PALS renewals when the deadline is tomorrow.</span><span className="vet">Vetted by nurses</span></div>
-            <div className="vetcard"><b>Steve Insurance</b><span>Health coverage that follows you between contracts.</span><span className="vet">Vetted by nurses</span></div>
-            <div className="vetcard"><b>Tallewise</b><span>Job search help built around travel contracts.</span><span className="vet">Vetted by nurses</span></div>
+          <div className="vetgrid v3 stagger">
+            <div className="vetcard"><b>HeartStart CPR</b><span>In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</span><span className="vet">Vetted by nurses</span><a className="visit" href="https://refer.cprvam.com/MFf7baa86672/signup?mwr=drew-9025" target="_blank" rel="noopener sponsored">Get certified <Arr /></a></div>
+            <div className="vetcard"><b>Same Day CPR</b><span>In-class and Verification Station training for AHA BLS, ACLS, and PALS, when the deadline is tomorrow.</span><span className="vet">Vetted by nurses</span></div>
+            <div className="vetcard"><b>Med Max Edu</b><span>Virtual TNCC and ENPC courses, done from wherever your contract takes you.</span><span className="vet">Vetted by nurses</span></div>
           </div>
         </div>
       </section>

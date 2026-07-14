@@ -87,7 +87,7 @@ export default function Faq() {
             </details>
             <details className="faq">
               <summary>Who&apos;s already in?</summary>
-              <p>HeartStart CPR, Same Day CPR, Steve Insurance, and Tallewise. Each one was used and vouched for by nurses in the group before anything was signed.</p>
+              <p>HeartStart CPR, Same Day CPR, Steve Does Insurance, and Tallewise. Each one was used and vouched for by nurses in the group before anything was signed.</p>
             </details>
           </div>
         </div>

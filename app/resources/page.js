@@ -38,7 +38,7 @@ export default function Resources() {
       <header className="page-head ph-resources">
         <Nav active="resources" />
         <div className="container">
-          <span className="eyebrow-s">Vetted, not paid</span>
+          <span className="eyebrow-s">Vetted, then featured</span>
           <h1 style={{ maxWidth: "20ch" }}>Skip the search. Start with <span className="hl">the short list</span>.</h1>
           <p className="sub" style={{ maxWidth: "54ch" }}>
             Tax help, insurance, certifications, housing, and job search, pulled from
@@ -113,7 +113,7 @@ export default function Resources() {
           <div className="resgrid stagger">
             <div className="rescard feat">
               <div className="rtop"><span className="ric">SI</span><span className="rtag">Community partner</span></div>
-              <h3>Steve Insurance</h3>
+              <h3>Steve Does Insurance</h3>
               <p className="what">Health coverage that follows you between contracts, built for people who move every thirteen weeks.</p>
               <p className="earned">Vetted through member policies, not a sales pitch.</p>
               <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="#">Visit site <Arr /></a></div>

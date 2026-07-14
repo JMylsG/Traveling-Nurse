@@ -331,6 +331,11 @@ h1 .hl{color:var(--rose-deep);background:linear-gradient(105deg, var(--rose-deep
 .vetcard span{font-size:13px;color:var(--muted);display:block;margin-top:4px;line-height:1.45}
 .vetcard .vet{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-family:'Space Grotesk';font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#2E8B8A;margin-top:12px}
 .vetcard .vet::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.vetgrid.v3{grid-template-columns:repeat(3,1fr)}
+.vetcard .visit{display:block;margin-top:12px;font-family:'Space Grotesk';font-weight:500;font-size:13.5px;color:var(--rose-deep);transition:color .15s}
+.vetcard .visit:hover{color:#A61E4D}
+@media(max-width:960px){.vetgrid.v3{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.vetgrid.v3{grid-template-columns:1fr}}
 @media(max-width:960px){.vetgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.vetgrid{grid-template-columns:1fr}}
 

@@ -33,7 +33,7 @@ export default function Home() {
 
         <div className="hero-body">
           <div className="hero-inner">
-            <span className="eyebrow">Built by a travel nurse · 37,000+ strong</span>
+            <span className="eyebrow">Built by Drew Jones, RN · 37,000+ strong</span>
             <h1>Know what you&apos;re <span className="hl">worth</span> before you sign.</h1>
             <p className="sub">
               Straight answers on pay, contracts, taxes, and housing, plus vetted resources from people
@@ -73,13 +73,13 @@ export default function Home() {
             <span className="ic">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="3.6" /><path d="M5 20c0-3.4 3.1-6 7-6s7 2.6 7 6" /></svg>
             </span>
-            <div><h3>Built by a travel nurse</h3><p>Real time on the road, not a media company guessing.</p></div>
+            <div><h3>Built by a travel nurse</h3><p>Run by Drew Jones, RN. Real time on the road, not a media company guessing.</p></div>
           </div>
           <div className="vitem">
             <span className="ic">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l2.1 1.6 2.6-.2 1 2.4 2.3 1.4-.6 2.6.6 2.6-2.3 1.4-1 2.4-2.6-.2L12 21l-2.1-1.6-2.6.2-1-2.4L3 17.6l.6-2.6L3 12.4l2.3-1.4 1-2.4 2.6.2z" /><path d="M9 12l2 2 4-4" /></svg>
             </span>
-            <div><h3>Vetted, not paid</h3><p>Resources earn their spot. Recommendations you can trust.</p></div>
+            <div><h3>Vetted, then featured</h3><p>Resources earn their spot. Recommendations you can trust.</p></div>
           </div>
         </div>
       </section>
@@ -141,6 +141,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ABOUT / FOUNDER */}
+      <section id="about" className="section light reveal" style={{ paddingBottom: 0 }}>
+        <div className="container">
+          <div className="cols" style={{ marginTop: 0 }}>
+            <div>
+              <span className="eyebrow-s">About The Travel Nurse Guide</span>
+              <h2 className="h2">Honest information, <span className="hlr">nurses first</span>.</h2>
+              <p className="lead" style={{ maxWidth: "58ch" }}>
+                The Travel Nurse Guide is a 37,000 member community built on one premise: travel nurses
+                deserve honest, unbiased information and a place to find it without wading through recruiter noise.
+              </p>
+              <p className="lead" style={{ maxWidth: "58ch", marginTop: 12 }}>
+                Since 2018, TNG has been the go-to resource for nurses navigating pay packages, contracts,
+                taxes, housing, and everything else that comes with life on the road. Every resource on this
+                site is vetted. Every partner has earned their spot. Nothing here is pay to play.
+              </p>
+            </div>
+            <div className="aside math">
+              <span className="at">A note from the founder</span>
+              <p style={{ fontSize: "14.5px", lineHeight: 1.65, color: "var(--navy)" }}>
+                TNG was started by Drew Jones, RN, after his first year of travel nursing taught him the
+                hard way how broken the information landscape was. He built the community he wished had
+                existed. Eight years later it is still run the same way it started, with nurses first.
+              </p>
+              <div className="sum">Drew Jones, RN <span>· Founder</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PROOF */}
       <section id="resources" className="section light reveal" style={{ paddingBottom: 36 }}>
         <div className="container">
@@ -150,7 +180,7 @@ export default function Home() {
             The companies we point you to for tax, insurance, certification, and housing.
             Each one vetted by nurses who&apos;ve actually used them.
           </p>
-          <div className="logos"><span>HeartStart CPR</span><span>Same Day CPR</span><span>Steve Insurance</span><span>Tallewise</span></div>
+          <div className="logos"><span>HeartStart CPR</span><span>Same Day CPR</span><span>Steve Does Insurance</span><span>Tallewise</span></div>
           <div className="quotes2 stagger">
             <div className="q2">
               <p>&ldquo;This community helped me negotiate my best contract yet.&rdquo;</p>
