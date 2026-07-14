@@ -53,6 +53,8 @@ nav .brand:hover{transform:scale(1.06)}
 .nav-cta.filled{color:var(--navy-deep);background:var(--teal)}
 .nav-cta.filled:hover{background:var(--teal-l);border-color:var(--teal-l)}
 @media(max-width:900px){.nav-links{display:none}}
+/* phones: the bottom nav + in-page CTAs cover it; the top-right button is redundant */
+@media(max-width:680px){.nav-cta{display:none}}
 
 /* ============ LANDING HERO ============ */
 .hero{position:relative;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;color:#fff}
@@ -164,7 +166,7 @@ h1 .hl{color:var(--rose-deep);background:linear-gradient(105deg, var(--rose-deep
     url('/market-header.jpg') center right/cover no-repeat, var(--navy)}
   .ph-partners{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
     linear-gradient(100deg, rgba(27,42,74,.95) 0%, rgba(27,42,74,.8) 45%, rgba(110,70,82,.55) 75%, rgba(213,72,82,.4) 100%),
-    url('/partner-header.jpg') center right/cover no-repeat, var(--navy)}
+    url('/partner-header.jpg') 83% center/cover no-repeat, var(--navy)}
   .ph-resources{background:linear-gradient(to bottom, rgba(27,42,74,.55) 0%, rgba(27,42,74,0) 24%),
     linear-gradient(100deg, rgba(27,42,74,.95) 0%, rgba(27,42,74,.8) 45%, rgba(110,70,82,.55) 75%, rgba(213,72,82,.4) 100%),
     url('/resources-header.jpg') center right/cover no-repeat, var(--navy)}
