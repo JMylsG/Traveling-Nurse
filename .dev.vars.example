@@ -16,3 +16,11 @@ CONTACT_TO=""
 # Optional verified sender, e.g. "TNG Website <site@drewsdomain.com>".
 # Defaults to Resend's onboarding sender, fine for testing.
 CONTACT_FROM=""
+
+# OPTIONAL rate-limit raisers for the market page's data feeds. The page works
+# without them, but shared CI IPs can hit the keyless caps on busy days.
+# Free BLS v2 key (instant): https://data.bls.gov/registrationEngine/
+BLS_API_KEY=""
+# Free api.data.gov key (instant email signup): https://api.data.gov/signup/
+# Without it the GSA feed uses DEMO_KEY (30 req/hr; some cities may skip stipends).
+GSA_API_KEY=""

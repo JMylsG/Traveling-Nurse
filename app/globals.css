@@ -271,7 +271,10 @@ h1 .hl{color:var(--rose-deep);background:linear-gradient(105deg, var(--rose-deep
 .trend.down{background:rgba(123,130,133,.12);color:var(--muted)}
 .rcard .amt{font-family:'Space Grotesk';font-weight:700;font-size:30px;margin-top:16px;perspective:300px}
 .rcard .amt small{font-size:13.5px;color:var(--muted);font-weight:400}
+.rcard .stip{font-size:13.5px;color:var(--muted);margin-top:8px}
+.rcard .stip b{font-family:'Space Grotesk';color:#2E8B8A}
 .rcard .meta{font-size:12.5px;color:var(--muted);margin-top:8px}
+.note .inline-link{color:var(--rose-deep);font-weight:500}
 .empty{text-align:center;color:var(--muted);padding:60px 0;font-size:16px}
 .note{max-width:1180px;margin:0 auto;padding:6px 40px 40px;font-size:13px;color:var(--muted)}
 @media(max-width:960px){.rgrid{grid-template-columns:1fr 1fr}}
