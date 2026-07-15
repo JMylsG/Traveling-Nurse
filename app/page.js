@@ -3,10 +3,27 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Fx from "@/components/Fx";
 import SubscribeForm from "@/components/SubscribeForm";
+import { getMarketData, ABBR } from "@/lib/market";
 
 const Arr = () => <span className="arr">→</span>;
 
-export default function Home() {
+// Pick a few real, high-paying metros for the homepage teaser: highest staff
+// RN wage, one per state for geographic variety, and only ones with a GSA
+// stipend ceiling so both numbers on the card are real. Empty if the feed is
+// down, in which case the band drops its numbers instead of faking them.
+function payTeaser(data) {
+  if (!data?.rows?.length) return [];
+  const seen = new Set();
+  return [...data.rows]
+    .filter((r) => r.gsa && r.wageScope === "metro")
+    .sort((a, b) => Number(b.wage) - Number(a.wage))
+    .filter((r) => (seen.has(r.state) ? false : seen.add(r.state)))
+    .slice(0, 3);
+}
+
+export default async function Home() {
+  const market = await getMarketData();
+  const teaser = payTeaser(market);
   return (
     <>
       <Fx spots=".gcard,.pcard,.q2" magnets=".btn-hero,.btn-teal,.form button,.nav-cta" />
@@ -129,16 +146,30 @@ export default function Home() {
         <div className="container">
           <span className="eyebrow-s">Pay insight</span>
           <h2 className="h2">Know what <span className="hlt">good pay</span> looks like before you apply.</h2>
-          <p className="lead">Real weekly averages from the community, not recruiter promises.</p>
-          <div className="pay stagger">
-            <div className="pcard"><div className="spec">ER</div><div className="loc">Georgia</div><div className="amt">$1,940 <small>/wk</small></div></div>
-            <div className="pcard"><div className="spec">Cath Lab</div><div className="loc">Tennessee</div><div className="amt">$2,720 <small>/wk</small></div></div>
-            <div className="pcard"><div className="spec">ICU</div><div className="loc">Atlanta, GA</div><div className="amt">$2,080 <small>/wk</small></div></div>
-          </div>
-          <div style={{ marginTop: 30, display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }}>
-            <Link className="btn-teal" href="/market">See pay for your specialty <Arr /></Link>
-            <span style={{ fontSize: 13, color: "#9BA3A8" }}>Sample community data, shown for illustration.</span>
-          </div>
+          <p className="lead">The federal baselines every travel package is built on: staff RN wages from the Bureau of Labor Statistics, tax-free stipend ceilings from the GSA.</p>
+          {teaser.length === 3 ? (
+            <>
+              <div className="pay stagger">
+                {teaser.map((r) => (
+                  <div className="pcard" key={r.city}>
+                    <div className="spec">{r.city}, {ABBR[r.state]}</div>
+                    <div className="loc">Staff RN mean · BLS {market.year}</div>
+                    <div className="amt">${Number(r.wage).toFixed(2)} <small>/hr</small></div>
+                    <div className="pstip">Tax-free stipend ceiling <b>${r.gsa.weekly.toLocaleString()}/wk</b> · GSA FY{market.fy}</div>
+                  </div>
+                ))}
+              </div>
+              <div style={{ marginTop: 30, display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }}>
+                <Link className="btn-teal" href="/market">See all 46 metros <Arr /></Link>
+                <span style={{ fontSize: 13, color: "#9BA3A8" }}>Source: BLS OEWS (occupation 29-1141) and GSA per diem.</span>
+              </div>
+            </>
+          ) : (
+            <div style={{ marginTop: 30, display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }}>
+              <Link className="btn-teal" href="/market">Explore the market data <Arr /></Link>
+              <span style={{ fontSize: 13, color: "#9BA3A8" }}>Staff wages and stipend ceilings for 46 metros, straight from BLS and GSA.</span>
+            </div>
+          )}
         </div>
       </section>
 
