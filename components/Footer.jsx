@@ -33,8 +33,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="fnote">
-          <span>© 2026 The Travel Nurse Guide · Guide Media LLC · <Link href="/privacy">Privacy</Link></span>
-          <span>Prototype · placeholder copy</span>
+          <span>© 2026 The Travel Nurse Guide · Guide Media LLC</span>
+          <span><Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms of Service</Link></span>
         </div>
       </div>
     </footer>
