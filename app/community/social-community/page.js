@@ -22,7 +22,7 @@ export default function Community() {
             travel nursing journey actually looks like.
           </p>
           <p className="trustline"><span className="tick">✓</span> 37,000 nurses · All 50 states · Recruiters get denied at the door</p>
-          <a className="btn-teal" href="#">Join the Facebook group <Arr /></a>
+          <a className="btn-teal" href="https://www.facebook.com/share/g/1BcxDjK3Q8/" target="_blank" rel="noopener noreferrer">Join the Facebook group <Arr /></a>
           <p className="head-note">Takes a minute. Answer the join questions so we know you&apos;re a nurse.</p>
         </div>
       </header>
@@ -136,7 +136,7 @@ export default function Community() {
           <span className="eyebrow-s">Join us</span>
           <div className="h2">Bring the question you&apos;d never ask a recruiter.</div>
           <p className="bandp">Free to join, nurses only, since 2018. Somebody in there has already lived your next contract.</p>
-          <a className="btn-teal" href="#">Join the Facebook group <Arr /></a>
+          <a className="btn-teal" href="https://www.facebook.com/share/g/1BcxDjK3Q8/" target="_blank" rel="noopener noreferrer">Join the Facebook group <Arr /></a>
           <Link className="alt-cta" href="/#getguide">Not on Facebook? Get the free guide by email <Arr /></Link>
         </div>
       </div>
