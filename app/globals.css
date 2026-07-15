@@ -540,6 +540,19 @@ details.faq p b{color:var(--navy)}
 .btn-teal:hover{background:var(--teal-l)}
 @media(max-width:620px){.capture-band,.capture-band.lg,.capture-band.left{padding:36px 24px}.cta-wrap{padding:10px 24px 48px}}
 
+/* ============ LEGAL / PRIVACY ============ */
+.lstamp{display:inline-block;margin-top:18px;font-family:'Space Grotesk';font-size:13px;font-weight:500;letter-spacing:.03em;color:var(--muted)}
+.legal{max-width:760px;margin-top:10px}
+.legal .lead{font-size:18px;line-height:1.6;color:var(--navy);max-width:60ch;margin-bottom:8px}
+.legal h3{font-family:'Space Grotesk';font-weight:600;font-size:21px;color:var(--navy);margin:40px 0 12px;scroll-margin-top:90px}
+.legal p{font-size:16px;line-height:1.7;color:var(--muted);margin:0 0 14px;max-width:68ch}
+.legal p b{color:var(--navy)}
+.legal ul{list-style:none;margin:2px 0 16px;padding:0;display:flex;flex-direction:column;gap:11px}
+.legal li{position:relative;padding-left:22px;font-size:16px;line-height:1.6;color:var(--muted);max-width:66ch}
+.legal li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--teal)}
+.legal li b{color:var(--navy)}
+.legal .inline-link{color:var(--rose-deep);font-weight:500}
+
 /* ============ FOOTER ============ */
 footer{background:var(--navy-deep);color:#C2C9CC;padding:60px 0 34px}
 .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:34px}
@@ -554,6 +567,8 @@ footer{background:var(--navy-deep);color:#C2C9CC;padding:60px 0 34px}
 .socials a:hover{border-color:var(--teal);color:var(--teal-l);background:rgba(101,191,190,.1);transform:translateY(-2px)}
 .socials svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .fnote{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;font-size:13px;color:#7B8285;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.fnote a{color:#9BA3A8;transition:color .15s}
+.fnote a:hover{color:var(--teal-l)}
 
 /* ============ FEEDBACK WIDGET ============ */
 .fb-btn{position:fixed;left:22px;bottom:22px;z-index:110;display:inline-flex;align-items:center;gap:8px;
