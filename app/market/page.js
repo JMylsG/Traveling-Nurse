@@ -132,50 +132,52 @@ async function gsaCity(city, stateAbbr, fy) {
   }
 }
 
-const getMarket = unstable_cache(
-  async () => {
-    try {
-      const wageIds = METROS.map((m) => metroId(m.cbsa, "03"));
-      const empIds = METROS.map((m) => metroId(m.cbsa, "01"));
-      const { out: bls, year } = await blsFetch([NATIONAL_ID, ...Object.values(FIPS).map(stateId), ...wageIds, ...empIds]);
-      if (!bls[NATIONAL_ID]) return null;
+async function fetchMarket() {
+  try {
+    const wageIds = METROS.map((m) => metroId(m.cbsa, "03"));
+    const empIds = METROS.map((m) => metroId(m.cbsa, "01"));
+    const { out: bls, year } = await blsFetch([NATIONAL_ID, ...Object.values(FIPS).map(stateId), ...wageIds, ...empIds]);
+    if (!bls[NATIONAL_ID]) return null;
 
-      const states = {};
-      for (const [name, fips] of Object.entries(FIPS)) {
-        if (bls[stateId(fips)]) states[name] = bls[stateId(fips)];
-      }
-
-      const fy = gsaFy();
-      // limited concurrency keeps GSA happy on the keyless DEMO_KEY
-      const gsa = [];
-      for (let i = 0; i < METROS.length; i += 6) {
-        gsa.push(...(await Promise.all(
-          METROS.slice(i, i + 6).map((m) => gsaCity(m.city, ABBR[m.state], fy))
-        )));
-      }
-
-      const rows = METROS.map((m, i) => {
-        const wage = bls[metroId(m.cbsa, "03")];
-        return {
-          city: m.city,
-          state: m.state,
-          wage: wage || states[m.state] || null,
-          wageScope: wage ? "metro" : "state",
-          emp: bls[metroId(m.cbsa, "01")] || null,
-          gsa: gsa[i],
-        };
-      }).filter((r) => r.wage);
-
-      return { year, fy, national: bls[NATIONAL_ID], states, rows };
-    } catch {
-      return null;
+    const states = {};
+    for (const [name, fips] of Object.entries(FIPS)) {
+      if (bls[stateId(fips)]) states[name] = bls[stateId(fips)];
     }
-  },
-  ["market-data-real-v1"],
-  { revalidate: 86400 }
-);
+
+    const fy = gsaFy();
+    // limited concurrency keeps GSA happy on the keyless DEMO_KEY
+    const gsa = [];
+    for (let i = 0; i < METROS.length; i += 6) {
+      gsa.push(...(await Promise.all(
+        METROS.slice(i, i + 6).map((m) => gsaCity(m.city, ABBR[m.state], fy))
+      )));
+    }
+
+    const rows = METROS.map((m, i) => {
+      const wage = bls[metroId(m.cbsa, "03")];
+      return {
+        city: m.city,
+        state: m.state,
+        wage: wage || states[m.state] || null,
+        wageScope: wage ? "metro" : "state",
+        emp: bls[metroId(m.cbsa, "01")] || null,
+        gsa: gsa[i],
+      };
+    }).filter((r) => r.wage);
+
+    return { year, fy, national: bls[NATIONAL_ID], states, rows };
+  } catch {
+    return null;
+  }
+}
+
+const getMarket = unstable_cache(fetchMarket, ["market-data-real-v2"], { revalidate: 86400 });
 
 export default async function Market() {
-  const data = await getMarket();
+  // Serve the cached feed when it's good. If the cache is holding an empty
+  // result (a transient BLS/GSA hiccup during a refresh), fetch live so the
+  // page self-heals on the next visit instead of showing the fallback all day.
+  let data = await getMarket();
+  if (!data) data = await fetchMarket();
   return <MarketClient data={data} />;
 }
