@@ -277,6 +277,54 @@ h1 .hl{color:var(--rose-deep);background:linear-gradient(105deg, var(--rose-deep
 @media(max-width:960px){.rgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.rgrid{grid-template-columns:1fr}.results,.note{padding-left:24px;padding-right:24px}.filters .row{padding:14px 24px}}
 
+/* market detail overlay (card click-through) */
+.rcard{cursor:pointer}
+.rcard:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.mkt-backdrop{position:fixed;inset:0;z-index:130;background:rgba(27,42,74,.5);
+  backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);animation:mfade .2s ease both}
+.mkt{position:fixed;z-index:131;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(620px,calc(100vw - 40px));max-height:88vh;overflow-y:auto;background:#fff;
+  border-radius:20px;box-shadow:0 40px 90px rgba(27,42,74,.4);animation:mktup .28s cubic-bezier(.2,.7,.2,1) both}
+@keyframes mktup{from{opacity:0;transform:translate(-50%,calc(-50% + 18px))}to{opacity:1;transform:translate(-50%,-50%)}}
+.mkt-hero{position:relative;height:150px;background:radial-gradient(240px 130px at 72% 18%, rgba(101,191,190,.28), transparent 70%),linear-gradient(120deg,#26395F,#17253F)}
+.mkt-hero img{width:100%;height:100%;object-fit:cover;display:block}
+.mkt-x{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:none;cursor:pointer;
+  background:rgba(27,42,74,.75);color:#fff;font-size:20px;line-height:1;display:grid;place-items:center;
+  backdrop-filter:blur(4px);transition:background .15s}
+.mkt-x:hover{background:var(--navy)}
+.mkt-body{padding:22px 26px 26px}
+.mkt-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.mkt-head .spec{font-family:'Space Grotesk';font-weight:700;font-size:22px}
+.mkt-head .loc{font-size:14px;color:var(--muted);margin-top:2px}
+.mkt-pay{margin-top:14px}
+.mkt-pay .big{font-family:'Space Grotesk';font-weight:700;font-size:34px;color:var(--navy)}
+.mkt-pay .big small{font-size:14px;color:var(--muted);font-weight:400;margin-left:8px}
+.mkt-pay .range{font-size:13.5px;color:var(--muted);margin-top:4px}
+.mkt-label{display:block;font-family:'Space Grotesk';font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#2E8B8A;margin-bottom:10px}
+.mkt-split{margin-top:20px;border:1px solid var(--card-line);border-left:3px solid var(--teal);border-radius:12px;padding:16px 18px}
+.mkt-split .row{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--navy);padding:5px 0}
+.mkt-split .row span{color:var(--muted)}
+.mkt-split .row b{font-family:'Space Grotesk'}
+.mkt-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.mkt-facts>div{background:var(--paper);border-radius:11px;padding:12px 14px}
+.mkt-facts small{display:block;font-family:'Space Grotesk';font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.mkt-facts b{font-family:'Space Grotesk';font-size:15px;color:var(--navy)}
+.mkt-notes{margin-top:20px}
+.mkt-notes ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.mkt-notes li{font-size:14px;line-height:1.55;color:var(--navy);padding-left:18px;position:relative}
+.mkt-notes li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.mkt-foot{margin-top:20px;padding-top:16px;border-top:1px solid var(--card-line)}
+.mkt-src{display:block;font-size:12.5px;color:var(--muted);margin-bottom:14px}
+.mkt-ctas{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.mkt-alt{font-family:'Space Grotesk';font-weight:500;font-size:14px;color:var(--rose-deep)}
+.mkt-alt:hover{color:#A61E4D}
+@media(max-width:680px){
+  .mkt{left:0;right:0;top:auto;bottom:0;transform:none;width:100%;max-height:88dvh;
+    border-radius:20px 20px 0 0;padding-bottom:env(safe-area-inset-bottom);animation:msheetup .28s cubic-bezier(.2,.7,.2,1) both}
+  .mkt-body{padding:20px 20px 24px}
+  .mkt-hero{height:120px}
+}
+
 /* split-flap digits */
 .flap-d{display:inline-block;min-width:.62ch;backface-visibility:hidden}
 .flap-d.cyc{animation:flap .12s linear infinite}

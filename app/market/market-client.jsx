@@ -78,8 +78,41 @@ const NATL_AVG = Math.round(avgOf(DATA) / 10) * 10;
 const HOT_SPEC = top(SPECS, "spec");
 const HOT_STATE = top(STATES, "state");
 
+// Real state facts nurses check before a contract (licensure + income tax).
+// NLC membership and no-income-tax states as of 2026; the pay numbers stay sample.
+const STATE_FACTS = {
+  Georgia: { nlc: true, noTax: false }, Texas: { nlc: true, noTax: true },
+  Florida: { nlc: true, noTax: true }, Arizona: { nlc: true, noTax: false },
+  Washington: { nlc: true, noTax: true }, "North Carolina": { nlc: true, noTax: false },
+  Tennessee: { nlc: true, noTax: true }, Colorado: { nlc: true, noTax: false },
+  Pennsylvania: { nlc: true, noTax: false }, Virginia: { nlc: true, noTax: false },
+  Ohio: { nlc: true, noTax: false }, "New Mexico": { nlc: true, noTax: false },
+  California: { nlc: false, noTax: false }, "New York": { nlc: false, noTax: false },
+  Massachusetts: { nlc: false, noTax: false }, Nevada: { nlc: false, noTax: true },
+  Illinois: { nlc: false, noTax: false }, Oregon: { nlc: false, noTax: false },
+  Michigan: { nlc: false, noTax: false },
+};
+
 // deterministic mini trend per listing (no real history yet, seeded so it never changes)
 const seeded = (s, k) => { const x = Math.sin(s * 7.31 + k * 13.77) * 43758.545; return x - Math.floor(x); };
+
+// illustrative package split + range, seeded per listing so it never changes between renders
+function pkg(d) {
+  const s = d.amt + d.n;
+  const baseHr = 22 + Math.round(seeded(s, 9) * 5);
+  const base = baseHr * 36;
+  const stip = d.amt - base;
+  const housing = Math.round((stip * 0.72) / 5) * 5;
+  return {
+    baseHr,
+    base,
+    housing,
+    mie: stip - housing,
+    low: Math.round((d.amt * 0.93) / 10) * 10,
+    high: Math.round((d.amt * 1.07) / 10) * 10,
+    blended: Math.round(d.amt / 36),
+  };
+}
 function sparkPath(d) {
   const s = d.amt + d.n; let y = 15; const pts = [];
   for (let k = 0; k < 7; k++) { y += (seeded(s, k) - 0.5) * 14; y = Math.max(6, Math.min(24, y)); pts.push(y); }
@@ -103,7 +136,20 @@ export default function MarketClient({ bls }) {
   const [spec, setSpec] = useState("");
   const [state, setState] = useState("");
   const [sort, setSort] = useState("high");
+  const [sel, setSel] = useState(null); // listing shown in the detail overlay
   const gridRef = useRef(null);
+
+  // detail overlay: close on Escape, lock page scroll while open
+  useEffect(() => {
+    if (!sel) return;
+    const onKey = (e) => { if (e.key === "Escape") setSel(null); };
+    addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [sel]);
 
   // support /market?spec=ICU deep links
   useEffect(() => {
@@ -212,7 +258,16 @@ export default function MarketClient({ bls }) {
       <main className="results">
         <div className="rgrid" ref={gridRef}>
           {rows.map((d, i) => (
-            <div className="rcard" key={`${d.spec}-${d.city}-${d.state}`} style={{ animationDelay: `${Math.min(i * 40, 480)}ms` }}>
+            <div
+              className="rcard"
+              key={`${d.spec}-${d.city}-${d.state}`}
+              style={{ animationDelay: `${Math.min(i * 40, 480)}ms` }}
+              role="button"
+              tabIndex={0}
+              aria-label={`${d.spec} in ${d.city}, ${d.state}: market overview`}
+              onClick={() => setSel(d)}
+              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setSel(d); } }}
+            >
               <div className="cityph" aria-hidden="true">
                 <img src={`/cities/${citySlug(d.city)}.jpg`} alt="" loading="lazy" onError={(e) => { e.currentTarget.style.display = "none"; }} />
               </div>
@@ -251,6 +306,77 @@ export default function MarketClient({ bls }) {
           <Link className="btn-teal" href="/#getguide">Send me the guide <Arr /></Link>
         </div>
       </div>
+
+      {sel && (() => {
+        const p = pkg(sel);
+        const f = STATE_FACTS[sel.state] || {};
+        const pct = Math.round(((sel.amt - NATL_AVG) / NATL_AVG) * 100);
+        return (
+          <>
+            <div className="mkt-backdrop" onClick={() => setSel(null)} />
+            <div className="mkt" role="dialog" aria-modal="true" aria-label={`${sel.spec} in ${sel.city}`}>
+              <div className="mkt-hero">
+                <img src={`/cities/${citySlug(sel.city)}.jpg`} alt="" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+                <button type="button" className="mkt-x" aria-label="Close" onClick={() => setSel(null)}>×</button>
+              </div>
+              <div className="mkt-body">
+                <div className="mkt-head">
+                  <div>
+                    <div className="spec">{sel.spec}</div>
+                    <div className="loc">{sel.city}, {sel.state}</div>
+                  </div>
+                  <span className={`trend ${sel.trend >= 0 ? "up" : "down"}`}>{sel.trend >= 0 ? "▲" : "▼"} {Math.abs(sel.trend)}% mo</span>
+                </div>
+
+                <div className="mkt-pay">
+                  <div className="big">${sel.amt.toLocaleString()}<small>/wk avg · ≈ ${p.blended}/hr blended</small></div>
+                  <div className="range">Recent reports: ${p.low.toLocaleString()} to ${p.high.toLocaleString()}</div>
+                </div>
+
+                <div className="mkt-split">
+                  <span className="mkt-label">Typical package shape</span>
+                  <div className="row"><span>Taxable base · ${p.baseHr}/hr × 36</span><b>${p.base.toLocaleString()}</b></div>
+                  <div className="row"><span>Housing stipend · tax-free</span><b>${p.housing.toLocaleString()}</b></div>
+                  <div className="row"><span>Meals and incidentals · tax-free</span><b>${p.mie.toLocaleString()}</b></div>
+                </div>
+
+                <div className="mkt-facts">
+                  <div><small>License</small><b>{f.nlc ? "Compact (NLC)" : "Single-state"}</b></div>
+                  <div><small>State income tax</small><b>{f.noTax ? "None" : "Yes"}</b></div>
+                  <div><small>Guaranteed hours</small><b>36/wk typical</b></div>
+                  <div><small>Contract length</small><b>13 weeks typical</b></div>
+                </div>
+
+                <div className="mkt-notes">
+                  <span className="mkt-label">Worth knowing</span>
+                  <ul>
+                    <li>{sel.city} runs {Math.abs(pct)}% {pct >= 0 ? "above" : "below"} the community-wide national average.</li>
+                    <li>{f.nlc
+                      ? `${sel.state} honors the Nurse Licensure Compact, so a multistate license works here with no new application.`
+                      : `${sel.state} is not a compact state. Start licensure by endorsement well before your target start date.`}</li>
+                    <li>{f.noTax
+                      ? `No state income tax in ${sel.state}, so the taxable base stretches further than the same rate elsewhere.`
+                      : `${sel.state} taxes income at the state level. Compare take-home against no-tax states, not just gross.`}</li>
+                    <li>{sel.trend >= 3
+                      ? `Rates climbed ${sel.trend}% this month. Numbers this hot usually cool within a season, so move if it fits.`
+                      : sel.trend >= 1
+                        ? "Rates are drifting up slowly here. No rush premium, but no discount either."
+                        : "Rates are flat to soft this month, which often means extra negotiating room on the package."}</li>
+                  </ul>
+                </div>
+
+                <div className="mkt-foot">
+                  <span className="mkt-src">{sel.n} pay reports · package split is sample data; license and tax facts are real</span>
+                  <div className="mkt-ctas">
+                    <Link className="btn-teal" href="/community/social-community" onClick={() => setSel(null)}>Ask about {sel.city} in the group <Arr /></Link>
+                    <Link className="mkt-alt" href="/#getguide" onClick={() => setSel(null)}>Get monthly benchmarks by email <Arr /></Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        );
+      })()}
 
       <Footer />
     </>
