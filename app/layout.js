@@ -21,6 +21,38 @@ export const metadata = {
   robots: { index: false, follow: false },
 };
 
+const SITE_URL = "https://traveling-nurse.jmguanso1.workers.dev";
+
+// Organization + WebSite structured data (JSON-LD) so search engines understand
+// the brand, its founder, and its social profiles. Update SITE_URL at launch.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#org`,
+      name: "The Travel Nurse Guide",
+      url: SITE_URL,
+      logo: `${SITE_URL}/icon.png`,
+      description:
+        "Honest, vetted information and community for travel nurses. Built by a working RN since 2018.",
+      foundingDate: "2018",
+      founder: { "@type": "Person", name: "Drew Jones", jobTitle: "RN" },
+      sameAs: [
+        "https://www.facebook.com/share/g/1BcxDjK3Q8/",
+        "https://www.linkedin.com/in/drew-jones-rn/",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "The Travel Nurse Guide",
+      publisher: { "@id": `${SITE_URL}/#org` },
+    },
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -33,6 +65,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <ProgressBar />
         {children}
         <Feedback />

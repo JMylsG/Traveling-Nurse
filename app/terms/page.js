@@ -3,7 +3,11 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Fx from "@/components/Fx";
 
-export const metadata = { title: "Terms of Service · The Travel Nurse Guide" };
+export const metadata = {
+  title: "Terms of Service · The Travel Nurse Guide",
+  description:
+    "The terms for using The Travel Nurse Guide, in plain language. Written to be read, not to trip you up.",
+};
 
 const Arr = () => <span className="arr">→</span>;
 

@@ -3,7 +3,11 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Fx from "@/components/Fx";
 
-export const metadata = { title: "Community · The Travel Nurse Guide" };
+export const metadata = {
+  title: "Community · The Travel Nurse Guide",
+  description:
+    "Inside the 37,000-member travel nurse community. Real conversations, house rules, and how to join the group.",
+};
 
 const Arr = () => <span className="arr">→</span>;
 

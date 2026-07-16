@@ -4,7 +4,11 @@ import Footer from "@/components/Footer";
 import Fx from "@/components/Fx";
 import PartnerForm from "@/components/PartnerForm";
 
-export const metadata = { title: "Partner with us · The Travel Nurse Guide" };
+export const metadata = {
+  title: "Partner with us · The Travel Nurse Guide",
+  description:
+    "Get recommended to 37,000 travel nurses. A boutique community built on trust, not ad blasts. See how partnering works.",
+};
 
 const Arr = () => <span className="arr">→</span>;
 
