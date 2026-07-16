@@ -1,4 +1,5 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { verifyTurnstile } from "@/lib/turnstile";
 
 // Email capture -> Kit (ConvertKit). Dormant until KIT_API_KEY is set:
 //   local: .dev.vars (see .dev.vars.example)
@@ -28,6 +29,11 @@ export async function POST(req) {
   const specialty = String(body.specialty || "").trim().slice(0, 40);
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return Response.json({ ok: false, code: "invalid-email" }, { status: 400 });
+  }
+
+  // bot check (Cloudflare Turnstile); skipped automatically when TURNSTILE_SECRET_KEY is unset
+  if (!(await verifyTurnstile(body.turnstileToken, env(), req.headers.get("cf-connecting-ip")))) {
+    return Response.json({ ok: false, code: "turnstile" }, { status: 403 });
   }
 
   const key = env().KIT_API_KEY;

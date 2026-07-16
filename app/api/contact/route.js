@@ -1,4 +1,5 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { verifyTurnstile } from "@/lib/turnstile";
 
 // Partner inquiries + feedback widget -> email via Resend.
 // Dormant until RESEND_API_KEY and CONTACT_TO are set (see .dev.vars.example).
@@ -33,6 +34,11 @@ export async function POST(req) {
     }
   } else if (!message) {
     return Response.json({ ok: false, code: "missing-fields" }, { status: 400 });
+  }
+
+  // bot check (Cloudflare Turnstile); skipped automatically when TURNSTILE_SECRET_KEY is unset
+  if (!(await verifyTurnstile(body.turnstileToken, env(), req.headers.get("cf-connecting-ip")))) {
+    return Response.json({ ok: false, code: "turnstile" }, { status: 403 });
   }
 
   const { RESEND_API_KEY, CONTACT_TO, CONTACT_FROM } = env();

@@ -1,11 +1,14 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import Turnstile from "./Turnstile";
 
 // Floating feedback widget, site-wide. POSTs to /api/contact (kind: feedback);
 // while the backend is dormant it says so instead of faking a thank-you.
 export default function Feedback() {
   const [open, setOpen] = useState(false);
-  const [sent, setSent] = useState(false); // false | "busy" | "done" | "soon" | "error"
+  const [sent, setSent] = useState(false); // false | "busy" | "done" | "soon" | "turnstile" | "error"
+  const [token, setToken] = useState("");
+  const tsRef = useRef(null);
 
   const submit = async (e) => {
     e.preventDefault();
@@ -20,12 +23,18 @@ export default function Feedback() {
           kind: "feedback",
           category: f.querySelector("#fb-cat").value,
           message: f.querySelector("#fb-msg").value,
+          turnstileToken: token,
         }),
       });
       const d = await r.json().catch(() => ({}));
-      setSent(r.ok ? "done" : d.code === "soon" ? "soon" : "error");
+      if (r.ok) return setSent("done");
+      setSent(d.code === "soon" ? "soon" : d.code === "turnstile" ? "turnstile" : "error");
+      tsRef.current?.reset();
+      setToken("");
     } catch {
       setSent("error");
+      tsRef.current?.reset();
+      setToken("");
     }
   };
 
@@ -43,6 +52,8 @@ export default function Feedback() {
             <p className="fb-thanks">The feedback inbox isn&apos;t wired up quite yet. Hold that thought and try again soon.</p>
           ) : sent === "error" ? (
             <p className="fb-thanks">That didn&apos;t send. Give it another try in a minute.</p>
+          ) : sent === "turnstile" ? (
+            <p className="fb-thanks">We couldn&apos;t verify you&apos;re human. Close this and try again.</p>
           ) : (
             <form className="fb-form" onSubmit={submit}>
               <label htmlFor="fb-cat">Category</label>
@@ -55,6 +66,7 @@ export default function Feedback() {
               </select>
               <label htmlFor="fb-msg">Tell us more</label>
               <textarea id="fb-msg" placeholder="What happened? What would make this better?" required />
+              <Turnstile ref={tsRef} theme="light" onToken={setToken} />
               <button type="submit" className="btn-teal fb-send">Send it</button>
             </form>
           )}

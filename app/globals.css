@@ -555,6 +555,11 @@ details.faq p b{color:var(--navy)}
 .legal li b{color:var(--navy)}
 .legal .inline-link{color:var(--rose-deep);font-weight:500}
 
+/* Turnstile bot-check widget (reserves height so layout doesn't jump on load) */
+.cf-turnstile-box{margin:8px 0;min-height:65px}
+.form .cf-turnstile-box{flex-basis:100%}
+.fb-form .cf-turnstile-box{margin:2px 0 4px}
+
 /* ============ FOOTER ============ */
 footer{background:var(--navy-deep);color:#C2C9CC;padding:60px 0 34px}
 .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:34px}

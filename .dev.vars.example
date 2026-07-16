@@ -24,3 +24,9 @@ BLS_API_KEY=""
 # Free api.data.gov key (instant email signup): https://api.data.gov/signup/
 # Without it the GSA feed uses DEMO_KEY (30 req/hr; some cities may skip stipends).
 GSA_API_KEY=""
+
+# Cloudflare Turnstile secret key -> server-side bot check on all 3 forms.
+# The public site key is hardcoded in components/Turnstile.jsx. Without this
+# secret the forms still work (the check is skipped); set it to enforce. Copy it
+# from the Turnstile widget you create in the Cloudflare dashboard.
+TURNSTILE_SECRET_KEY=""
