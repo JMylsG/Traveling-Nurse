@@ -45,8 +45,8 @@ export default function Partners() {
       {/* THE NOISE PROBLEM */}
       <section className="psec alt reveal">
         <div className="container">
-          <span className="eyebrow-s">The noise problem</span>
-          <h2 className="h2">Outreach without context is just <span className="hlr">noise</span>.</h2>
+          <span className="eyebrow-s">Cutting through the noise</span>
+          <h2 className="h2">Skip the noise. Show up <span className="hlr">where nurses already are</span>.</h2>
           <p className="lead">The challenge isn&apos;t how you support nurses. It&apos;s breaking through early enough for a nurse to see the difference before you&apos;re lumped in with every other agency.</p>
           <div className="grid3 stagger">
             <div className="card"><span className="ic">21</span><h3>Days a year on the scroll</h3><p>That&apos;s how much time the average person spends scrolling. The question isn&apos;t reach. It&apos;s whether you ever show up with context when they do.</p></div>

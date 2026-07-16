@@ -74,7 +74,7 @@ export default function Resources() {
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Certifications</span>
-            <h2 className="h2">Certification</h2>
+            <h2 className="h2">Keep your certs current.</h2>
             <p className="lead">Expired certs stall onboarding more than anything else. These are the ones our nurses actually renew with.</p>
           </div>
           <div className="resgrid stagger">
