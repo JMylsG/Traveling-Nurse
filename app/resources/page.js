@@ -90,7 +90,7 @@ export default function Resources() {
               <h3>Same Day CPR</h3>
               <p className="what">In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</p>
               <p className="earned">Named by members who needed a cert overnight and got one.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="#">Visit site <Arr /></a></div>
+              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://samedaycpr.com/" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
             </div>
             <div className="rescard feat">
               <div className="rtop"><span className="ric">MM</span><span className="rtag">Community partner</span></div>
@@ -149,7 +149,7 @@ export default function Resources() {
               <h3>Tallewise</h3>
               <p className="what">Job search help built around travel contracts, not permanent placements.</p>
               <p className="earned">Members used them to land contracts and reported back.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="#">Visit site <Arr /></a></div>
+              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://tallewise.com/" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
             </div>
             <div className="rescard open">
               <div className="rtop"><span className="ric">…</span><span className="rtag teal">Vetting now</span></div>
