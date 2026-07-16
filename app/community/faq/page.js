@@ -45,8 +45,8 @@ export default function Faq() {
               <p>No. The group is free, the guides are free, the pay data is free. The site is supported by a small number of vetted partners, and they don&apos;t get a say in what gets posted.</p>
             </details>
             <details className="faq">
-              <summary>Why do I have to answer join questions?</summary>
-              <p>Because that&apos;s how we keep recruiters and spam out. Every join request gets read by a human. Answer honestly and you&apos;re in.</p>
+              <summary>Why does the group ask me questions before I can join?</summary>
+              <p>To keep recruiters and spam out. Every request to join is read by a real person, not a bot, so answer honestly and you&apos;re in.</p>
             </details>
             <details className="faq">
               <summary>Are recruiters really not allowed?</summary>
