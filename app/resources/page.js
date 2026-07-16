@@ -74,29 +74,30 @@ export default function Resources() {
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Certifications</span>
-            <h2 className="h2">BLS due? Don&apos;t let it hold up a start date.</h2>
+            <h2 className="h2">Certification</h2>
             <p className="lead">Expired certs stall onboarding more than anything else. These are the ones our nurses actually renew with.</p>
           </div>
           <div className="resgrid stagger">
             <div className="rescard feat">
               <div className="rtop"><span className="ric">HS</span><span className="rtag">Community partner</span></div>
               <h3>HeartStart CPR</h3>
-              <p className="what">BLS and CPR certification, online and in person, with cards issued fast.</p>
+              <p className="what">In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</p>
               <p className="earned">Recommended in the group long before it was listed here.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="#">Visit site <Arr /></a></div>
+              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://refer.cprvam.com/MFf7baa86672/signup?mwr=drew-9025" target="_blank" rel="noopener sponsored">Visit site <Arr /></a></div>
             </div>
             <div className="rescard feat">
               <div className="rtop"><span className="ric">SD</span><span className="rtag">Community partner</span></div>
               <h3>Same Day CPR</h3>
-              <p className="what">BLS, ACLS, and PALS renewals when the deadline is tomorrow.</p>
+              <p className="what">In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</p>
               <p className="earned">Named by members who needed a cert overnight and got one.</p>
               <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="#">Visit site <Arr /></a></div>
             </div>
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">+</span><span className="rtag teal">Your pick</span></div>
-              <h3>Your favorite missing?</h3>
-              <p className="what">Every listing starts as a recommendation from a nurse in the group. If yours earned it, say the name.</p>
-              <div className="rfoot"><Link className="visit" href="/community/social-community">Nominate them in the community <Arr /></Link></div>
+            <div className="rescard feat">
+              <div className="rtop"><span className="ric">MM</span><span className="rtag">Community partner</span></div>
+              <h3>Med Max Edu</h3>
+              <p className="what">Virtual TNCC and ENPC classes. Offering initial and renewal training classes.</p>
+              <p className="earned">The remote go-to for travel-specific courses.</p>
+              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://medmaxedu.com/" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
             </div>
           </div>
         </div>

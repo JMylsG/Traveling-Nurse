@@ -63,7 +63,7 @@ export default function Guides() {
           <div className="cols">
             <div className="pts stagger">
               <div className="pt"><span className="ic">01</span><div><h3>Compare weekly pay carefully</h3><p>Ask every recruiter for the same number: <mark className="hlm">gross weekly pay</mark>, with hourly rate, stipends, reimbursements, bonuses, and holiday and on-call pay listed. Net pay is just an estimate from your recruiter.</p></div></div>
-              <div className="pt"><span className="ic">02</span><div><h3>Know the three parts</h3><p><b>Taxable base</b> (often low, $20 to $30/hr), <b>housing stipend</b>, and <b>meals and incidentals</b>. The stipends are where the real money lives.</p></div></div>
+              <div className="pt"><span className="ic">02</span><div><h3>Know the three parts</h3><p><b>Taxable base</b> (often low, $20 to $30/hr), <b>housing stipend</b>, and <b>meals and incidentals</b>.</p></div></div>
               <div className="pt"><span className="ic">03</span><div><h3>The IRS and GSA set the guardrails</h3><p>Many travelers and tax experts treat an RN base under <b>$20/hr</b> as an IRS red flag. On the other end, the <a className="inline-link" href="https://www.gsa.gov/travel?topnav=travel" target="_blank" rel="noopener noreferrer">GSA</a> caps how much an agency can pay you in tax-free stipends.</p></div></div>
               <div className="pt"><span className="ic">04</span><div><h3>Check the market first</h3><p>Look up the community average for your specialty and state before the call, so you know a lowball when you hear one. <Link className="inline-link" href="/market">See real pay rates <Arr /></Link></p></div></div>
             </div>
