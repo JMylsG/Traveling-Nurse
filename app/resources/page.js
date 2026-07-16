@@ -75,7 +75,7 @@ export default function Resources() {
           <div className="head">
             <span className="eyebrow-s">Certifications</span>
             <h2 className="h2">BLS due? Don&apos;t let it hold up a start date.</h2>
-            <p className="lead">Expired certs stall onboarding more than anything else. These two are the ones our nurses actually renew with.</p>
+            <p className="lead">Expired certs stall onboarding more than anything else. These are the ones our nurses actually renew with.</p>
           </div>
           <div className="resgrid stagger">
             <div className="rescard feat">
@@ -116,7 +116,7 @@ export default function Resources() {
               <h3>Steve Does Insurance</h3>
               <p className="what">Health coverage that follows you between contracts, built for people who move every thirteen weeks.</p>
               <p className="earned">Vetted through member policies, not a sales pitch.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="#">Visit site <Arr /></a></div>
+              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://www.facebook.com/stevedoesinsurance" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
             </div>
             <div className="rescard open">
               <div className="rtop"><span className="ric">…</span><span className="rtag teal">Vetting now</span></div>
@@ -171,15 +171,16 @@ export default function Resources() {
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Tax services</span>
-            <h2 className="h2">A preparer who knows what a tax home is.</h2>
-            <p className="lead">A regular preparer will miss the stipend rules. We only list travel-tax specialists, and we&apos;re picky on purpose.</p>
+            <h2 className="h2">An expert who knows what a tax home is.</h2>
+            <p className="lead">Let the tax experts handle your taxes. We only list travel-tax specialists, and we&apos;re picky on purpose.</p>
           </div>
           <div className="resgrid stagger">
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">…</span><span className="rtag teal">Vetting now</span></div>
-              <h3>Travel-tax specialists</h3>
-              <p className="what">Being vetted with the group right now. Names land here when nurses vouch for the returns, not the marketing.</p>
-              <div className="rfoot"><span className="vet">In review</span></div>
+            <div className="rescard feat">
+              <div className="rtop"><span className="ric">TS</span><span className="rtag">Community partner</span></div>
+              <h3>Tax Scrubs</h3>
+              <p className="what">Specializes in travel nurse taxes in the U.S. and Canada, tax homes and stipend rules included.</p>
+              <p className="earned">Vetted with the group before it earned a spot here.</p>
+              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://www.taxscrubs.com/" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
             </div>
             <div className="rescard open">
               <div className="rtop"><span className="ric">✓</span><span className="rtag teal">Free guide</span></div>

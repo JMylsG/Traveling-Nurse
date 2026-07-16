@@ -58,13 +58,13 @@ export default function Guides() {
           <div className="head">
             <span className="eyebrow-s">Guide 01</span>
             <h2 className="h2">Pay: read the whole package, not the hourly rate.</h2>
-            <p className="lead">A travel contract is usually a taxable base rate plus tax-free stipends, unless you don&apos;t qualify for the stipends or choose all-taxable pay. Two offers with the same &quot;hourly&quot; can still differ by hundreds a week.</p>
+            <p className="lead">The hospital agrees to pay a set amount to an agency for each travel nurse they place. That amount is called the bill rate. The agency uses the bill rate to cover its own costs, pay the travel nurse, and make a profit. What the agency pays the nurse is called the pay package.</p>
           </div>
           <div className="cols">
             <div className="pts stagger">
-              <div className="pt"><span className="ic">01</span><div><h3>Compare weekly pay carefully</h3><p>Ask every recruiter for the same number: <mark className="hlm">gross weekly on a 36-hour week</mark>, with stipends itemized. Net pay is just an estimate from your recruiter.</p></div></div>
+              <div className="pt"><span className="ic">01</span><div><h3>Compare weekly pay carefully</h3><p>Ask every recruiter for the same number: <mark className="hlm">gross weekly pay</mark>, with hourly rate, stipends, reimbursements, bonuses, and holiday and on-call pay listed. Net pay is just an estimate from your recruiter.</p></div></div>
               <div className="pt"><span className="ic">02</span><div><h3>Know the three parts</h3><p><b>Taxable base</b> (often low, $20 to $30/hr), <b>housing stipend</b>, and <b>meals and incidentals</b>. The stipends are where the real money lives.</p></div></div>
-              <div className="pt"><span className="ic">03</span><div><h3>The IRS and GSA set the guardrails</h3><p>Many travelers and tax experts treat an RN base under <b>$20/hr</b> as an IRS red flag. On the other end, the GSA caps how much an agency can pay you in tax-free stipends.</p></div></div>
+              <div className="pt"><span className="ic">03</span><div><h3>The IRS and GSA set the guardrails</h3><p>Many travelers and tax experts treat an RN base under <b>$20/hr</b> as an IRS red flag. On the other end, the <a className="inline-link" href="https://www.gsa.gov/travel?topnav=travel" target="_blank" rel="noopener noreferrer">GSA</a> caps how much an agency can pay you in tax-free stipends.</p></div></div>
               <div className="pt"><span className="ic">04</span><div><h3>Check the market first</h3><p>Look up the community average for your specialty and state before the call, so you know a lowball when you hear one. <Link className="inline-link" href="/market">See real pay rates <Arr /></Link></p></div></div>
             </div>
             <div className="aside math">
@@ -180,7 +180,7 @@ export default function Guides() {
           <div className="vetgrid v3 stagger">
             <div className="vetcard"><b>HeartStart CPR</b><span>In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</span><span className="vet">Vetted by nurses</span><a className="visit" href="https://refer.cprvam.com/MFf7baa86672/signup?mwr=drew-9025" target="_blank" rel="noopener sponsored">Get certified <Arr /></a></div>
             <div className="vetcard"><b>Same Day CPR</b><span>In-class and Verification Station training for AHA BLS, ACLS, and PALS, when the deadline is tomorrow.</span><span className="vet">Vetted by nurses</span></div>
-            <div className="vetcard"><b>Med Max Edu</b><span>Virtual TNCC and ENPC courses, done from wherever your contract takes you.</span><span className="vet">Vetted by nurses</span></div>
+            <div className="vetcard"><b>Med Max Edu</b><span>Virtual TNCC and ENPC courses, done from wherever your contract takes you.</span><span className="vet">Vetted by nurses</span><a className="visit" href="https://medmaxedu.com/" target="_blank" rel="noopener noreferrer">Get certified <Arr /></a></div>
           </div>
         </div>
       </section>

@@ -187,7 +187,7 @@ export default async function Home() {
               <p className="lead" style={{ maxWidth: "58ch", marginTop: 12 }}>
                 Since 2018, TNG has been the go-to resource for nurses navigating pay packages, contracts,
                 taxes, housing, and everything else that comes with life on the road. Every resource on this
-                site is vetted. Every partner has earned their spot. Nothing here is pay to play.
+                site is vetted, and every partner earns their spot through a vetting process, not just a check.
               </p>
             </div>
             <div className="aside math">

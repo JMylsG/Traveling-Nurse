@@ -46,8 +46,8 @@ export default function Partners() {
           <p className="lead">The challenge isn&apos;t how you support nurses. It&apos;s breaking through early enough for a nurse to see the difference before you&apos;re lumped in with every other agency.</p>
           <div className="grid3 stagger">
             <div className="card"><span className="ic">21</span><h3>Days a year on the scroll</h3><p>That&apos;s how much time the average person spends scrolling. The question isn&apos;t reach. It&apos;s whether you ever show up with context when they do.</p></div>
-            <div className="card"><span className="ic">0</span><h3>Conversions from 250,000 cold emails</h3><p>One staffing database holds 26 million contacts and blasted a quarter million of them. Volume wasn&apos;t the problem. Context was.</p></div>
-            <div className="card"><span className="ic">$</span><h3>Cold calls cost twice</h3><p>Every minute a recruiter spends cold calling is money the agency is losing, and one more reason a nurse stops answering unknown numbers.</p></div>
+            <div className="card"><span className="ic">#1</span><h3>Facebook is still where it happens</h3><p>It&apos;s the #1 platform where recruiters and travelers actually talk. Real conversations, real nurses, no bots, no job blasts.</p></div>
+            <div className="card"><span className="ic">37K</span><h3>Warmer leads, built on trust</h3><p>Access to 37,000 nurses in one place. Show up consistently and let familiarity do the work. By the time a nurse reaches out, they already know who you are.</p></div>
           </div>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function Partners() {
           <p className="lead">Facebook is still where recruiters actually reach travelers, and this is one of the most focused rooms in it. Members join for value, not entertainment, and they act on recommendations from people they trust. That trust is the product.</p>
           <div className="grid3 stagger">
             <div className="card"><span className="ic">01</span><h3>A trusted voice, not a billboard</h3><p>Recommendations come from a working travel nurse with eight years in the community, not a media company guessing.</p></div>
-            <div className="card"><span className="ic">02</span><h3>One profession, zero waste</h3><p>Every member is a travel nurse or becoming one. No broad healthcare audience to pay for and filter out.</p></div>
+            <div className="card"><span className="ic">02</span><h3>One profession, zero waste</h3><p>Every member is a travel nurse or interested in becoming one. No broad healthcare audience to pay for and filter out.</p></div>
             <div className="card"><span className="ic">03</span><h3>Vetted placement</h3><p>Your brand appears as a vetted resource nurses are pointed to, not as an ad they scroll past. Warmer leads, fewer ghosted messages.</p></div>
           </div>
         </div>

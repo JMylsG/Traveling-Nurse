@@ -21,7 +21,7 @@ export default function Community() {
             Real stories from nurses on the road. Step inside and see what the
             travel nursing journey actually looks like.
           </p>
-          <p className="trustline"><span className="tick">✓</span> 37,000 nurses · All 50 states · Recruiters get denied at the door</p>
+          <p className="trustline"><span className="tick">✓</span> 37,000 nurses · All 50 states · Since 2018</p>
           <a className="btn-teal" href="https://www.facebook.com/share/g/1BcxDjK3Q8/" target="_blank" rel="noopener noreferrer">Join the Facebook group <Arr /></a>
           <p className="head-note">Takes a minute. Answer the join questions so we know you&apos;re a nurse.</p>
         </div>
@@ -121,11 +121,10 @@ export default function Community() {
             <div className="aside flag">
               <span className="at">House rules · not allowed inside</span>
               <ul>
-                <li>Recruiters. Join requests from recruiters get denied, every time.</li>
-                <li>Agency ads and &quot;DM me about rates&quot; posts</li>
-                <li>Spam, MLMs, and anything sold in the comments</li>
+                <li>No job postings</li>
+                <li>No unvetted spam</li>
               </ul>
-              <div className="sum">What&apos;s left: <span>nurses helping nurses</span></div>
+              <div className="sum">Just a safe place for travelers to <span>learn, ask questions, and share experiences</span>.</div>
             </div>
           </div>
         </div>
@@ -134,8 +133,8 @@ export default function Community() {
       <div className="cta-wrap">
         <div className="capture-band reveal">
           <span className="eyebrow-s">Join us</span>
-          <div className="h2">Bring the question you&apos;d never ask a recruiter.</div>
-          <p className="bandp">Free to join, nurses only, since 2018. Somebody in there has already lived your next contract.</p>
+          <div className="h2">Get answers from the nurses who have already been there.</div>
+          <p className="bandp">Free to join. Somebody in there has already lived your next contract.</p>
           <a className="btn-teal" href="https://www.facebook.com/share/g/1BcxDjK3Q8/" target="_blank" rel="noopener noreferrer">Join the Facebook group <Arr /></a>
           <Link className="alt-cta" href="/#getguide">Not on Facebook? Get the free guide by email <Arr /></Link>
         </div>
