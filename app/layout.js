@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import ProgressBar from "@/components/ProgressBar";
 import Feedback from "@/components/Feedback";
 import MobileNav from "@/components/MobileNav";
@@ -70,6 +71,12 @@ export default function RootLayout({ children }) {
         {children}
         <Feedback />
         <MobileNav />
+        {/* Cloudflare Web Analytics (cookieless, no consent banner needed) */}
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          strategy="afterInteractive"
+          data-cf-beacon='{"token": "21b453aae4c947f9a8426a0a9837abb9"}'
+        />
       </body>
     </html>
   );
