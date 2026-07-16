@@ -26,6 +26,10 @@ export default async function Home() {
   const teaser = payTeaser(market);
   return (
     <>
+      {/* The hero is a CSS background, so the browser's preload scanner can't
+          discover it. This starts the LCP image downloading right away. */}
+      <link rel="preload" as="image" href="/revised-tn.jpg" fetchPriority="high" />
+
       <Fx spots=".gcard,.pcard,.q2" magnets=".btn-hero,.btn-teal,.form button,.nav-cta" />
 
       <section className="hero">

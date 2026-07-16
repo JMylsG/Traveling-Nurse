@@ -11,6 +11,14 @@
 		"directory": ".open-next/assets",
 		"binding": "ASSETS"
 	},
+	// Incremental cache store for prerendered/ISR pages (/ and /market).
+	// see https://opennext.js.org/cloudflare/caching
+	"kv_namespaces": [
+		{
+			"binding": "NEXT_INC_CACHE_KV",
+			"id": "649a21352f5c48e4b4ac1c4600bdf33b"
+		}
+	],
 	"services": [
 		{
 			// Self-reference service binding, the service name must match the worker name
