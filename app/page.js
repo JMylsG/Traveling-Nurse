@@ -212,7 +212,7 @@ export default async function Home() {
             The companies we point you to for tax, insurance, certification, and housing.
             Each one vetted by nurses who&apos;ve actually used them.
           </p>
-          <div className="logos"><span>HeartStart CPR</span><span>Same Day CPR</span><span>Steve Does Insurance</span><span>Tallewise</span></div>
+          <div className="logos"><span>HeartStart CPR</span><span>Same Day CPR</span><span>Med Max Edu</span><span>Steve Does Insurance</span><span>Tax Scrubs</span><span>Tallewise</span></div>
           <div className="quotes2 stagger">
             <div className="q2">
               <p>&ldquo;This community helped me negotiate my best contract yet.&rdquo;</p>
