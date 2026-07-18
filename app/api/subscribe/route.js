@@ -1,10 +1,13 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { verifyTurnstile } from "@/lib/turnstile";
 
-// Email capture -> Kit (ConvertKit). Dormant until KIT_API_KEY is set:
+// Email capture -> Resend Audience (the email list). Dormant until both
+// RESEND_API_KEY and RESEND_AUDIENCE_ID are set:
 //   local: .dev.vars (see .dev.vars.example)
-//   prod:  npx wrangler secret put KIT_API_KEY
+//   prod:  npx wrangler secret put RESEND_API_KEY  (+ RESEND_AUDIENCE_ID)
 // While dormant, responds 503 { code: "soon" } and the form shows a soft notice.
+// Resend audiences store email only, so the chosen specialty is forwarded to
+// CONTACT_TO as a best-effort notification (never blocks the signup).
 
 function env() {
   try {
@@ -36,22 +39,45 @@ export async function POST(req) {
     return Response.json({ ok: false, code: "turnstile" }, { status: 403 });
   }
 
-  const key = env().KIT_API_KEY;
-  if (!key) return Response.json({ ok: false, code: "soon" }, { status: 503 });
+  const key = env().RESEND_API_KEY;
+  const audienceId = env().RESEND_AUDIENCE_ID;
+  if (!key || !audienceId) return Response.json({ ok: false, code: "soon" }, { status: 503 });
 
-  const res = await fetch("https://api.kit.com/v4/subscribers", {
+  const res = await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
     method: "POST",
-    headers: { "Content-Type": "application/json", "X-Kit-Api-Key": key },
-    body: JSON.stringify({
-      email_address: email,
-      // requires a "Specialty" custom field in Kit; harmless if unset
-      ...(specialty ? { fields: { specialty } } : {}),
-    }),
+    headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
+    body: JSON.stringify({ email, unsubscribed: false }),
   });
 
-  // 409 = already subscribed, which is a success from the nurse's side
-  if (!res.ok && res.status !== 409) {
+  const data = await res.json().catch(() => ({}));
+  // an already-subscribed email is a success from the nurse's side
+  const already =
+    res.status === 409 ||
+    res.status === 422 ||
+    /already|exist/i.test(`${data?.message || ""} ${data?.name || ""}`);
+  if (!res.ok && !already) {
     return Response.json({ ok: false, code: "upstream" }, { status: 502 });
   }
+
+  // best-effort: forward the specialty to Drew (audiences can't store custom fields)
+  const to = env().CONTACT_TO;
+  if (to && !already) {
+    const from = env().CONTACT_FROM || "The Travel Nurse Guide <onboarding@resend.dev>";
+    try {
+      await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
+        body: JSON.stringify({
+          from,
+          to,
+          subject: "New guide signup",
+          text: `New subscriber: ${email}${specialty ? `\nSpecialty: ${specialty}` : ""}`,
+        }),
+      });
+    } catch {
+      // notification is optional; the signup already succeeded
+    }
+  }
+
   return Response.json({ ok: true });
 }

@@ -41,7 +41,7 @@ export default function Guides() {
           <h1 style={{ maxWidth: "20ch" }}>The four things that move your <span className="hl">paycheck</span>.</h1>
           <p className="sub">
             Pay, contracts, taxes, and housing, explained by people who&apos;ve actually done it.
-            Short, direct, and written for nurses who are tired.
+            Short, direct, and written to give you the upper hand.
           </p>
         </div>
       </header>
@@ -174,7 +174,7 @@ export default function Guides() {
           <div className="head">
             <span className="eyebrow-s">Before you apply</span>
             <h2 className="h2">Keep your certs current, the easy way.</h2>
-            <p className="lead">Expired BLS or ACLS can hold up a start date. These are the companies our nurses actually use, each one vetted by people who&apos;ve used them.</p>
+            <p className="lead">Expired certifications can hold up a start date. These are the companies our nurses actually use, each one vetted by people who&apos;ve used them.</p>
             <p className="lead" style={{ marginTop: 10 }}><b>New:</b> AHA CPR Verification Stations are automated, self-guided testing units. Finish the online portion first, then the station&apos;s voice-assisted manikins run your hands-on skills check and issue your AHA eCard the same day. No instructor, no scheduling.</p>
           </div>
           <div className="vetgrid v3 stagger">

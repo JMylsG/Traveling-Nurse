@@ -89,8 +89,7 @@ export default function Privacy() {
               needs to do its job:
             </p>
             <ul>
-              <li><b>Kit</b> (formerly ConvertKit) stores the email list and delivers our emails.</li>
-              <li><b>Resend</b> delivers the messages you send through our forms to our inbox.</li>
+              <li><b>Resend</b> delivers the messages you send through our forms, stores the email list, and sends the emails you sign up to receive.</li>
               <li><b>Cloudflare</b> hosts the site and provides the cookieless analytics.</li>
             </ul>
             <p>

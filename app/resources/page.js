@@ -59,7 +59,7 @@ export default function Resources() {
           <div className="head">
             <span className="eyebrow-s">How this list works</span>
             <h2 className="h2">Recommendations, not ads.</h2>
-            <p className="lead">Plenty of sites sell this page to whoever pays. Here, partners support the community, but money doesn&apos;t buy a listing. <mark className="hlm">Passing the vet does.</mark></p>
+            <p className="lead">Plenty of sites sell this page to whoever pays. Here, listings start with <mark className="hlm">nurses in the group recommending what they actually use.</mark></p>
           </div>
           <div className="steps stagger">
             <div className="step"><span className="n">STEP 1</span><h3>Nurses vouch first</h3><p>Nothing gets listed because a company asked. It gets considered because members used it and said so in the group.</p></div>

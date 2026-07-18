@@ -2,10 +2,11 @@
 # For production, set each as a secret:  npx wrangler secret put <NAME>
 # The forms stay dormant (soft "opening soon" notice) until these exist.
 
-# Kit (ConvertKit) v4 API key -> powers /api/subscribe (email capture).
-# Kit dashboard: Settings > Developer > API Keys. A "specialty" custom
-# field on subscribers is recommended (the form sends it).
-KIT_API_KEY=""
+# Resend Audience ID -> powers /api/subscribe (the email list). Create an
+# Audience in the Resend dashboard (Audiences tab) and paste its ID here.
+# Uses RESEND_API_KEY below. The chosen specialty is emailed to CONTACT_TO
+# since Resend audiences store email only.
+RESEND_AUDIENCE_ID=""
 
 # Resend API key -> powers /api/contact (partner form + feedback widget).
 RESEND_API_KEY=""
