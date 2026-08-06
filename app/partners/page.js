@@ -37,7 +37,6 @@ export default function Partners() {
           <div className="stat"><b>37,000+</b><small>Members</small></div>
           <div className="stat"><b><span>Daily</span></b><small>Active conversations</small></div>
           <div className="stat"><b>All 50</b><small>States</small></div>
-          <div className="stat"><b><span>10.4%</span></b><small>Click-to-signup conversion</small></div>
           <div className="stat"><b>Since 2018</b><small>Community</small></div>
         </div>
       </div>
@@ -59,9 +58,9 @@ export default function Partners() {
       {/* WHY */}
       <section className="psec reveal">
         <div className="container">
-          <span className="eyebrow-s">Why it converts</span>
-          <h2 className="h2">An audience you can&apos;t buy with ads.</h2>
-          <p className="lead">Facebook is still where recruiters actually reach travelers, and this is one of the most focused rooms in it. Members join for value, not entertainment, and they act on recommendations from people they trust. That trust is the product.</p>
+          <span className="eyebrow-s">What you&apos;re getting</span>
+          <h2 className="h2">We sell access, not leads.</h2>
+          <p className="lead">An audience you can&apos;t buy with ads. Facebook is still where recruiters actually reach travelers, and this is one of the most focused rooms in it. Members join for value, not entertainment, and they act on recommendations from people they trust. That trust is the product.</p>
           <div className="grid3 stagger">
             <div className="card"><span className="ic">01</span><h3>A trusted voice, not a billboard</h3><p>Recommendations come from a working travel nurse with eight years in the community, not a media company guessing.</p></div>
             <div className="card"><span className="ic">02</span><h3>One profession, zero waste</h3><p>Every member is a travel nurse or interested in becoming one. No broad healthcare audience to pay for and filter out.</p></div>
@@ -93,8 +92,8 @@ export default function Partners() {
           <div className="logos"><span>HeartStart CPR</span><span>Same Day CPR</span><span>Med Max Edu</span><span>Steve Does Insurance</span><span>Tax Scrubs</span><span>Tallewise</span></div>
           <div className="quotes2 stagger" style={{ marginTop: 38 }}>
             <div className="q2">
-              <p>&quot;Working with Drew put us in front of exactly the nurses we wanted to reach. The response felt like word of mouth, not advertising.&quot;</p>
-              <div className="who"><span className="av">SI</span><div><b>Partner testimonial</b><small>Insurance services</small></div></div>
+              <p>&quot;The campaign we ran with The Travel Nurse Guide was by far our most successful promotional campaign during our entire launch period.&quot;</p>
+              <div className="who"><span className="av">AC</span><div><b>Andrew Craig</b><small>Tallewise</small></div></div>
             </div>
             <div className="q2">
               <p>&quot;The community actually engages. We saw more qualified traffic from one feature than from a month of paid social.&quot;</p>

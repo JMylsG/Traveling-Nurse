@@ -12,6 +12,7 @@ const CHIPS = [
   { label: "Contracts", id: "contracts" },
   { label: "Taxes", id: "taxes" },
   { label: "Housing", id: "housing" },
+  { label: "Insurance", id: "insurance" },
   { label: "Certifications", id: "certs" },
 ];
 
@@ -65,7 +66,7 @@ export default function Guides() {
               <div className="pt"><span className="ic">01</span><div><h3>Compare weekly pay carefully</h3><p>Ask every recruiter for the same number: <mark className="hlm">gross weekly pay</mark>, with hourly rate, stipends, reimbursements, bonuses, and holiday and on-call pay listed. Net pay is just an estimate from your recruiter.</p></div></div>
               <div className="pt"><span className="ic">02</span><div><h3>Know the three parts</h3><p><b>Taxable base</b> (often low, $20 to $30/hr), <b>housing stipend</b>, and <b>meals and incidentals</b>.</p></div></div>
               <div className="pt"><span className="ic">03</span><div><h3>The IRS and GSA set the guardrails</h3><p>Many travelers and tax experts treat an RN base under <b>$20/hr</b> as an IRS red flag. On the other end, the <a className="inline-link" href="https://www.gsa.gov/travel?topnav=travel" target="_blank" rel="noopener noreferrer">GSA</a> caps how much an agency can pay you in tax-free stipends.</p></div></div>
-              <div className="pt"><span className="ic">04</span><div><h3>Check the market first</h3><p>Look up the community average for your specialty and state before the call, so you know a lowball when you hear one. <Link className="inline-link" href="/market">See real pay rates <Arr /></Link></p></div></div>
+              <div className="pt"><span className="ic">04</span><div><h3>Check the market first</h3><p>Look up the community average for your specialty and state before the call, so you know a lowball when you hear one. <Link className="inline-link" href="/community/social-community">Ask the community <Arr /></Link></p></div></div>
             </div>
             <div className="aside math">
               <span className="at">Quick math · sample offer</span>
@@ -152,7 +153,7 @@ export default function Guides() {
               <div className="pt"><span className="ic">01</span><div><h3>Research housing before you sign</h3><p>Check availability and cost near the facility before you accept the contract. A strong rate in a town with no monthly rentals is not a strong rate.</p></div></div>
               <div className="pt"><span className="ic">02</span><div><h3>Verify before you pay anything</h3><p>Scammers work travelers hard, and urgency is their favorite tool. Never send money before you&apos;ve seen the place, in person or on a live video walkthrough, and confirm the landlord actually owns it.</p></div></div>
               <div className="pt"><span className="ic">03</span><div><h3>Get a lease and keep receipts</h3><p>If the IRS ever audits your stipends, a real rental agreement and <mark className="hlm">proof of every payment</mark> is what satisfies them. Handshake deals do not.</p></div></div>
-              <div className="pt"><span className="ic">04</span><div><h3>Use platforms built for travelers</h3><p>Travel nurse housing platforms like <b>Vidle</b> (sponsored) filter for furnished, monthly, flexible terms, so you&apos;re not fighting twelve-month leases.</p></div></div>
+              <div className="pt"><span className="ic">04</span><div><h3>Use platforms built for travelers</h3><p>Travel nurse housing platforms like <b>Vidle</b> filter for furnished, monthly, flexible terms, so you&apos;re not fighting twelve-month leases.</p></div></div>
             </div>
             <div className="aside flag">
               <span className="at">Scam signals · do not send money</span>
@@ -168,8 +169,37 @@ export default function Guides() {
         </div>
       </section>
 
+      {/* INSURANCE */}
+      <section id="insurance" className="gsec reveal">
+        <div className="container">
+          <div className="head">
+            <span className="eyebrow-s">Guide 05</span>
+            <h2 className="h2">Insurance: don&apos;t just default to the agency plan.</h2>
+            <p className="lead">Most travel nurses take their agency&apos;s plan without ever comparing it to anything else. It&apos;s worth a look before you assume it&apos;s the best deal.</p>
+          </div>
+          <div className="cols">
+            <div className="pts stagger">
+              <div className="pt"><span className="ic">01</span><div><h3>Agency insurance is convenient</h3><p>It usually requires no underwriting, so it&apos;s the easy default. That convenience is real, it just isn&apos;t the whole picture.</p></div></div>
+              <div className="pt"><span className="ic">02</span><div><h3>&ldquo;The agency covers part of the premium&rdquo; is a bit misleading</h3><p>That money comes from your <mark className="hlm">bill rate</mark> in the first place, so you&apos;re paying into it either way.</p></div></div>
+              <div className="pt"><span className="ic">03</span><div><h3>It ends when your contract does</h3><p>Coverage stops with the assignment, and your deductible resets every time you switch agencies.</p></div></div>
+              <div className="pt"><span className="ic">04</span><div><h3>Private insurance follows you</h3><p>It&apos;s not tied to your contract, so there&apos;s no coverage gap between assignments and no deductible reset. Some plans cover all 50 states. The tradeoff is you have to research which option fits your travel pattern.</p></div></div>
+            </div>
+            <div className="aside math">
+              <span className="at">Agency vs. private · quick compare</span>
+              <ul>
+                <li>Agency: convenient, usually no underwriting</li>
+                <li>Agency: ends with the contract, deductible resets on every switch</li>
+                <li>Private: no gap between assignments, no reset</li>
+                <li>Private: some plans cover all 50 states</li>
+              </ul>
+            </div>
+          </div>
+          <Link className="gget" href="/#getguide">The Travel Nurse Playbook has the full agency vs. private chart. Get the free guide <Arr /></Link>
+        </div>
+      </section>
+
       {/* CERTIFICATIONS / PARTNERS */}
-      <section id="certs" className="gsec reveal">
+      <section id="certs" className="gsec alt reveal">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Before you apply</span>
@@ -179,7 +209,7 @@ export default function Guides() {
           </div>
           <div className="vetgrid v3 stagger">
             <div className="vetcard"><b>HeartStart CPR</b><span>In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</span><span className="vet">Vetted by nurses</span><a className="visit" href="https://refer.cprvam.com/MFf7baa86672/signup?mwr=drew-9025" target="_blank" rel="noopener sponsored">Get certified <Arr /></a></div>
-            <div className="vetcard"><b>Same Day CPR</b><span>In-class and Verification Station training for AHA BLS, ACLS, and PALS, when the deadline is tomorrow.</span><span className="vet">Vetted by nurses</span></div>
+            <div className="vetcard"><b>Same Day CPR</b><span>In-class and Verification Station training for AHA BLS, ACLS, and PALS, when the deadline is tomorrow.</span><span className="vet">Vetted by nurses</span><a className="visit" href="https://refer.samedaycpr.com/MFe178975618/signup?mwr=drew-9758" target="_blank" rel="noopener sponsored">Get certified <Arr /></a></div>
             <div className="vetcard"><b>Med Max Edu</b><span>Virtual TNCC and ENPC courses, done from wherever your contract takes you.</span><span className="vet">Vetted by nurses</span><a className="visit" href="https://medmaxedu.com/" target="_blank" rel="noopener noreferrer">Get certified <Arr /></a></div>
           </div>
         </div>

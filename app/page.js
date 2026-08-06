@@ -55,7 +55,7 @@ export default async function Home() {
 
         <div className="hero-body">
           <div className="hero-inner">
-            <span className="eyebrow">Built by Drew Jones, RN · 37,000+ strong</span>
+            <span className="eyebrow">37,000+ nurses strong · Since 2018</span>
             <h1>Know what you&apos;re <span className="hl">worth</span> before you sign.</h1>
             <p className="sub">
               Straight answers on pay, contracts, taxes, and housing, plus vetted resources from people
@@ -63,7 +63,7 @@ export default async function Home() {
             </p>
             <div className="hero-actions">
               <Link className="btn-hero primary" href="/guides">Explore the guides <Arr /></Link>
-              <Link className="btn-hero ghost" href="/market">See real pay rates <Arr /></Link>
+              <Link className="btn-hero ghost" href="/guides#pay">Read the pay guide <Arr /></Link>
             </div>
             <p className="door">
               Are you a brand looking to reach travel nurses? <Link href="/partners">Partner with us <Arr /></Link>
@@ -95,7 +95,7 @@ export default async function Home() {
             <span className="ic">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="3.6" /><path d="M5 20c0-3.4 3.1-6 7-6s7 2.6 7 6" /></svg>
             </span>
-            <div><h3>Built by a travel nurse</h3><p>Run by Drew Jones, RN. Real time on the road, not a media company guessing.</p></div>
+            <div><h3>Built by a travel nurse</h3><p>Run by a working travel nurse with real time on the road, not a media company guessing.</p></div>
           </div>
           <div className="vitem">
             <span className="ic">
@@ -150,7 +150,7 @@ export default async function Home() {
         <div className="container">
           <span className="eyebrow-s">Pay insight</span>
           <h2 className="h2">Know what <span className="hlt">good pay</span> looks like before you apply.</h2>
-          <p className="lead">The federal baselines every travel package is built on: staff RN wages from the Bureau of Labor Statistics, tax-free stipend ceilings from the GSA.</p>
+          <p className="lead">The best contracts go fast. Knowing what good pay looks like means you can say yes before someone else does.</p>
           {teaser.length === 3 ? (
             <>
               <div className="pay stagger">
@@ -164,13 +164,13 @@ export default async function Home() {
                 ))}
               </div>
               <div style={{ marginTop: 30, display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }}>
-                <Link className="btn-teal" href="/market">See all 46 metros <Arr /></Link>
+                <Link className="btn-teal" href="/guides#pay">Read the pay guide <Arr /></Link>
                 <span style={{ fontSize: 13, color: "#9BA3A8" }}>Source: BLS OEWS (occupation 29-1141) and GSA per diem.</span>
               </div>
             </>
           ) : (
             <div style={{ marginTop: 30, display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }}>
-              <Link className="btn-teal" href="/market">Explore the market data <Arr /></Link>
+              <Link className="btn-teal" href="/guides#pay">Read the pay guide <Arr /></Link>
               <span style={{ fontSize: 13, color: "#9BA3A8" }}>Staff wages and stipend ceilings for 46 metros, straight from BLS and GSA.</span>
             </div>
           )}
@@ -219,12 +219,12 @@ export default async function Home() {
           <div className="logos"><span>HeartStart CPR</span><span>Same Day CPR</span><span>Med Max Edu</span><span>Steve Does Insurance</span><span>Tax Scrubs</span><span>Tallewise</span></div>
           <div className="quotes2 stagger">
             <div className="q2">
-              <p>&ldquo;This community helped me negotiate my best contract yet.&rdquo;</p>
-              <div className="who"><span className="av">SR</span><div><b>Sarah</b><small>ICU travel nurse</small></div></div>
+              <p>&ldquo;This online course (Maxed Out Negotiations) from the Travel Nurse Guide ultimately got me an extra $400 a week with this assignment.&rdquo;</p>
+              <div className="who"><span className="av">MH</span><div><b>Michayla H.</b><small>Travel RN</small></div></div>
             </div>
             <div className="q2">
-              <p>&ldquo;Finally a place with honest, unbiased information.&rdquo;</p>
-              <div className="who"><span className="av">MK</span><div><b>Marcus</b><small>ER travel nurse</small></div></div>
+              <p>&ldquo;I would&apos;ve just stuck with one company so I wouldn&apos;t have even known. And I wouldn&apos;t have had the courage to confront my recruiter.&rdquo;</p>
+              <div className="who"><span className="av">LM</span><div><b>Lindsey M.</b><small>Travel RN</small></div></div>
             </div>
           </div>
         </div>

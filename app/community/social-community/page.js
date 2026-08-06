@@ -119,8 +119,8 @@ export default function Community() {
           </div>
           <div className="cols">
             <div className="qstack stagger">
-              <div className="q2"><p>&quot;This community helped me negotiate my best contract yet.&quot;</p><div className="who"><span className="av">SR</span><div><b>Sarah</b><small>ICU travel nurse</small></div></div></div>
-              <div className="q2"><p>&quot;Finally a place with honest, unbiased information.&quot;</p><div className="who"><span className="av">MK</span><div><b>Marcus</b><small>ER travel nurse</small></div></div></div>
+              <div className="q2"><p>&quot;This was the first group that I joined once I officially started my journey and I&apos;ve learned so much just by being a part of this group.&quot;</p><div className="who"><span className="av">MH</span><div><b>Michayla H.</b><small>Travel RN</small></div></div></div>
+              <div className="q2"><p>&quot;My goal always is to not let anyone have bad info and we both know how much of that is out there. As I am winding down my career I am very happy to say that your group will carry the torch.&quot;</p><div className="who"><span className="av">TN</span><div><b>Tricia N.</b><small>Travel RN</small></div></div></div>
             </div>
             <div className="aside flag">
               <span className="at">House rules · not allowed inside</span>

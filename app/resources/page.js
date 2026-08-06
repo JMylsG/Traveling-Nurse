@@ -76,6 +76,7 @@ export default function Resources() {
             <span className="eyebrow-s">Certifications</span>
             <h2 className="h2">Keep your certs current.</h2>
             <p className="lead">Expired certs stall onboarding more than anything else. These are the ones our nurses actually renew with.</p>
+            <p className="lead" style={{ marginTop: 10 }}><b>New:</b> AHA CPR Verification Stations are automated, self-guided testing units. Finish the online portion first, then the station&apos;s voice-assisted manikins run your hands-on skills check and issue your AHA eCard the same day. No instructor, no scheduling.</p>
           </div>
           <div className="resgrid stagger">
             <div className="rescard feat">
@@ -83,7 +84,7 @@ export default function Resources() {
               <h3>HeartStart CPR</h3>
               <p className="what">In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</p>
               <p className="earned">Recommended in the group long before it was listed here.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://refer.cprvam.com/MFf7baa86672/signup?mwr=drew-9025" target="_blank" rel="noopener sponsored">Visit site <Arr /></a></div>
+              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://cprvam.com/" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
             </div>
             <div className="rescard feat">
               <div className="rtop"><span className="ric">SD</span><span className="rtag">Community partner</span></div>
@@ -117,7 +118,7 @@ export default function Resources() {
               <h3>Steve Does Insurance</h3>
               <p className="what">Health coverage that follows you between contracts, built for people who move every thirteen weeks.</p>
               <p className="earned">Vetted through member policies, not a sales pitch.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://www.facebook.com/stevedoesinsurance" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
+              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://calendly.com/stevedoesinsurance/appointment" target="_blank" rel="noopener noreferrer">Book a call <Arr /></a></div>
             </div>
             <div className="rescard open">
               <div className="rtop"><span className="ric">…</span><span className="rtag teal">Vetting now</span></div>
@@ -161,7 +162,7 @@ export default function Resources() {
               <div className="rtop"><span className="ric">$</span><span className="rtag teal">Do this first</span></div>
               <h3>Know the rate before the call</h3>
               <p className="what">Check the community average for your specialty and state, so a lowball sounds like one.</p>
-              <div className="rfoot"><Link className="visit" href="/market">See real pay rates <Arr /></Link></div>
+              <div className="rfoot"><Link className="visit" href="/guides#pay">Read the pay guide <Arr /></Link></div>
             </div>
           </div>
         </div>
