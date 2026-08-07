@@ -235,7 +235,7 @@ export default function Resources() {
         <div className="capture-band reveal">
           <span className="eyebrow-s">Free guide</span>
           <div className="h2">Get the vetted list in your inbox.</div>
-          <p className="bandp">The short list, the pay benchmarks, and all four guides. One email, no spam, unsubscribe anytime.</p>
+          <p className="bandp">The short list, the pay benchmarks, and every guide. One email, no spam, unsubscribe anytime.</p>
           <Link className="btn-teal" href="/#getguide">Send me the guide <Arr /></Link>
         </div>
       </div>

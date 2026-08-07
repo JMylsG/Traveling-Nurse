@@ -26,7 +26,7 @@ export default function Partners() {
             Ads get scrolled past. Recommendations get acted on. This community is run by a working
             travel nurse, and when a brand earns a spot here, nurses listen.
           </p>
-          <p className="trustline"><span className="tick">✓</span> Already trusted by HeartStart CPR, Same Day CPR, Med Max Edu, Steve Does Insurance, Tax Scrubs, and Tallewise</p>
+          <p className="trustline"><span className="tick">✓</span> Already trusted by PRN Healthcare, HeartStart CPR, Same Day CPR, Med Max Edu, Steve Does Insurance, Tax Scrubs, and Tallewise</p>
           <a className="btn-teal" href="#contact">Start the conversation <Arr /></a>
           <p className="head-note">No media kits, no pressure. A short call to see if it&apos;s a fit.</p>
         </div>
@@ -89,15 +89,11 @@ export default function Partners() {
         <div className="container">
           <span className="eyebrow-s">In good company</span>
           <h2 className="h2">Brands already working with us.</h2>
-          <div className="logos"><span>HeartStart CPR</span><span>Same Day CPR</span><span>Med Max Edu</span><span>Steve Does Insurance</span><span>Tax Scrubs</span><span>Tallewise</span></div>
-          <div className="quotes2 stagger" style={{ marginTop: 38 }}>
+          <div className="logos"><span>PRN Healthcare</span><span>HeartStart CPR</span><span>Same Day CPR</span><span>Med Max Edu</span><span>Steve Does Insurance</span><span>Tax Scrubs</span><span>Tallewise</span></div>
+          <div className="stagger" style={{ marginTop: 38, maxWidth: 620, marginLeft: "auto", marginRight: "auto" }}>
             <div className="q2">
               <p>&quot;The campaign we ran with The Travel Nurse Guide was by far our most successful promotional campaign during our entire launch period.&quot;</p>
               <div className="who"><span className="av">AC</span><div><b>Andrew Craig</b><small>Tallewise</small></div></div>
-            </div>
-            <div className="q2">
-              <p>&quot;The community actually engages. We saw more qualified traffic from one feature than from a month of paid social.&quot;</p>
-              <div className="who"><span className="av">CP</span><div><b>Partner testimonial</b><small>Certification provider</small></div></div>
             </div>
           </div>
         </div>

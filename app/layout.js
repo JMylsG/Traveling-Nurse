@@ -8,11 +8,11 @@ export const metadata = {
   metadataBase: new URL("https://traveling-nurse.jmguanso1.workers.dev"),
   title: "The Travel Nurse Guide",
   description:
-    "Straight answers on pay, contracts, taxes, and housing, plus vetted resources from people who've actually done it.",
+    "Straight answers on pay, contracts, taxes, housing, and insurance, plus vetted resources from people who've actually done it.",
   openGraph: {
     title: "The Travel Nurse Guide",
     description:
-      "Straight answers on pay, contracts, taxes, and housing, plus vetted resources from people who've actually done it.",
+      "Straight answers on pay, contracts, taxes, housing, and insurance, plus vetted resources from people who've actually done it.",
     siteName: "The Travel Nurse Guide",
     type: "website",
   },

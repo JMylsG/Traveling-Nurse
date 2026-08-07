@@ -3,27 +3,10 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Fx from "@/components/Fx";
 import SubscribeForm from "@/components/SubscribeForm";
-import { getMarketData, ABBR } from "@/lib/market";
 
 const Arr = () => <span className="arr">→</span>;
 
-// Pick a few real, high-paying metros for the homepage teaser: highest staff
-// RN wage, one per state for geographic variety, and only ones with a GSA
-// stipend ceiling so both numbers on the card are real. Empty if the feed is
-// down, in which case the band drops its numbers instead of faking them.
-function payTeaser(data) {
-  if (!data?.rows?.length) return [];
-  const seen = new Set();
-  return [...data.rows]
-    .filter((r) => r.gsa && r.wageScope === "metro")
-    .sort((a, b) => Number(b.wage) - Number(a.wage))
-    .filter((r) => (seen.has(r.state) ? false : seen.add(r.state)))
-    .slice(0, 3);
-}
-
-export default async function Home() {
-  const market = await getMarketData();
-  const teaser = payTeaser(market);
+export default function Home() {
   return (
     <>
       {/* The hero is a CSS background, so the browser's preload scanner can't
@@ -58,7 +41,7 @@ export default async function Home() {
             <span className="eyebrow">37,000+ nurses strong · Since 2018</span>
             <h1>Know what you&apos;re <span className="hl">worth</span> before you sign.</h1>
             <p className="sub">
-              Straight answers on pay, contracts, taxes, and housing, plus vetted resources from people
+              Straight answers on pay, contracts, taxes, housing, and insurance, plus vetted resources from people
               who&apos;ve actually done it. Everything you need to travel smarter and earn more.
             </p>
             <div className="hero-actions">
@@ -111,8 +94,8 @@ export default async function Home() {
         <div className="container">
           <span className="eyebrow-s">The business side</span>
           <h2 className="h2">Straight answers, minus the fluff.</h2>
-          <p className="lead">The four things that actually move your paycheck, explained by people who&apos;ve done it.</p>
-          <div className="grid4 stagger">
+          <p className="lead">What actually moves your paycheck, explained by people who&apos;ve done it.</p>
+          <div className="grid5 stagger">
             <div className="gcard">
               <span className="ic">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v10M14.6 9.2c-.4-.8-1.4-1.2-2.6-1.2-1.5 0-2.5.8-2.5 1.9s1 1.7 2.5 2 2.6.9 2.6 2-1.1 2-2.6 2c-1.2 0-2.2-.5-2.6-1.3" /></svg>
@@ -141,6 +124,13 @@ export default async function Home() {
               <h3>Housing</h3><p>Furnished, monthly, near your assignment. No scams.</p>
               <Link href="/guides#housing">Read the guide <Arr /></Link>
             </div>
+            <div className="gcard">
+              <span className="ic">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z" /><path d="M9 12l2 2 4-4" /></svg>
+              </span>
+              <h3>Insurance</h3><p>Coverage that doesn&apos;t end when your contract does.</p>
+              <Link href="/guides#insurance">Read the guide <Arr /></Link>
+            </div>
           </div>
         </div>
       </section>
@@ -151,29 +141,9 @@ export default async function Home() {
           <span className="eyebrow-s">Pay insight</span>
           <h2 className="h2">Know what <span className="hlt">good pay</span> looks like before you apply.</h2>
           <p className="lead">The best contracts go fast. Knowing what good pay looks like means you can say yes before someone else does.</p>
-          {teaser.length === 3 ? (
-            <>
-              <div className="pay stagger">
-                {teaser.map((r) => (
-                  <div className="pcard" key={r.city}>
-                    <div className="spec">{r.city}, {ABBR[r.state]}</div>
-                    <div className="loc">Staff RN mean · BLS {market.year}</div>
-                    <div className="amt">${Number(r.wage).toFixed(2)} <small>/hr</small></div>
-                    <div className="pstip">Tax-free stipend ceiling <b>${r.gsa.weekly.toLocaleString()}/wk</b> · GSA FY{market.fy}</div>
-                  </div>
-                ))}
-              </div>
-              <div style={{ marginTop: 30, display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }}>
-                <Link className="btn-teal" href="/guides#pay">Read the pay guide <Arr /></Link>
-                <span style={{ fontSize: 13, color: "#9BA3A8" }}>Source: BLS OEWS (occupation 29-1141) and GSA per diem.</span>
-              </div>
-            </>
-          ) : (
-            <div style={{ marginTop: 30, display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }}>
-              <Link className="btn-teal" href="/guides#pay">Read the pay guide <Arr /></Link>
-              <span style={{ fontSize: 13, color: "#9BA3A8" }}>Staff wages and stipend ceilings for 46 metros, straight from BLS and GSA.</span>
-            </div>
-          )}
+          <div style={{ marginTop: 30, display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }}>
+            <Link className="btn-teal" href="/guides#pay">Read the pay guide <Arr /></Link>
+          </div>
         </div>
       </section>
 
@@ -216,8 +186,8 @@ export default async function Home() {
             The companies we point you to for tax, insurance, certification, and housing.
             Each one vetted by nurses who&apos;ve actually used them.
           </p>
-          <div className="logos"><span>HeartStart CPR</span><span>Same Day CPR</span><span>Med Max Edu</span><span>Steve Does Insurance</span><span>Tax Scrubs</span><span>Tallewise</span></div>
-          <div className="quotes2 stagger">
+          <div className="logos"><span>PRN Healthcare</span><span>HeartStart CPR</span><span>Same Day CPR</span><span>Med Max Edu</span><span>Steve Does Insurance</span><span>Tax Scrubs</span><span>Tallewise</span></div>
+          <div className="quotes3 stagger">
             <div className="q2">
               <p>&ldquo;This online course (Maxed Out Negotiations) from the Travel Nurse Guide ultimately got me an extra $400 a week with this assignment.&rdquo;</p>
               <div className="who"><span className="av">MH</span><div><b>Michayla H.</b><small>Travel RN</small></div></div>
@@ -225,6 +195,10 @@ export default async function Home() {
             <div className="q2">
               <p>&ldquo;I would&apos;ve just stuck with one company so I wouldn&apos;t have even known. And I wouldn&apos;t have had the courage to confront my recruiter.&rdquo;</p>
               <div className="who"><span className="av">LM</span><div><b>Lindsey M.</b><small>Travel RN</small></div></div>
+            </div>
+            <div className="q2">
+              <p>&ldquo;My goal always is to not let anyone have bad info and we both know how much of that is out there. As I am winding down my career I am very happy to say that your group will carry the torch.&rdquo;</p>
+              <div className="who"><span className="av">TN</span><div><b>Tricia N.</b><small>Travel RN</small></div></div>
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ export default function Guides() {
         <Nav active="guides" />
         <div className="container">
           <span className="eyebrow-s">The business side</span>
-          <h1 style={{ maxWidth: "20ch" }}>The four things that move your <span className="hl">paycheck</span>.</h1>
+          <h1 style={{ maxWidth: "20ch" }}>What actually moves your <span className="hl">paycheck</span>.</h1>
           <p className="sub">
             Pay, contracts, taxes, and housing, explained by people who&apos;ve actually done it.
             Short, direct, and written to give you the upper hand.
@@ -218,7 +218,7 @@ export default function Guides() {
       <div className="cta-wrap">
         <div className="capture-band reveal">
           <span className="eyebrow-s">Free guide</span>
-          <div className="h2">Take all four guides with you.</div>
+          <div className="h2">Take the guides with you.</div>
           <p className="bandp">The cheat sheet, the pay benchmarks, and the vetted resources, in your inbox.</p>
           <Link className="btn-teal" href="/#getguide">Send me the guide <Arr /></Link>
         </div>
