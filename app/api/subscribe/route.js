@@ -17,6 +17,30 @@ function env() {
   }
 }
 
+// Branded delivery email sent to each new subscriber with the Playbook link.
+// Inline styles only, so it renders across email clients.
+function guideEmail(url) {
+  return `<!doctype html><html><body style="margin:0;background:#f2f5f6;">
+  <div style="background:#f2f5f6;padding:32px 16px;font-family:Arial,Helvetica,sans-serif;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:12px;overflow:hidden;">
+      <tr><td style="background:#1B2A4A;padding:22px 30px;">
+        <div style="color:#7DE9E8;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:bold;">The Travel Nurse Guide</div>
+      </td></tr>
+      <tr><td style="padding:34px 30px 6px;">
+        <h1 style="margin:0 0 14px;color:#1B2A4A;font-size:24px;line-height:1.25;">Your Playbook is here.</h1>
+        <p style="margin:0 0 10px;color:#3c4a5c;font-size:15px;line-height:1.6;">Thanks for joining 37,000 travel nurses. Here is your free copy of the Travel Nurse Playbook, what the industry does not explain, in the order you actually need it.</p>
+      </td></tr>
+      <tr><td style="padding:18px 30px 30px;">
+        <a href="${url}" style="display:inline-block;background:#65BFBE;color:#12233f;text-decoration:none;font-weight:bold;font-size:15px;padding:14px 30px;border-radius:8px;">Download the Playbook &rarr;</a>
+        <p style="margin:18px 0 0;color:#7b8285;font-size:13px;line-height:1.6;">Or paste this into your browser:<br><a href="${url}" style="color:#D6336C;">${url}</a></p>
+      </td></tr>
+      <tr><td style="background:#f2f5f6;padding:18px 30px;border-top:1px solid #e2e7e9;">
+        <p style="margin:0;color:#7b8285;font-size:12px;line-height:1.5;">The Travel Nurse Guide &middot; Guide Media LLC<br>Honest information, nurses first.</p>
+      </td></tr>
+    </table>
+  </div></body></html>`;
+}
+
 export async function POST(req) {
   let body;
   try {
@@ -59,10 +83,35 @@ export async function POST(req) {
     return Response.json({ ok: false, code: "upstream" }, { status: 502 });
   }
 
+  const from = env().CONTACT_FROM || "The Travel Nurse Guide <onboarding@resend.dev>";
+
+  // Deliver the Playbook to the new subscriber (best-effort; skips re-submits).
+  // The link resolves against the request origin, so it points at workers.dev
+  // now and the real domain automatically once it is attached. Note: the
+  // onboarding@resend.dev fallback can only email the Resend account owner, so
+  // real delivery to subscribers begins once CONTACT_FROM is a verified domain.
+  if (!already) {
+    const guideUrl = new URL("/the-travel-nurse-playbook.pdf", req.url).toString();
+    try {
+      await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
+        body: JSON.stringify({
+          from,
+          to: email,
+          subject: "Your Travel Nurse Playbook is here",
+          html: guideEmail(guideUrl),
+          text: `Thanks for joining The Travel Nurse Guide.\n\nDownload your free Travel Nurse Playbook: ${guideUrl}\n\nWhat the industry does not explain, in the order you actually need it.\n\ntravelnurseguide.com`,
+        }),
+      });
+    } catch {
+      // delivery is best-effort; the signup already succeeded
+    }
+  }
+
   // best-effort: forward the specialty to Drew (audiences can't store custom fields)
   const to = env().CONTACT_TO;
   if (to && !already) {
-    const from = env().CONTACT_FROM || "The Travel Nurse Guide <onboarding@resend.dev>";
     try {
       await fetch("https://api.resend.com/emails", {
         method: "POST",
