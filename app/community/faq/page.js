@@ -54,7 +54,7 @@ export default function Faq() {
             </details>
             <details className="faq">
               <summary>Where do the pay numbers come from?</summary>
-              <p>Straight from the government, and cited right on the page. Staff RN wages come from the Bureau of Labor Statistics, and the tax-free stipend ceilings from the GSA. That&apos;s the real federal baseline every travel package is built on, not agency marketing. What travelers actually land on top of it, nurses compare in the group every day. <Link className="inline-link" href="/market">See the market data <Arr /></Link></p>
+              <p>Straight from the government. Staff RN wages come from the Bureau of Labor Statistics, and the tax-free stipend ceilings from the GSA. That&apos;s the real federal baseline every travel package is built on, not agency marketing. What travelers actually land on top of it, nurses compare in the group every day. <Link className="inline-link" href="/guides#pay">Read the pay guide <Arr /></Link></p>
             </details>
             <details className="faq">
               <summary>I haven&apos;t taken my first contract yet. Is this for me?</summary>

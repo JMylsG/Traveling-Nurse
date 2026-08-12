@@ -13,7 +13,6 @@ export default function Footer() {
           <div className="fcol">
             <span className="ft">Explore</span>
             <Link href="/guides">Guides</Link>
-            <Link href="/market">Market</Link>
             <Link href="/resources">Resources</Link>
             <Link href="/community/social-community">Community</Link>
             <Link href="/community/faq">FAQ</Link>
