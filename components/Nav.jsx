@@ -5,6 +5,7 @@ export default function Nav({ active = "", cta, ctaOnMobile = true }) {
   const { href = "/partners", label = "Partner with us", filled = false } = cta || {};
   const links = [
     { label: "Guides", href: "/guides" },
+    { label: "Stipend Calculator", href: "/calculator" },
     { label: "Resources", href: "/resources" },
   ];
   return (
