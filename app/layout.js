@@ -5,7 +5,7 @@ import Feedback from "@/components/Feedback";
 import MobileNav from "@/components/MobileNav";
 
 export const metadata = {
-  metadataBase: new URL("https://traveling-nurse.jmguanso1.workers.dev"),
+  metadataBase: new URL("https://travelnurseguide.com"),
   title: "The Travel Nurse Guide",
   description:
     "Straight answers on pay, contracts, taxes, housing, and insurance, plus vetted resources from people who've actually done it.",
@@ -17,12 +17,9 @@ export const metadata = {
     type: "website",
   },
   twitter: { card: "summary_large_image" },
-  // Preview lives on workers.dev until Drew's real domain is attached.
-  // Remove this at launch so search engines can index the site.
-  robots: { index: false, follow: false },
 };
 
-const SITE_URL = "https://traveling-nurse.jmguanso1.workers.dev";
+const SITE_URL = "https://travelnurseguide.com";
 
 // Organization + WebSite structured data (JSON-LD) so search engines understand
 // the brand, its founder, and its social profiles. Update SITE_URL at launch.

@@ -1,5 +1,5 @@
 // Update SITE to the real domain at launch (keep in sync with metadataBase in layout.js).
-const SITE = "https://traveling-nurse.jmguanso1.workers.dev";
+const SITE = "https://travelnurseguide.com";
 
 export default function sitemap() {
   const now = new Date();

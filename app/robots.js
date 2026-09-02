@@ -3,7 +3,7 @@
 // in layout.js (index:false) until launch. That combination is intentional: an
 // allowed crawl lets bots actually see the noindex, which is how you reliably
 // stay unindexed. At launch, remove the meta noindex and this stays as-is.
-const SITE = "https://traveling-nurse.jmguanso1.workers.dev";
+const SITE = "https://travelnurseguide.com";
 
 export default function robots() {
   return {
