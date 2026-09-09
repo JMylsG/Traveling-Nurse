@@ -52,9 +52,9 @@ export default function Resources() {
       </div>
 
       {/* INTRO */}
-      <section className="gsec reveal" style={{ paddingBottom: 0 }}>
+      <section className="gsec reveal" style={{ paddingTop: 44, paddingBottom: 44 }}>
         <div className="container">
-          <p className="lead" style={{ maxWidth: "64ch" }}>
+          <p className="lead" style={{ maxWidth: "64ch", marginTop: 0 }}>
             Explore companies, services, and tools that may be useful throughout your travel nursing
             journey. TNG may receive payment or referral compensation from some featured companies.
           </p>
