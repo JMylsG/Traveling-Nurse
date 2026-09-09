@@ -38,7 +38,7 @@ export default function Home() {
 
         <div className="hero-body">
           <div className="hero-inner">
-            <span className="eyebrow">37,000+ nurses strong · Since 2018</span>
+            <span className="eyebrow">37,000+ strong · Since 2018</span>
             <h1>Know what you&apos;re <span className="hl">worth</span> before you sign.</h1>
             <p className="sub">
               Straight answers on pay, contracts, taxes, housing, and insurance, plus vetted resources from people
@@ -49,7 +49,7 @@ export default function Home() {
               <Link className="btn-hero ghost" href="/guides#pay">Read the pay guide <Arr /></Link>
             </div>
             <p className="door">
-              Are you a brand looking to reach travel nurses? <Link href="/partners">Partner with us <Arr /></Link>
+              Are you a brand looking to reach healthcare travelers? <Link href="/partners">Partner with us <Arr /></Link>
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function Home() {
             <span className="ic">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="3.6" /><path d="M5 20c0-3.4 3.1-6 7-6s7 2.6 7 6" /></svg>
             </span>
-            <div><h3>Built by a travel nurse</h3><p>Run by a working travel nurse with real time on the road, not a media company guessing.</p></div>
+            <div><h3>Built from experience</h3><p>Practical guidance shaped by firsthand travel nursing experience and years of community feedback.</p></div>
           </div>
           <div className="vitem">
             <span className="ic">
@@ -153,23 +153,24 @@ export default function Home() {
           <div className="cols" style={{ marginTop: 0 }}>
             <div>
               <span className="eyebrow-s">About The Travel Nurse Guide</span>
-              <h2 className="h2">Honest information, <span className="hlr">nurses first</span>.</h2>
+              <h2 className="h2">Honest information, <span className="hlr">travelers first</span>.</h2>
               <p className="lead" style={{ maxWidth: "58ch" }}>
-                The Travel Nurse Guide is a 37,000 member community built on one premise: travel nurses
-                deserve honest, unbiased information and a place to find it without wading through recruiter noise.
+                The Travel Nurse Guide is a community of more than 37,000 healthcare travelers, built on one
+                premise: you deserve honest, unbiased information and a place to find it without wading
+                through recruiter noise.
               </p>
               <p className="lead" style={{ maxWidth: "58ch", marginTop: 12 }}>
-                Since 2018, TNG has been the go-to resource for nurses navigating pay packages, contracts,
-                taxes, housing, and everything else that comes with life on the road. Every resource on this
-                site is vetted, and every partner earns their spot through a vetting process, not just a check.
+                Since 2018, TNG has been a go-to resource for healthcare travelers navigating pay packages,
+                contracts, taxes, housing, and everything else that comes with life on the road. Every
+                resource on this site is reviewed before it is featured.
               </p>
             </div>
             <div className="aside math">
-              <span className="at">A note from the founder</span>
+              <span className="at">Built from firsthand travel nursing experience</span>
               <p style={{ fontSize: "14.5px", lineHeight: 1.65, color: "var(--navy)" }}>
-                TNG was started by Drew Jones, RN, after his first year of travel nursing taught him the
-                hard way how broken the information landscape was. He built the community he wished had
-                existed. Eight years later it is still run the same way it started, with nurses first.
+                The Travel Nurse Guide began in 2018, started by Drew Jones, a registered nurse and former
+                travel nurse who wanted healthcare travelers to have the honest information he wished he had.
+                It has since grown into a community of more than 37,000 members.
               </p>
               <div className="sum">Drew Jones, RN <span>· Founder</span></div>
             </div>
@@ -183,10 +184,10 @@ export default function Home() {
           <span className="eyebrow-s">Trusted, both ways</span>
           <h2 className="h2">Partners <span className="hlr">worth</span> your time.</h2>
           <p className="lead">
-            The companies we point you to for tax, insurance, certification, and housing.
-            Each one vetted by nurses who&apos;ve actually used them.
+            Companies and services we trust to support travel nurses on and off assignment.
+            Each one is carefully vetted before being featured.
           </p>
-          <div className="logos"><span>PRN Healthcare</span><span>HeartStart CPR</span><span>Same Day CPR</span><span>Med Max Edu</span><span>Steve Does Insurance</span><span>Tax Scrubs</span><span>Tallewise</span></div>
+          <div className="logos"><span>PRN Healthcare</span><span>HeartStart CPR</span><span>Same Day CPR</span><span>Med Max Edu</span><span>Steve Does Insurance</span><span>Tax Scrubs</span></div>
           <div className="quotes3 stagger">
             <div className="q2">
               <p>&ldquo;This online course (Maxed Out Negotiations) from the Travel Nurse Guide ultimately got me an extra $400 a week with this assignment.&rdquo;</p>
@@ -214,7 +215,7 @@ export default function Home() {
             <div className="capture" id="getguide" style={{ maxWidth: 540, margin: "26px auto 0", textAlign: "left" }}>
               <div className="label"><span className="tag">Free</span> Get the insider guide to your first travel contract.</div>
               <SubscribeForm />
-              <div className="micro"><b>Free guide,</b> instant access. Unsubscribe anytime.</div>
+              <div className="micro">Enter your email to receive the free guide and occasional emails from The Travel Nurse Guide about resources, updates, and offers. Unsubscribe at any time.</div>
             </div>
           </div>
         </div>

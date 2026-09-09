@@ -6,7 +6,7 @@ import Fx from "@/components/Fx";
 export const metadata = {
   title: "Community · The Travel Nurse Guide",
   description:
-    "Inside the 37,000-member travel nurse community. Real conversations, house rules, and how to join the group.",
+    "Inside the 37,000-member travel healthcare community. Real conversations, house rules, and how to join the group.",
 };
 
 const Arr = () => <span className="arr">→</span>;
@@ -14,97 +14,34 @@ const Arr = () => <span className="arr">→</span>;
 export default function Community() {
   return (
     <>
-      <Fx spots=".post,.q2,.aside,.snap" magnets=".btn-teal,.nav-cta" />
+      <Fx spots=".q2,.aside" magnets=".btn-teal,.nav-cta" />
 
       <header className="page-head ph-community">
         <Nav active="community" />
         <div className="container">
           <span className="eyebrow-s">The group</span>
-          <h1 style={{ maxWidth: "20ch" }}>Where travel nurses <span className="hl">talk together</span>.</h1>
+          <h1 style={{ maxWidth: "20ch" }}>Where <span className="hl">healthcare travelers</span> connect.</h1>
           <p className="sub tight">
-            Real stories from nurses on the road. Step inside and see what the
-            travel nursing journey actually looks like.
+            Real conversations, shared experiences, and practical support from healthcare
+            professionals who understand life on assignment.
           </p>
-          <p className="trustline"><span className="tick">✓</span> 37,000 nurses · All 50 states · Since 2018</p>
+          <p className="trustline"><span className="tick">✓</span> 37,000 members · All 50 states · Since 2018</p>
           <a className="btn-teal" href="https://www.facebook.com/share/g/1BcxDjK3Q8/" target="_blank" rel="noopener noreferrer">Join the Facebook group <Arr /></a>
-          <p className="head-note">Takes a minute. Answer the join questions so we know you&apos;re a nurse.</p>
+          <p className="head-note">Takes a minute. Answer every required admission question so we can properly review your request.</p>
         </div>
       </header>
 
-      {/* THE FEED */}
+      {/* INSIDE THE GROUP: reserved for genuine member screenshots (Drew to supply).
+          Fabricated threads and staged postcard images removed per Sep 2026 content review. */}
       <section className="gsec reveal">
         <div className="container">
-          <div className="head" style={{ margin: "0 auto", textAlign: "center", maxWidth: "52ch" }}>
+          <div className="head" style={{ margin: "0 auto", textAlign: "center", maxWidth: "56ch" }}>
             <span className="eyebrow-s" style={{ justifyContent: "center" }}>Inside the group</span>
-            <h2 className="h2">This is what it sounds like in there.</h2>
-            <p className="lead" style={{ margin: "14px auto 0" }}>Four threads, recreated from the group. Names changed, <mark className="hlm">numbers real</mark>.</p>
-          </div>
-          <div className="feedwrap stagger">
-            <div className="post">
-              <div className="phead"><span className="av">ER</span><div><b>ER traveler, Georgia</b><small>Pay thread</small></div></div>
-              <p className="pbody">Recruiter says $1,850 is &quot;top of market&quot; for ER in Georgia. Is that true or am I getting worked?</p>
-              <div className="preplies">
-                <div className="preply"><b>ICU, on assignment:</b> I&apos;m at $1,940 in Savannah right now and I didn&apos;t have to fight for it.</div>
-                <div className="preply"><b>Former recruiter, now RN:</b> ICU Atlanta was going for $2,080 last month. Push back.</div>
-              </div>
-              <div className="pfoot">47 replies <span className="dot" /> answered within the hour</div>
-            </div>
-            <div className="post">
-              <div className="phead"><span className="av">MS</span><div><b>First-time traveler, Ohio</b><small>Contract gut check</small></div></div>
-              <p className="pbody">Contract says guaranteed hours are &quot;subject to facility needs.&quot; That&apos;s not actually guaranteed, right?</p>
-              <div className="preplies">
-                <div className="preply"><b>8-year traveler:</b> That clause ate two of my shifts in January. Make them cap cancellations per contract, in writing.</div>
-              </div>
-              <div className="pfoot">23 replies <span className="dot" /> signed with the fix</div>
-            </div>
-            <div className="post">
-              <div className="phead"><span className="av">CL</span><div><b>Cath Lab traveler, Tennessee</b><small>Housing warning</small></div></div>
-              <p className="pbody">Heads up: the &quot;travel nurse special&quot; listing near the hospital wants a Zelle deposit before a tour. It&apos;s a scam. Reported it, don&apos;t send money.</p>
-              <div className="pfoot">312 reactions <span className="dot" /> pinned by mods</div>
-            </div>
-            <div className="post">
-              <div className="phead"><span className="av">TX</span><div><b>New grad traveler, Texas</b><small>Week six</small></div></div>
-              <p className="pbody">Week 6 of my first contract and homesick as hell. Tell me it gets better.</p>
-              <div className="preplies">
-                <div className="preply"><b>3 states in:</b> It does. Week 8 you stop counting days and start planning weekends.</div>
-                <div className="preply"><b>Night shift, Denver:</b> Homesick at week 6, extended at week 11. Give it time.</div>
-              </div>
-              <div className="pfoot">89 replies <span className="dot" /> still going</div>
-            </div>
-            <div className="post">
-              <div className="phead"><span className="av">RN</span><div><b>First-year traveler, Florida</b><small>Tax question</small></div></div>
-              <p className="pbody">Do I really need a &quot;tax home&quot; or is that one of those optional things nobody actually does?</p>
-              <div className="preplies">
-                <div className="preply"><b>5 contracts in:</b> Not optional if you want your stipends tax-free. Read up before your first contract, not at filing time.</div>
-              </div>
-              <div className="pfoot">31 replies <span className="dot" /> audit avoided</div>
-            </div>
-            <div className="post">
-              <div className="phead"><span className="av">W</span><div><b>ICU traveler, Arizona</b><small>The win</small></div></div>
-              <p className="pbody">Signed today. ICU nights in Phoenix at $2,300 a week. Thank you all for the rate check last Tuesday, I would have taken the first offer.</p>
-              <div className="preplies">
-                <div className="preply"><b>The whole thread:</b> LFG.</div>
-              </div>
-              <div className="pfoot">204 reactions <span className="dot" /> celebration thread</div>
-            </div>
-          </div>
-          <p className="feednote">Threads recreated from real conversations, shown for illustration. Details changed to protect members.</p>
-        </div>
-      </section>
-
-      {/* POSTCARDS FROM ASSIGNMENT */}
-      <section className="gsec alt reveal">
-        <div className="container">
-          <div className="head">
-            <span className="eyebrow-s">From the road</span>
-            <h2 className="h2">Postcards from assignment.</h2>
-            <p className="lead">Thirteen weeks somewhere new, then somewhere newer. The parts of this job nobody puts in the contract.</p>
-          </div>
-          <div className="snaps stagger">
-            <figure className="snap snap-1"><div className="ph" /><figcaption><b>Night shift sunrise</b><span>Denver, CO</span></figcaption></figure>
-            <figure className="snap snap-2"><div className="ph" /><figcaption><b>Moving day, again</b><span>Savannah, GA</span></figcaption></figure>
-            <figure className="snap snap-3"><div className="ph" /><figcaption><b>Between contracts</b><span>Phoenix, AZ</span></figcaption></figure>
-            <figure className="snap snap-4"><div className="ph" /><figcaption><b>Day off, finally</b><span>San Diego, CA</span></figcaption></figure>
+            <h2 className="h2">Real conversations, shared with permission.</h2>
+            <p className="lead" style={{ margin: "14px auto 0" }}>
+              We are gathering genuine posts and comments from members to feature here. They will appear
+              with identifying details removed unless a member has given permission to include them.
+            </p>
           </div>
         </div>
       </section>
@@ -114,8 +51,8 @@ export default function Community() {
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Why it stays good</span>
-            <h2 className="h2">The group is only useful because it&apos;s protected.</h2>
-            <p className="lead">Every join request gets read by a human. That&apos;s why people post their real numbers here and nowhere else.</p>
+            <h2 className="h2">A community built for useful conversations.</h2>
+            <p className="lead">Membership requests are reviewed before approval. Required admission questions and clear group rules help reduce spam and keep conversations relevant for healthcare travelers.</p>
           </div>
           <div className="cols">
             <div className="qstack stagger">
@@ -123,12 +60,13 @@ export default function Community() {
               <div className="q2"><p>&quot;My goal always is to not let anyone have bad info and we both know how much of that is out there. As I am winding down my career I am very happy to say that your group will carry the torch.&quot;</p><div className="who"><span className="av">TN</span><div><b>Tricia N.</b><small>Travel RN</small></div></div></div>
             </div>
             <div className="aside flag">
-              <span className="at">House rules · not allowed inside</span>
+              <span className="at">House rules</span>
+              <p className="ruleslead">What we do not allow:</p>
               <ul>
                 <li>No job postings</li>
-                <li>No unvetted spam</li>
+                <li>No spam or unauthorized promotions</li>
               </ul>
-              <div className="sum">Just a safe place for travelers to <span>learn, ask questions, and share experiences</span>.</div>
+              <div className="sum">A moderated place where healthcare travelers can <span>learn, ask questions, and share experiences</span>.</div>
             </div>
           </div>
         </div>
@@ -137,8 +75,8 @@ export default function Community() {
       <div className="cta-wrap">
         <div className="capture-band reveal">
           <span className="eyebrow-s">Join us</span>
-          <div className="h2">Get answers from the nurses who have already been there.</div>
-          <p className="bandp">Free to join. Somebody in there has already lived your next contract.</p>
+          <div className="h2">Connect with healthcare travelers who understand life on assignment.</div>
+          <p className="bandp">The community is free to join. Ask questions, share experiences, and learn from healthcare professionals who have traveled before.</p>
           <a className="btn-teal" href="https://www.facebook.com/share/g/1BcxDjK3Q8/" target="_blank" rel="noopener noreferrer">Join the Facebook group <Arr /></a>
           <Link className="alt-cta" href="/#getguide">Not on Facebook? Get the free guide by email <Arr /></Link>
         </div>

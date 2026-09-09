@@ -160,7 +160,7 @@ export default function CalculatorClient() {
             ))}
           </select>
           <p className="calc-help">
-            Enter the number of days each week you expect to remain away from your tax home and duplicate expenses.
+            Enter the number of days per week you expect to qualify for tax free stipends.
           </p>
         </div>
 
@@ -247,6 +247,33 @@ export default function CalculatorClient() {
           </div>
         )}
       </div>
+
+      <div className="calc-disclaimer">
+        <span className="calc-di-ic" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z" /><path d="M12 9v4" /><path d="M12 16v.01" /></svg>
+        </span>
+        <p>
+          This calculator shows GSA based maximums, not the stipend an agency will offer. Tax free
+          eligibility depends on your individual circumstances and employer reimbursement plan.
+        </p>
+      </div>
+
+      <aside className="calc-ad">
+        <span className="calc-ad-eyebrow">Featured tax resource</span>
+        <h3>Not sure if you qualify for tax free stipends?</h3>
+        <p>
+          Tax Scrubs is a Travel Nurse Guide partner that offers personalized tax home consultations for
+          travel nurses. A tax professional will review your work, housing, and tax home situation to help
+          determine whether you qualify for tax free stipends.
+        </p>
+        <p>
+          If you do not currently qualify, they can explain the legitimate steps you may be able to take to
+          establish or maintain a qualifying tax home.
+        </p>
+        <a className="btn-teal" href="https://www.taxscrubs.com/services" target="_blank" rel="noopener noreferrer">
+          Learn About Tax Home Consultations
+        </a>
+      </aside>
     </div>
   );
 }

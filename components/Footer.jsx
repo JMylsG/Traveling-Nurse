@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="fgrid">
           <div className="fabout">
             <Brand />
-            <p>Honest answers and vetted resources for travel nurses. Built by one of us.</p>
+            <p>Practical tools, resources, and community support for healthcare travelers.</p>
           </div>
           <div className="fcol">
             <span className="ft">Explore</span>

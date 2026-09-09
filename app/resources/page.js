@@ -8,7 +8,6 @@ import Fx from "@/components/Fx";
 const Arr = () => <span className="arr">→</span>;
 
 const CHIPS = [
-  { label: "How it works", id: "how" },
   { label: "Certifications", id: "certs" },
   { label: "Insurance", id: "insurance" },
   { label: "Job search", id: "jobs" },
@@ -38,11 +37,10 @@ export default function Resources() {
       <header className="page-head ph-resources">
         <Nav active="resources" />
         <div className="container">
-          <span className="eyebrow-s">Vetted, then featured</span>
-          <h1 style={{ maxWidth: "20ch" }}>Skip the search. Start with <span className="hl">the short list</span>.</h1>
+          <span className="eyebrow-s">For healthcare travelers</span>
+          <h1 style={{ maxWidth: "20ch" }}>Resources <span className="hl">Worth Exploring</span></h1>
           <p className="sub" style={{ maxWidth: "54ch" }}>
-            Tax help, insurance, certifications, housing, and job search, pulled from
-            what nurses in the group actually use and vouch for.
+            Find companies, services, and tools for the many decisions that come with travel nursing.
           </p>
         </div>
       </header>
@@ -53,24 +51,18 @@ export default function Resources() {
         </div>
       </div>
 
-      {/* HOW IT WORKS */}
-      <section id="how" className="gsec reveal">
+      {/* INTRO */}
+      <section className="gsec reveal" style={{ paddingBottom: 0 }}>
         <div className="container">
-          <div className="head">
-            <span className="eyebrow-s">How this list works</span>
-            <h2 className="h2">Recommendations, not ads.</h2>
-            <p className="lead">Plenty of sites sell this page to whoever pays. Here, listings start with <mark className="hlm">nurses in the group recommending what they actually use.</mark></p>
-          </div>
-          <div className="steps stagger">
-            <div className="step"><span className="n">STEP 1</span><h3>Nurses vouch first</h3><p>Nothing gets listed because a company asked. It gets considered because members used it and said so in the group.</p></div>
-            <div className="step"><span className="n">STEP 2</span><h3>Then we kick the tires</h3><p>Pricing, service, and what happens when something goes wrong. If we wouldn&apos;t send a friend, it doesn&apos;t go up.</p></div>
-            <div className="step"><span className="n">STEP 3</span><h3>Slip, and it&apos;s gone</h3><p>A listing that stops earning recommendations comes down. That&apos;s the whole deal, and everyone listed knows it.</p></div>
-          </div>
+          <p className="lead" style={{ maxWidth: "64ch" }}>
+            Explore companies, services, and tools that may be useful throughout your travel nursing
+            journey. TNG may receive payment or referral compensation from some featured companies.
+          </p>
         </div>
       </section>
 
       {/* CERTIFICATIONS */}
-      <section id="certs" className="gsec alt reveal">
+      <section id="certs" className="gsec alt reveal res-cat">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Certifications</span>
@@ -105,7 +97,7 @@ export default function Resources() {
       </section>
 
       {/* INSURANCE */}
-      <section id="insurance" className="gsec reveal">
+      <section id="insurance" className="gsec reveal res-cat">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Insurance</span>
@@ -137,7 +129,7 @@ export default function Resources() {
       </section>
 
       {/* JOB SEARCH */}
-      <section id="jobs" className="gsec alt reveal">
+      <section id="jobs" className="gsec alt reveal res-cat">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Job search and recruiters</span>
@@ -146,7 +138,7 @@ export default function Resources() {
           </div>
           <div className="resgrid stagger">
             <div className="rescard feat">
-              <div className="rtop"><span className="ric">TW</span><span className="rtag">Community partner</span></div>
+              <div className="rtop"><span className="ric">TW</span><span className="rtag">Vetted Resource</span></div>
               <h3>Tallewise</h3>
               <p className="what">Job search help built around travel contracts, not permanent placements.</p>
               <p className="earned">Members used them to land contracts and reported back.</p>
@@ -169,7 +161,7 @@ export default function Resources() {
       </section>
 
       {/* TAXES */}
-      <section id="taxes" className="gsec reveal">
+      <section id="taxes" className="gsec reveal res-cat">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Tax services</span>
@@ -201,7 +193,7 @@ export default function Resources() {
       </section>
 
       {/* HOUSING */}
-      <section id="housing" className="gsec alt reveal">
+      <section id="housing" className="gsec alt reveal res-cat">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Housing</span>

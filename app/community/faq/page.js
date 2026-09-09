@@ -6,7 +6,7 @@ import Fx from "@/components/Fx";
 export const metadata = {
   title: "FAQ · The Travel Nurse Guide",
   description:
-    "Answers about the travel nurse community and about partnering with it. Straight answers, both sides of the table.",
+    "Answers about The Travel Nurse Guide: who the community is for, what it costs, how to join the Facebook group, and how resources are selected.",
 };
 
 const Arr = () => <span className="arr">→</span>;
@@ -22,76 +22,39 @@ export default function Faq() {
           <span className="eyebrow-s">Questions</span>
           <h1 style={{ maxWidth: "22ch" }}>Ask it here <span className="hl">before you ask a recruiter</span>.</h1>
           <p className="sub">
-            Straight answers about the community, and about partnering with it.
-            Both sides at the same table, that&apos;s the whole idea.
+            Straight answers about the community, the calculator, and how resources
+            get on the site.
           </p>
         </div>
       </header>
 
-      {/* FOR NURSES */}
+      {/* ABOUT THE COMMUNITY */}
       <section className="gsec reveal">
         <div className="container">
           <div className="head">
-            <span className="eyebrow-s">For nurses</span>
-            <h2 className="h2">About the community.</h2>
+            <span className="eyebrow-s">The basics</span>
+            <h2 className="h2">About The Travel Nurse Guide.</h2>
           </div>
           <div className="faqwrap stagger">
             <details className="faq">
-              <summary>Who runs this?</summary>
-              <p>Drew, a working travel nurse. He started the group in 2018 and still takes contracts, which is why the advice in here sounds like the floor and not a brochure.</p>
+              <summary>What is The Travel Nurse Guide?</summary>
+              <p>The Travel Nurse Guide is an independent website and online community created to help healthcare travelers find useful information, tools, resources, and community support. TNG began in 2018 and has grown to more than 37,000 Facebook group members.</p>
             </details>
             <details className="faq">
-              <summary>Does any of this cost money?</summary>
-              <p>No. The group is free, the guides are free, the pay data is free. The site is supported by a small number of vetted partners, and they don&apos;t get a say in what gets posted.</p>
+              <summary>Who is the TNG community for?</summary>
+              <p>Despite the name, The Travel Nurse Guide is for all healthcare workers who are currently traveling or interested in travel healthcare. Nurses, allied health professionals, and other healthcare travelers are welcome because much of the information applies across specialties and professions.</p>
             </details>
             <details className="faq">
-              <summary>Why does the group ask me questions before I can join?</summary>
-              <p>To keep recruiters and spam out. Every request to join is read by a real person, not a bot, so answer honestly and you&apos;re in.</p>
+              <summary>Does it cost anything to use the website or join the Facebook group?</summary>
+              <p>No. The website, GSA Stipend Calculator, current resources, and Facebook group are free to use. TNG may offer optional paid products or services in the future, but any cost will be clearly disclosed before purchase.</p>
             </details>
             <details className="faq">
-              <summary>Are recruiters really not allowed?</summary>
-              <p>Really. Recruiter join requests get denied, every time. Plenty of recruiters are good at their jobs, but nurses need one room where nobody is selling. This is that room.</p>
+              <summary>How do I join the Travel Nurse Guide Facebook group?</summary>
+              <p>Use the Visit the Community link on the website to open the Facebook group. Submit a membership request, answer every required admission question, and agree to follow the group rules. The admission questions are required, and requests with incomplete or unanswered questions may not be approved.</p>
             </details>
             <details className="faq">
-              <summary>Where do the pay numbers come from?</summary>
-              <p>Straight from the government. Staff RN wages come from the Bureau of Labor Statistics, and the tax-free stipend ceilings from the GSA. That&apos;s the real federal baseline every travel package is built on, not agency marketing. What travelers actually land on top of it, nurses compare in the group every day. <Link className="inline-link" href="/guides#pay">Read the pay guide <Arr /></Link></p>
-            </details>
-            <details className="faq">
-              <summary>I haven&apos;t taken my first contract yet. Is this for me?</summary>
-              <p>Especially for you. First-timers get the most out of the group, and nobody gets talked down to for asking a basic question. Start with the guides, then bring your questions in. <Link className="inline-link" href="/guides">Read the guides <Arr /></Link></p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      {/* FOR PARTNERS */}
-      <section className="gsec alt reveal">
-        <div className="container">
-          <div className="head">
-            <span className="eyebrow-s">For partners</span>
-            <h2 className="h2">About building this with us.</h2>
-            <p className="lead">Partners aren&apos;t advertisers here. The ones on this site are part of what makes the community useful, and these are the questions they asked first.</p>
-          </div>
-          <div className="faqwrap stagger">
-            <details className="faq">
-              <summary>Can I pay to be listed as a resource?</summary>
-              <p>No, and that&apos;s the point. Money doesn&apos;t buy a listing, passing the vet does. Partners support the community financially, but every listed name got there because nurses vouched for it.</p>
-            </details>
-            <details className="faq">
-              <summary>So how does a partnership actually work?</summary>
-              <p>A short intro call, a fit check, and if we&apos;d genuinely recommend you to a nurse, we shape the placement together. If we wouldn&apos;t, we&apos;ll tell you straight and save everyone time. <Link className="inline-link" href="/partners">See how it works <Arr /></Link></p>
-            </details>
-            <details className="faq">
-              <summary>Why a Facebook group instead of ad platforms?</summary>
-              <p>Because this is where travel nurses already talk. 37,000 of them, every state, zero recruiters, moderated by a nurse they trust. A recommendation inside that room outperforms an impression outside it.</p>
-            </details>
-            <details className="faq">
-              <summary>What does &quot;building together&quot; mean in practice?</summary>
-              <p>It means we treat partners the way we ask them to treat nurses: as partners, not placements. Long-term spots over one-off campaigns, honest reporting over vanity numbers, and a community that gets more useful because you&apos;re in it.</p>
-            </details>
-            <details className="faq">
-              <summary>Who&apos;s already in?</summary>
-              <p>HeartStart CPR, Same Day CPR, Med Max Edu, Steve Does Insurance, Tax Scrubs, and Tallewise. Each one was used and vouched for by nurses in the group before anything was signed.</p>
+              <summary>How are companies and resources selected for the website?</summary>
+              <p>Resources may be selected because they appear relevant or useful to healthcare travelers, because community members have recommended them, or as part of a paid advertising or partnership agreement. Some featured companies may pay TNG or provide referral compensation. A listing does not guarantee a particular result, and travelers should evaluate each product or service based on their own needs.</p>
             </details>
           </div>
         </div>
@@ -101,7 +64,7 @@ export default function Faq() {
         <div className="capture-band reveal">
           <span className="eyebrow-s">Still curious</span>
           <div className="h2">Didn&apos;t find your question?</div>
-          <p className="bandp">Nurses, ask it in the group, someone&apos;s answered it before. Partners, bring it to the intro call.</p>
+          <p className="bandp">Ask it in the group. Someone has almost certainly answered it before.</p>
           <Link className="btn-teal" href="/community/social-community">Visit the community <Arr /></Link>
           <Link className="alt-cta" href="/partners#contact">Partner question? Start the conversation <Arr /></Link>
         </div>

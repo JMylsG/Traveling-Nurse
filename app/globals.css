@@ -360,6 +360,12 @@ h1 .hl{color:var(--rose-deep);background:linear-gradient(105deg, var(--rose-deep
 .gsec .head{max-width:56ch}
 .gsec .h2{font-size:clamp(26px,3.2vw,36px);line-height:1.12}
 .gsec .lead{font-size:17px;margin-top:12px;max-width:none}
+/* Resource categories: the category name (eyebrow) reads as the section heading,
+   with the descriptive line beneath it demoted to a supporting subhead. */
+.res-cat .head .eyebrow-s{font-size:21px;font-weight:700;letter-spacing:.05em;color:var(--rose-deep)}
+.res-cat .head .eyebrow-s::before{width:32px}
+.res-cat .head .h2{font-size:clamp(18px,2vw,21px);margin-top:9px;color:var(--navy);font-weight:600}
+@media(max-width:680px){.res-cat .head .eyebrow-s{font-size:18px}}
 .cols{display:grid;grid-template-columns:1.5fr 1fr;gap:34px;margin-top:36px;align-items:start}
 .pts{display:flex;flex-direction:column;gap:20px}
 .pt{display:flex;gap:14px;align-items:flex-start}
@@ -379,6 +385,7 @@ h1 .hl{color:var(--rose-deep);background:linear-gradient(105deg, var(--rose-deep
 .aside li{font-size:14px;line-height:1.5;color:var(--navy);padding-left:18px;position:relative}
 .aside.flag li::before{content:"×";position:absolute;left:0;color:var(--rose-deep);font-weight:600}
 .aside.math li::before{content:"✓";position:absolute;left:0;color:#2E8B8A;font-weight:600}
+.aside .ruleslead{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:11px}
 .aside .sum{margin-top:16px;padding-top:14px;border-top:1px solid var(--card-line);font-family:'Space Grotesk';font-size:15px;font-weight:600}
 .aside .sum span{color:#2E8B8A}
 .gget{display:inline-block;margin-top:30px;font-family:'Space Grotesk';font-weight:500;font-size:14.5px;color:var(--rose-deep);transition:color .15s}
@@ -425,6 +432,7 @@ mark.hlm{background-color:transparent;color:inherit;font-weight:600;border-radiu
 .card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(27,42,74,.09)}
 .navy .card{color:var(--navy)}
 .card .ic{width:44px;height:44px;border-radius:12px;background:rgba(101,191,190,.13);display:grid;place-items:center;color:var(--teal-deep);margin-bottom:16px;font-family:'Space Grotesk';font-weight:600;font-size:15px}
+.card .clabel{display:inline-block;font-family:'Space Grotesk';font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:14px}
 .card h3{font-family:'Space Grotesk';font-weight:600;font-size:17.5px;margin-bottom:8px}
 .card p{font-size:14.5px;color:var(--muted);line-height:1.55}
 @media(max-width:860px){.grid3{grid-template-columns:1fr}}
@@ -667,7 +675,23 @@ a:hover .arr,button:hover .arr{transform:translateX(4px)}
 
 /* ===== GSA STIPEND MAXIMUM CALCULATOR ===== */
 .calc-wrap{display:grid;grid-template-columns:minmax(300px,360px) 1fr;gap:26px;align-items:start}
-@media(max-width:860px){.calc-wrap{grid-template-columns:1fr;gap:20px}}
+/* Desktop places the ad in the blank area under the form; DOM order keeps the ad
+   after the disclaimer so it stacks last on mobile. */
+.calc-wrap .calc-form{grid-column:1;grid-row:1}
+.calc-wrap .calc-results-col{grid-column:2;grid-row:1 / span 2;align-self:start}
+.calc-wrap .calc-ad{grid-column:1;grid-row:2;align-self:start}
+.calc-wrap .calc-disclaimer{grid-column:1 / -1;grid-row:3;margin-top:0}
+@media(max-width:860px){
+  .calc-wrap{grid-template-columns:1fr;gap:20px}
+  .calc-wrap .calc-form,.calc-wrap .calc-results-col,.calc-wrap .calc-ad,.calc-wrap .calc-disclaimer{grid-column:auto;grid-row:auto}
+}
+
+/* Tax Scrubs featured-resource ad */
+.calc-ad{background:#fff;border:1px solid var(--card-line);border-left:3px solid var(--teal);border-radius:14px;padding:22px}
+.calc-ad-eyebrow{display:inline-block;font-family:'Space Grotesk';font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:12px}
+.calc-ad h3{font-family:'Space Grotesk';font-weight:700;font-size:18.5px;line-height:1.28;color:var(--navy);margin:0 0 12px}
+.calc-ad p{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 12px}
+.calc-ad .btn-teal{margin-top:6px}
 
 /* form card */
 .calc-form{background:#fff;border:1px solid var(--card-line);border-radius:16px;padding:26px}

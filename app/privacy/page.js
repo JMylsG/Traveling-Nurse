@@ -6,7 +6,7 @@ import Fx from "@/components/Fx";
 export const metadata = {
   title: "Privacy · The Travel Nurse Guide",
   description:
-    "How The Travel Nurse Guide handles your data, in plain language. We collect almost nothing and never sell it.",
+    "How The Travel Nurse Guide handles your data, in plain language. We collect almost nothing and don't sell your data.",
 };
 
 const Arr = () => <span className="arr">→</span>;
@@ -25,7 +25,7 @@ export default function Privacy() {
             No dark patterns, no data selling, no fine print written to confuse you.
             Here&apos;s exactly what we collect, why, and what you can do about it.
           </p>
-          <span className="lstamp">Last updated: July 14, 2026</span>
+          <span className="lstamp">Last updated: September 8, 2026</span>
         </div>
       </header>
 
@@ -34,26 +34,26 @@ export default function Privacy() {
           <div className="legal">
             <p className="lead">
               The short version: we collect almost nothing. If you hand us your email, we use it to send you
-              what you asked for. We don&apos;t sell it, we don&apos;t rent it, and we don&apos;t hand it to advertisers.
-              The rest of this page is the honest detail behind that promise.
+              what you asked for and occasional updates. At this time we don&apos;t sell it, rent it, or hand it
+              to advertisers. The rest of this page is the honest detail.
             </p>
 
             <h3>Who runs this site</h3>
             <p>
-              The Travel Nurse Guide is operated by Guide Media LLC. The site is built and maintained by
-              Drew Jones, RN, a working travel nurse. When this page says &quot;we,&quot; that&apos;s who it means.
+              The Travel Nurse Guide is operated by Guide Media LLC. When this page says &quot;we,&quot; it
+              refers to Guide Media LLC and the people who help operate the website.
             </p>
 
             <h3>What we collect</h3>
             <p>We only collect information you choose to give us, plus the basics any website needs to run:</p>
             <ul>
               <li>
-                <b>Your email address,</b> if you sign up for the free guide or the email list. That&apos;s the
-                only thing the signup form asks for.
+                <b>Your email address,</b> when you request a guide or complete an email signup form, along
+                with any other information you voluntarily provide, such as your healthcare specialty.
               </li>
               <li>
-                <b>What you send us,</b> if you use a contact or partner form: your name, your email, and your
-                message. Nothing you don&apos;t type in yourself.
+                <b>What you send us,</b> if you use a contact or partner form. This may include your name,
+                company, work email, the products or services you offer, and your message.
               </li>
               <li>
                 <b>Feedback,</b> if you use the feedback button: your note, and your email only if you choose
@@ -79,8 +79,34 @@ export default function Privacy() {
               <li>Keep the site online, fast, and free of spam and bots.</li>
             </ul>
             <p>
-              That&apos;s the whole list. We don&apos;t use your information to build advertising profiles, and we
-              never sell or rent it to anyone.
+              That&apos;s the whole list. We don&apos;t use your information to build advertising profiles.
+            </p>
+
+            <h3>Email addresses and communications</h3>
+            <p>
+              When you request a guide or complete an email signup form, we may collect your email address
+              and any other information you voluntarily provide, such as your healthcare specialty.
+            </p>
+            <p>
+              We may use this information to deliver requested materials, respond to your requests, and send
+              occasional emails about Travel Nurse Guide resources, community updates, products, services,
+              partners, and special offers.
+            </p>
+            <p>
+              You may unsubscribe from promotional emails at any time by using the unsubscribe link included
+              in the email. After unsubscribing, you may still receive necessary messages directly related to
+              a request or transaction you initiated.
+            </p>
+            <p>
+              We may use third party email and technology providers to collect information, deliver requested
+              materials, and manage communications on our behalf.
+            </p>
+
+            <h3>Do we sell your information?</h3>
+            <p>
+              At this time, we do not sell or rent personal information. If our practices change, we will
+              update this policy and provide any notice or choices required by applicable law before the new
+              practice begins.
             </p>
 
             <h3>Who else touches your data</h3>

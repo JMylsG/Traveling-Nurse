@@ -25,7 +25,7 @@ export default function Terms() {
             The rules for using this site, written to be read, not to trip you up.
             Short version up top, the honest detail below.
           </p>
-          <span className="lstamp">Last updated: July 15, 2026</span>
+          <span className="lstamp">Last updated: September 8, 2026</span>
         </div>
       </header>
 
@@ -33,7 +33,7 @@ export default function Terms() {
         <div className="container">
           <div className="legal">
             <p className="lead">
-              The short version: this site gives travel nurses honest information and vetted recommendations.
+              The short version: this site gives healthcare travelers honest information and useful resources.
               It&apos;s here to help, not to give you professional advice or make you any promises. Use it in
               good faith and we&apos;re glad you&apos;re here.
             </p>
@@ -44,16 +44,36 @@ export default function Terms() {
               these terms. If you don&apos;t agree with them, that&apos;s okay, but please don&apos;t use the site.
             </p>
 
-            <h3>What this site is, and isn&apos;t</h3>
+            <h3>What this site is</h3>
             <p>
-              This is an information and community resource built by a working travel nurse. The guides, pay
-              data, and articles are here to help you make your own decisions.
+              This is an independent information and community resource created to help healthcare travelers
+              make more informed decisions.
             </p>
+
+            <h3>Informational and educational purposes only</h3>
             <p>
-              <b>They are not professional advice.</b> Nothing here is legal, tax, financial, or medical advice,
-              and reading it doesn&apos;t create any kind of professional relationship. Contracts, tax homes, and
-              pay packages have real stakes, so for decisions that matter, check with a qualified professional
-              who knows your situation.
+              The website, calculators, guides, articles, examples, community discussions, and other
+              resources are provided for general informational and educational purposes only. They do not
+              constitute tax, accounting, financial, investment, legal, contract, employment, medical,
+              nursing, clinical, or other professional advice.
+            </p>
+
+            <h3>No professional relationship</h3>
+            <p>
+              Using the website or participating in the community does not create an attorney client,
+              accountant client, financial advisor client, clinician patient, nurse patient, fiduciary,
+              employment, agency, or other professional relationship with Guide Media LLC, Drew Jones, or any
+              contributor, partner, employee, contractor, or representative.
+            </p>
+
+            <h3>Your responsibility</h3>
+            <p>
+              You are responsible for evaluating your own circumstances, verifying information, and consulting
+              appropriately qualified tax, accounting, financial, legal, employment, medical, nursing, or
+              other professionals before making decisions. Nothing on the website or in the community should
+              be used to diagnose or treat a condition, direct patient care, replace an employer&apos;s policy,
+              or override applicable laws, regulations, licensing requirements, professional standards, or
+              facility procedures.
             </p>
 
             <h3>Using the site fairly</h3>
@@ -73,12 +93,13 @@ export default function Terms() {
               is not okay. If you want to use something, just reach out.
             </p>
 
-            <h3>Recommendations and partner links</h3>
+            <h3>Third party companies and paid relationships</h3>
             <p>
-              We only feature resources we&apos;d actually recommend to a nurse, and money doesn&apos;t buy a listing.
-              But a recommendation is not a guarantee. When you follow a link to a partner or another site, you&apos;re
-              dealing with them under their terms, not ours, and we&apos;re not responsible for their services,
-              pricing, or promises. Some links may earn us a referral fee, and it never changes who we vouch for.
+              Some companies, services, links, content, or placements may be advertisements, sponsored
+              content, paid partnerships, or referral relationships. Guide Media LLC may receive payment or
+              referral compensation. A paid relationship does not make Guide Media LLC responsible for a third
+              party&apos;s products, services, pricing, claims, availability, privacy practices, or performance.
+              You should evaluate each company, product, and service based on your own needs.
             </p>
 
             <h3>The email list and free guide</h3>
@@ -88,18 +109,33 @@ export default function Terms() {
               {" "}<Link className="inline-link" href="/privacy">privacy policy <Arr /></Link>.
             </p>
 
-            <h3>No guarantees</h3>
+            <h3>Accuracy and changes</h3>
             <p>
-              We work hard to keep the information here accurate and current, and we use real, cited sources.
-              Still, we provide the site &quot;as is.&quot; We can&apos;t promise it will always be complete,
-              error-free, or available, and pay data especially can shift with the market. Use your own judgment.
+              We make reasonable efforts to provide useful information, but we do not guarantee that any
+              content is complete, current, accurate, or error free. Laws, tax rules, GSA rates, agency
+              policies, employment practices, healthcare requirements, products, and services may change. You
+              are responsible for verifying information that may affect your finances, employment, taxes,
+              licensing, contracts, or patient care.
             </p>
 
-            <h3>Where our responsibility ends</h3>
+            <h3>Assumption of risk and limitation of liability</h3>
             <p>
-              To the extent the law allows, Guide Media LLC isn&apos;t liable for losses that come from using the
-              site or acting on the information in it. You&apos;re responsible for your own decisions, including the
-              contracts you sign and the taxes you file.
+              Your use of the website, calculators, resources, linked services, and community information is
+              voluntary and at your own discretion and risk. To the fullest extent permitted by applicable
+              law, Guide Media LLC and its owners, employees, contractors, contributors, partners, and
+              representatives will not be responsible for losses, damages, claims, penalties, tax
+              consequences, employment consequences, contract disputes, clinical outcomes, or other results
+              arising from reliance on website content, community discussions, calculations, third party
+              services, or decisions made using them.
+            </p>
+
+            <h3>Calculator specific clarification</h3>
+            <p>
+              The GSA Stipend Calculator displays GSA based maximum amounts using the information entered by
+              the user. It does not determine whether a person qualifies for tax free stipends, calculate an
+              agency&apos;s actual pay package, or guarantee that any amount can or will be paid tax free.
+              Eligibility and reimbursement treatment depend on the user&apos;s individual facts, tax home,
+              assignment, expenses, employer practices, and applicable law.
             </p>
 
             <h3>Changes to these terms</h3>
