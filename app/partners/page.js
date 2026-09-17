@@ -21,12 +21,7 @@ export default function Partners() {
         <Nav cta={{ href: "#contact", label: "Start the conversation", filled: true }} ctaOnMobile={false} />
         <div className="container">
           <span className="eyebrow-s">For brands</span>
-          <h1 style={{ maxWidth: "26ch" }}>Connect with a community of more than <span className="hl">37,000 healthcare professionals</span> who travel or are interested in travel healthcare.</h1>
-          <p className="sub tight">
-            Put your company in front of a focused audience through advertising, sponsored content,
-            resource placements, and custom partnerships built around your goals.
-          </p>
-          <p className="trustline"><span className="tick">✓</span> Companies that have partnered with TNG include PRN Healthcare, HeartStart CPR, Same Day CPR, Med Max Edu, Steve Does Insurance, Tax Scrubs, and Tallewise</p>
+          <h1 style={{ maxWidth: "17ch" }}>Show up <span className="hl">where healthcare travelers already are</span>.</h1>
           <a className="btn-teal" href="#contact">Start the conversation <Arr /></a>
           <p className="head-note">No media kits, no pressure. A short call to see if it&apos;s a fit.</p>
         </div>
@@ -45,8 +40,13 @@ export default function Partners() {
       <section className="psec alt reveal">
         <div className="container">
           <span className="eyebrow-s">Cutting through the noise</span>
-          <h2 className="h2">Show up <span className="hlr">where healthcare travelers already are</span>.</h2>
-          <p className="lead">Breaking through is the hard part. A consistent presence inside a trusted community lets travelers get familiar with your company before they ever need what you offer.</p>
+          <h2 className="h2 partner-intro-heading">Connect with a community of more than <span className="hlr">37,000 healthcare professionals</span> who travel or are interested in travel healthcare.</h2>
+          <p className="lead">
+            Put your company in front of a focused audience through advertising, sponsored content,
+            resource placements, and custom partnerships built around your goals.
+          </p>
+          <p className="trustline partner-proof"><span className="tick">✓</span> Companies that have partnered with TNG include PRN Healthcare, HeartStart CPR, Same Day CPR, Med Max Edu, Steve Does Insurance, Tax Scrubs, and Tallewise</p>
+          <p className="lead partner-context">Breaking through is the hard part. A consistent presence inside a trusted community lets travelers get familiar with your company before they ever need what you offer.</p>
           <div className="grid3 stagger">
             <div className="card"><span className="clabel">Since 2018</span><h3>An established travel healthcare community</h3><p>TNG has served the travel healthcare community since 2018 and has grown to more than 37,000 members.</p></div>
             <div className="card"><span className="clabel">Active conversations</span><h3>Where healthcare travelers connect</h3><p>Members use the TNG Facebook group to ask questions, compare experiences, share information, and discuss life on assignment.</p></div>

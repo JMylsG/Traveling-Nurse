@@ -191,6 +191,9 @@ h1 .hl{color:var(--rose-deep);background:linear-gradient(105deg, var(--rose-deep
 .trustline .tick{color:var(--teal-l);font-weight:600}
 .head-note{font-size:13.5px;color:#9BA3A8;margin-top:14px}
 .page-head .sub.tight{margin-bottom:18px}
+.partner-intro-heading{max-width:25ch}
+.partner-proof{max-width:980px;margin:18px 0 0;color:var(--muted)}
+.partner-context{margin-top:28px}
 
 /* ============ SHARED SECTION SYSTEM ============ */
 .section{padding:56px 0}
