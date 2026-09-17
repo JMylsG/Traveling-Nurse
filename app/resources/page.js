@@ -1,9 +1,9 @@
 "use client";
 import { useEffect } from "react";
-import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Fx from "@/components/Fx";
+import ResourceSuggestionForm from "@/components/ResourceSuggestionForm";
 
 const Arr = () => <span className="arr">→</span>;
 
@@ -15,15 +15,48 @@ const CHIPS = [
   { label: "Housing", id: "housing" },
 ];
 
+function Badge({ children, quiet = false }) {
+  return <span className={`resource-badge${quiet ? " quiet" : ""}`}>{children}</span>;
+}
+
+function PartnerCard({ initials, name, children, href, cta }) {
+  return (
+    <article className="resource-card partner">
+      <div className="resource-card-head">
+        <span className="resource-initials" aria-hidden="true">{initials}</span>
+        <div><Badge>TNG Partner</Badge><h3>{name}</h3></div>
+      </div>
+      <div className="resource-copy">{children}</div>
+      <a className="btn-teal resource-cta" href={href} target="_blank" rel="noopener sponsored">
+        {cta} <Arr />
+      </a>
+    </article>
+  );
+}
+
+function FeaturedCard({ initials, name, href, children }) {
+  return (
+    <article className="resource-card featured">
+      <div className="resource-card-head">
+        <span className="resource-initials quiet" aria-hidden="true">{initials}</span>
+        <div>
+          <Badge quiet>Featured Resource</Badge>
+          <h3><a href={href} target="_blank" rel="noopener noreferrer">{name} <Arr /></a></h3>
+        </div>
+      </div>
+      <div className="resource-copy">{children}</div>
+    </article>
+  );
+}
+
 export default function Resources() {
-  // scrollspy: highlight the chip for the section under the sticky bar
   useEffect(() => {
     const chips = [...document.querySelectorAll(".chip")];
-    const secs = CHIPS.map((c) => document.getElementById(c.id));
+    const sections = CHIPS.map((item) => document.getElementById(item.id));
     const spy = () => {
-      let idx = -1;
-      secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top <= 150) idx = i; });
-      chips.forEach((c, i) => c.classList.toggle("active", i === idx));
+      let index = -1;
+      sections.forEach((section, i) => { if (section && section.getBoundingClientRect().top <= 150) index = i; });
+      chips.forEach((chip, i) => chip.classList.toggle("active", i === index));
     };
     addEventListener("scroll", spy, { passive: true });
     spy();
@@ -32,7 +65,7 @@ export default function Resources() {
 
   return (
     <>
-      <Fx spots=".rescard,.step" magnets=".btn-teal,.nav-cta" />
+      <Fx spots=".resource-card" magnets=".btn-teal,.nav-cta" />
 
       <header className="page-head ph-resources">
         <Nav active="resources" />
@@ -47,190 +80,127 @@ export default function Resources() {
 
       <div className="subnav">
         <div className="row">
-          {CHIPS.map((c) => <a key={c.id} className="chip" href={`#${c.id}`}>{c.label}</a>)}
+          {CHIPS.map((chip) => <a key={chip.id} className="chip" href={`#${chip.id}`}>{chip.label}</a>)}
         </div>
       </div>
 
-      {/* INTRO */}
-      <section className="gsec reveal" style={{ paddingTop: 44, paddingBottom: 44 }}>
+      <section className="gsec reveal resource-intro">
         <div className="container">
-          <p className="lead" style={{ maxWidth: "64ch", marginTop: 0 }}>
-            Explore companies, services, and tools that may be useful throughout your travel nursing
-            journey. TNG may receive payment or referral compensation from some featured companies.
+          <p className="lead">
+            Companies labeled TNG Partner have a paid or referral relationship with Travel Nurse Guide.
+            Other resources are included for informational purposes.
           </p>
         </div>
       </section>
 
-      {/* CERTIFICATIONS */}
       <section id="certs" className="gsec alt reveal res-cat">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Certifications</span>
             <h2 className="h2">Keep your certs current.</h2>
-            <p className="lead">Expired certs stall onboarding more than anything else. These are the ones our nurses actually renew with.</p>
-            <p className="lead" style={{ marginTop: 10 }}><b>New:</b> AHA CPR Verification Stations are automated, self-guided testing units. Finish the online portion first, then the station&apos;s voice-assisted manikins run your hands-on skills check and issue your AHA eCard the same day. No instructor, no scheduling.</p>
+            <p className="lead">Expired certifications can delay onboarding. Explore in-person, verification-station, and virtual training options for healthcare professionals.</p>
           </div>
-          <div className="resgrid stagger">
-            <div className="rescard feat">
-              <div className="rtop"><span className="ric">HS</span><span className="rtag">Community partner</span></div>
-              <h3>HeartStart CPR</h3>
-              <p className="what">In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</p>
-              <p className="earned">Recommended in the group long before it was listed here.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://cprvam.com/" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
-            </div>
-            <div className="rescard feat">
-              <div className="rtop"><span className="ric">SD</span><span className="rtag">Community partner</span></div>
-              <h3>Same Day CPR</h3>
-              <p className="what">In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</p>
-              <p className="earned">Named by members who needed a cert overnight and got one.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://samedaycpr.com/" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
-            </div>
-            <div className="rescard feat">
-              <div className="rtop"><span className="ric">MM</span><span className="rtag">Community partner</span></div>
-              <h3>Med Max Edu</h3>
-              <p className="what">Virtual TNCC and ENPC classes. Offering initial and renewal training classes.</p>
-              <p className="earned">The remote go-to for travel-specific courses.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://medmaxedu.com/" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
-            </div>
+          <div className="resource-grid three stagger">
+            <PartnerCard initials="HS" name="HeartStart CPR" href="https://cprvam.com/locations/" cta="See Locations">
+              <p>In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</p>
+              <p>Certification locations across the western U.S., with new locations continuing to be added.</p>
+            </PartnerCard>
+            <PartnerCard initials="SD" name="Same Day CPR" href="https://samedaycpr.com/locations/" cta="See Locations">
+              <p>In-class and CPR Verification Station training for AHA BLS, ACLS, and PALS.</p>
+              <p>Certification locations across the eastern and central U.S., with new locations continuing to be added.</p>
+            </PartnerCard>
+            <PartnerCard initials="MM" name="Med Max Edu" href="https://medmaxedu.com/" cta="View Classes">
+              <p>Virtual TNCC and ENPC classes for initial certification and renewal.</p>
+            </PartnerCard>
           </div>
         </div>
       </section>
 
-      {/* INSURANCE */}
       <section id="insurance" className="gsec reveal res-cat">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Insurance</span>
             <h2 className="h2">Coverage that doesn&apos;t end with your contract.</h2>
-            <p className="lead">Between assignments is exactly when you can&apos;t afford a gap. Start here before you count on agency benefits.</p>
+            <p className="lead">Explore health coverage options that can travel with you between assignments.</p>
           </div>
-          <div className="resgrid stagger">
-            <div className="rescard feat">
-              <div className="rtop"><span className="ric">SI</span><span className="rtag">Community partner</span></div>
-              <h3>Steve Does Insurance</h3>
-              <p className="what">Health coverage that follows you between contracts, built for people who move every thirteen weeks.</p>
-              <p className="earned">Vetted through member policies, not a sales pitch.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://calendly.com/stevedoesinsurance/appointment" target="_blank" rel="noopener noreferrer">Book a call <Arr /></a></div>
-            </div>
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">…</span><span className="rtag teal">Vetting now</span></div>
-              <h3>More coverage in vetting</h3>
-              <p className="what">Supplemental and disability options are being vetted with the group right now. The keepers land here.</p>
-              <div className="rfoot"><span className="vet">In review</span></div>
-            </div>
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">?</span><span className="rtag teal">Ask around</span></div>
-              <h3>Not sure what you need?</h3>
-              <p className="what">Coverage questions come up in the group every week, answered by nurses who&apos;ve been through open enrollment on the road.</p>
-              <div className="rfoot"><Link className="visit" href="/community/social-community">Ask in the community <Arr /></Link></div>
-            </div>
+          <div className="resource-grid single stagger">
+            <PartnerCard initials="SI" name="Steve Does Insurance" href="https://calendly.com/stevedoesinsurance/appointment" cta="Book a Call">
+              <p>Health coverage that follows you between contracts, built for people who move every thirteen weeks.</p>
+              <p>Stephen has helped many Travel Nurse Guide members explore their health coverage options.</p>
+            </PartnerCard>
           </div>
         </div>
       </section>
 
-      {/* JOB SEARCH */}
       <section id="jobs" className="gsec alt reveal res-cat">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Job search and recruiters</span>
             <h2 className="h2">Find contracts with someone on your side.</h2>
-            <p className="lead">Recruiters aren&apos;t the enemy, bad ones are. Work from names nurses vouch for, and know the rate before the call.</p>
+            <p className="lead">The right tools and support can make your job search easier. Explore options designed for healthcare travelers.</p>
           </div>
-          <div className="resgrid stagger">
-            <div className="rescard feat">
-              <div className="rtop"><span className="ric">TW</span><span className="rtag">Vetted Resource</span></div>
-              <h3>Tallewise</h3>
-              <p className="what">Job search help built around travel contracts, not permanent placements.</p>
-              <p className="earned">Members used them to land contracts and reported back.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://tallewise.com/" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
-            </div>
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">…</span><span className="rtag teal">Vetting now</span></div>
-              <h3>The recruiter short list</h3>
-              <p className="what">Recruiter recommendations are collected inside the group, name by name. The short list lands here once it&apos;s earned.</p>
-              <div className="rfoot"><span className="vet">In review</span></div>
-            </div>
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">$</span><span className="rtag teal">Do this first</span></div>
-              <h3>Know the rate before the call</h3>
-              <p className="what">Check the community average for your specialty and state, so a lowball sounds like one.</p>
-              <div className="rfoot"><Link className="visit" href="/guides#pay">Read the pay guide <Arr /></Link></div>
-            </div>
+          <div className="resource-grid mixed stagger">
+            <PartnerCard initials="PRN" name="PRN Healthcare" href="https://www.prnhealthservices.com/jobs" cta="Search Travel Jobs">
+              <p>Search travel nursing and allied health jobs nationwide, with support from a dedicated recruiter.</p>
+            </PartnerCard>
+            <FeaturedCard initials="TW" name="Tallewise" href="https://tallewise.com/">
+              <p>Find travel healthcare jobs while staying in control. Once verified, you get a free private Tallewise Number, so you don&apos;t have to share your personal number.</p>
+            </FeaturedCard>
           </div>
         </div>
       </section>
 
-      {/* TAXES */}
       <section id="taxes" className="gsec reveal res-cat">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Tax services</span>
-            <h2 className="h2">An expert who knows what a tax home is.</h2>
-            <p className="lead">Let the tax experts handle your taxes. We only list travel-tax specialists, and we&apos;re picky on purpose.</p>
+            <h2 className="h2">Navigate travel taxes with confidence.</h2>
+            <p className="lead">Explore help with tax filing, tax homes, stipends, and other travel-related tax needs.</p>
           </div>
-          <div className="resgrid stagger">
-            <div className="rescard feat">
-              <div className="rtop"><span className="ric">TS</span><span className="rtag">Community partner</span></div>
-              <h3>Tax Scrubs</h3>
-              <p className="what">Specializes in travel nurse taxes in the U.S. and Canada, tax homes and stipend rules included.</p>
-              <p className="earned">Vetted with the group before it earned a spot here.</p>
-              <div className="rfoot"><span className="vet">Vetted by nurses</span><a className="visit" href="https://www.taxscrubs.com/" target="_blank" rel="noopener noreferrer">Visit site <Arr /></a></div>
-            </div>
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">✓</span><span className="rtag teal">Free guide</span></div>
-              <h3>Keep your stipends tax-free</h3>
-              <p className="what">The tax guide covers tax homes, the 50-mile myth, and the audit file worth keeping.</p>
-              <div className="rfoot"><Link className="visit" href="/guides#taxes">Read the tax guide <Arr /></Link></div>
-            </div>
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">+</span><span className="rtag teal">Your pick</span></div>
-              <h3>Got one who earned it?</h3>
-              <p className="what">If a specialist saved your return, the community wants the name.</p>
-              <div className="rfoot"><Link className="visit" href="/community/social-community">Nominate them in the group <Arr /></Link></div>
-            </div>
+          <div className="resource-grid single stagger">
+            <article className="resource-card tax-scrubs">
+              <div className="resource-card-head">
+                <span className="resource-initials" aria-hidden="true">TS</span>
+                <h3>Tax Scrubs</h3>
+              </div>
+              <div className="resource-copy">
+                <p>Tax filing and consultations for U.S. and Canadian healthcare travelers, including help with tax homes, stipends, and cross-border taxes.</p>
+              </div>
+              <a className="btn-teal resource-cta" href="https://www.taxscrubs.com/" target="_blank" rel="noopener noreferrer">
+                View Tax Services <Arr />
+              </a>
+            </article>
           </div>
         </div>
       </section>
 
-      {/* HOUSING */}
       <section id="housing" className="gsec alt reveal res-cat">
         <div className="container">
           <div className="head">
             <span className="eyebrow-s">Housing</span>
-            <h2 className="h2">Furnished, monthly, and actually real.</h2>
-            <p className="lead">Housing is where travelers get scammed. Vetted platforms will land here. Until then, use the guide and ask the group.</p>
+            <h2 className="h2">Furnished housing for your next assignment.</h2>
+            <p className="lead">Explore furnished housing options for healthcare travelers.</p>
           </div>
-          <div className="resgrid stagger">
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">…</span><span className="rtag teal">Vetting now</span></div>
-              <h3>Furnished rental platforms</h3>
-              <p className="what">We&apos;re comparing the monthly-rental platforms members actually book with. The keepers land here.</p>
-              <div className="rfoot"><span className="vet">In review</span></div>
-            </div>
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">✓</span><span className="rtag teal">Free guide</span></div>
-              <h3>Spot a scam in one read</h3>
-              <p className="what">The housing guide covers stipend math, verification steps, and the do-not-send-money signals.</p>
-              <div className="rfoot"><Link className="visit" href="/guides#housing">Read the housing guide <Arr /></Link></div>
-            </div>
-            <div className="rescard open">
-              <div className="rtop"><span className="ric">?</span><span className="rtag teal">Ask around</span></div>
-              <h3>Leads from nurses on the ground</h3>
-              <p className="what">Members post housing leads and warnings for the cities they&apos;re actually working in.</p>
-              <div className="rfoot"><Link className="visit" href="/community/social-community">Ask in the community <Arr /></Link></div>
-            </div>
+          <div className="resource-grid featured-row stagger">
+            <FeaturedCard initials="VH" name="Vidle Housing" href="https://www.vidlehousing.com/">
+              <p>Furnished housing built specifically for healthcare travelers, with vetted hosts, transparent pricing, and support throughout your stay.</p>
+            </FeaturedCard>
+            <FeaturedCard initials="FF" name="Furnished Finder" href="https://www.furnishedfinder.com/">
+              <p>Search furnished monthly rentals and connect directly with property owners.</p>
+            </FeaturedCard>
           </div>
         </div>
       </section>
 
-      <div className="cta-wrap">
-        <div className="capture-band reveal">
-          <span className="eyebrow-s">Free guide</span>
-          <div className="h2">Get the vetted list in your inbox.</div>
-          <p className="bandp">The short list, the pay benchmarks, and every guide. One email, no spam, unsubscribe anytime.</p>
-          <Link className="btn-teal" href="/#getguide">Send me the guide <Arr /></Link>
+      <section className="gsec reveal suggestion-section">
+        <div className="container">
+          <span className="eyebrow-s">Resource suggestions</span>
+          <h2 className="h2">Know a resource healthcare travelers should know about?</h2>
+          <p className="lead">Tell us about a company, service, or tool you think should be considered for the TNG Resources page.</p>
+          <ResourceSuggestionForm />
+          <p className="suggest-note">Suggestions do not guarantee placement.</p>
         </div>
-      </div>
+      </section>
 
       <Footer />
     </>

@@ -31,3 +31,11 @@ GSA_API_KEY=""
 # secret the forms still work (the check is skipped); set it to enforce. Copy it
 # from the Turnstile widget you create in the Cloudflare dashboard.
 TURNSTILE_SECRET_KEY=""
+
+# Private Google Sheet storage for the homepage poll and resource-suggestion
+# form. Create two tabs named exactly "Homepage Poll" and
+# "Resource Suggestions", then share the spreadsheet with the service account
+# email as an Editor. Keep the private key in a Wrangler secret in production.
+GOOGLE_SHEETS_ID=""
+GOOGLE_SERVICE_ACCOUNT_EMAIL=""
+GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY=""

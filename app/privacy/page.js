@@ -25,7 +25,7 @@ export default function Privacy() {
             No dark patterns, no data selling, no fine print written to confuse you.
             Here&apos;s exactly what we collect, why, and what you can do about it.
           </p>
-          <span className="lstamp">Last updated: September 8, 2026</span>
+          <span className="lstamp">Last updated: September 17, 2026</span>
         </div>
       </header>
 
@@ -58,6 +58,14 @@ export default function Privacy() {
               <li>
                 <b>Feedback,</b> if you use the feedback button: your note, and your email only if you choose
                 to add it so we can reply.
+              </li>
+              <li>
+                <b>Poll and survey responses,</b> when you voluntarily tell us which resources, tools, or
+                topics you would like us to develop.
+              </li>
+              <li>
+                <b>Resource suggestions,</b> including the resource or company name, website, category,
+                your reason for recommending it, whether you represent the company, and an optional email address.
               </li>
               <li>
                 <b>Basic, anonymous traffic data.</b> Like most sites, ours counts visits so we know which
@@ -102,6 +110,21 @@ export default function Privacy() {
               materials, and manage communications on our behalf.
             </p>
 
+            <h3>Polls and surveys</h3>
+            <p>
+              We may collect responses you voluntarily submit through website polls or surveys. These responses
+              help us understand which resources, tools, and topics visitors would like us to develop. The current
+              homepage poll does not request your name or email address and is not designed to collect identifying information.
+            </p>
+
+            <h3>Resource suggestions</h3>
+            <p>
+              If you submit a resource suggestion, we may collect the resource or company name, website, category,
+              your reason for recommending it, whether you work for or represent the company, and an optional email
+              address. We use this information to review suggestions and, if you provide an email address, to contact
+              you about the submission. Submitting a resource does not guarantee that it will be listed.
+            </p>
+
             <h3>Do we sell your information?</h3>
             <p>
               At this time, we do not sell or rent personal information. If our practices change, we will
@@ -117,6 +140,7 @@ export default function Privacy() {
             <ul>
               <li><b>Resend</b> delivers the messages you send through our forms, stores the email list, and sends the emails you sign up to receive.</li>
               <li><b>Cloudflare</b> hosts the site and provides the cookieless analytics.</li>
+              <li><b>Google</b> provides the private spreadsheet used to store homepage poll responses and resource suggestions.</li>
             </ul>
             <p>
               These providers handle your data on our behalf under their own privacy terms. They are not

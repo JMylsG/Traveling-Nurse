@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Fx from "@/components/Fx";
 import SubscribeForm from "@/components/SubscribeForm";
+import HomepagePoll from "@/components/HomepagePoll";
 
 const Arr = () => <span className="arr">→</span>;
 
@@ -41,8 +42,7 @@ export default function Home() {
             <span className="eyebrow">37,000+ strong · Since 2018</span>
             <h1>Know what you&apos;re <span className="hl">worth</span> before you sign.</h1>
             <p className="sub">
-              Straight answers on pay, contracts, taxes, housing, and insurance, plus vetted resources from people
-              who&apos;ve actually done it. Everything you need to travel smarter and earn more.
+              Practical information on pay, contracts, taxes, housing, and insurance, plus helpful resources for healthcare travelers.
             </p>
             <div className="hero-actions">
               <Link className="btn-hero primary" href="/guides">Explore the guides <Arr /></Link>
@@ -72,7 +72,7 @@ export default function Home() {
             <span className="ic">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></svg>
             </span>
-            <div><h3>Everything in one place</h3><p>Pay, contracts, taxes, housing, and vetted partners, without the runaround.</p></div>
+            <div><h3>Everything in one place</h3><p>Tools and information for navigating pay, contracts, taxes, housing, and other parts of travel healthcare.</p></div>
           </div>
           <div className="vitem">
             <span className="ic">
@@ -84,7 +84,7 @@ export default function Home() {
             <span className="ic">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l2.1 1.6 2.6-.2 1 2.4 2.3 1.4-.6 2.6.6 2.6-2.3 1.4-1 2.4-2.6-.2L12 21l-2.1-1.6-2.6.2-1-2.4L3 17.6l.6-2.6L3 12.4l2.3-1.4 1-2.4 2.6.2z" /><path d="M9 12l2 2 4-4" /></svg>
             </span>
-            <div><h3>Vetted, then featured</h3><p>Resources earn their spot. Recommendations you can trust.</p></div>
+            <div><h3>Partners and resources</h3><p>Explore companies, services, and tools for healthcare travelers.</p></div>
           </div>
         </div>
       </section>
@@ -100,7 +100,7 @@ export default function Home() {
               <span className="ic">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v10M14.6 9.2c-.4-.8-1.4-1.2-2.6-1.2-1.5 0-2.5.8-2.5 1.9s1 1.7 2.5 2 2.6.9 2.6 2-1.1 2-2.6 2c-1.2 0-2.2-.5-2.6-1.3" /></svg>
               </span>
-              <h3>Pay</h3><p>What you should actually make by specialty and state.</p>
+              <h3>Pay</h3><p>How to compare the full pay package—not just the hourly rate.</p>
               <Link href="/guides#pay">Read the guide <Arr /></Link>
             </div>
             <div className="gcard">
@@ -181,11 +181,10 @@ export default function Home() {
       {/* PROOF */}
       <section id="resources" className="section light reveal" style={{ paddingBottom: 36 }}>
         <div className="container">
-          <span className="eyebrow-s">Trusted, both ways</span>
+          <span className="eyebrow-s">TNG Partners</span>
           <h2 className="h2">Partners <span className="hlr">worth</span> your time.</h2>
           <p className="lead">
-            Companies and services we trust to support travel nurses on and off assignment.
-            Each one is carefully vetted before being featured.
+            Explore companies and services working with Travel Nurse Guide to support healthcare travelers.
           </p>
           <div className="logos"><span>PRN Healthcare</span><span>HeartStart CPR</span><span>Same Day CPR</span><span>Med Max Edu</span><span>Steve Does Insurance</span><span>Tax Scrubs</span></div>
           <div className="quotes3 stagger">
@@ -205,13 +204,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HOMEPAGE POLL */}
+      <section className="section light reveal" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="poll-panel">
+            <span className="eyebrow-s">Help shape what&apos;s next</span>
+            <h2 className="h2">What would you like more help with?</h2>
+            <p className="lead">The Travel Nurse Guide is always growing. Select up to three topics where you would like to see more resources, tools, or support.</p>
+            <HomepagePoll />
+          </div>
+        </div>
+      </section>
+
       {/* EMAIL CAPTURE */}
       <section className="section light reveal" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="capture-band lg">
             <span className="eyebrow-s">Free guide</span>
             <h2 className="h2">Seen enough? Take it with you.</h2>
-            <p className="lead">The cheat sheet, the pay benchmarks, and the vetted resources, in your inbox.</p>
+            <p className="lead">Get the free Travel Nurse Guide cheat sheet delivered directly to your inbox.</p>
             <div className="capture" id="getguide" style={{ maxWidth: 540, margin: "26px auto 0", textAlign: "left" }}>
               <div className="label"><span className="tag">Free</span> Get the insider guide to your first travel contract.</div>
               <SubscribeForm />

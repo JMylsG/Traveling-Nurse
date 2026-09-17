@@ -260,18 +260,13 @@ export default function CalculatorClient() {
 
       <aside className="calc-ad">
         <span className="calc-ad-eyebrow">Featured tax resource</span>
-        <h3>Not sure if you qualify for tax free stipends?</h3>
+        <h3>Do you meet all the requirements to receive tax-free stipends?</h3>
         <p>
-          Tax Scrubs is a Travel Nurse Guide partner that offers personalized tax home consultations for
-          travel nurses. A tax professional will review your work, housing, and tax home situation to help
-          determine whether you qualify for tax free stipends.
+          Tax Scrubs offers consultations for healthcare travelers. A tax expert will review your tax home
+          and overall situation to help determine whether you qualify and explain your options if you do not.
         </p>
-        <p>
-          If you do not currently qualify, they can explain the legitimate steps you may be able to take to
-          establish or maintain a qualifying tax home.
-        </p>
-        <a className="btn-teal" href="https://www.taxscrubs.com/services" target="_blank" rel="noopener noreferrer">
-          Learn About Tax Home Consultations
+        <a className="btn-teal" href="https://www.taxscrubs.com/" target="_blank" rel="noopener noreferrer">
+          Learn About Consultations <span className="arr">→</span>
         </a>
       </aside>
     </div>
