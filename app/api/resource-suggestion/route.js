@@ -1,5 +1,5 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { appendSheetRow } from "@/lib/google-sheets";
+import { appendSheetRow, centralTimestamp } from "@/lib/google-sheets";
 
 const CATEGORIES = new Set(["Certifications", "Insurance", "Job search and recruiters", "Tax services", "Housing", "Other"]);
 const AFFILIATIONS = new Set(["Yes", "No"]);
@@ -51,7 +51,7 @@ export async function POST(req) {
 
   const row = [
     crypto.randomUUID(),
-    new Date().toISOString(),
+    centralTimestamp(),
     "Resources Page",
     name,
     parsedUrl.toString(),
@@ -66,7 +66,7 @@ export async function POST(req) {
       range: "'Resource Suggestions'!A:I",
       headerRange: "'Resource Suggestions'!A1:I1",
       headers: [
-        "Submission ID", "UTC Timestamp", "Source", "Resource or company name", "Website",
+        "Submission ID", "Central Timestamp", "Source", "Resource or company name", "Website",
         "Category", "Why recommended", "Represents company", "Email address",
       ],
       row,

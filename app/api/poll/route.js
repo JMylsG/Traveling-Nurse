@@ -1,5 +1,5 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { appendSheetRow } from "@/lib/google-sheets";
+import { appendSheetRow, centralTimestamp } from "@/lib/google-sheets";
 import { POLL_TOPICS, POLL_VERSION } from "@/lib/poll";
 
 function env() {
@@ -33,7 +33,7 @@ export async function POST(req) {
 
   const row = [
     crypto.randomUUID(),
-    new Date().toISOString(),
+    centralTimestamp(),
     "Homepage",
     POLL_VERSION,
     ...POLL_TOPICS.map((topic) => selected.includes(topic.id)),
@@ -45,7 +45,7 @@ export async function POST(req) {
       range: "'Homepage Poll'!A:O",
       headerRange: "'Homepage Poll'!A1:O1",
       headers: [
-        "Submission ID", "UTC Timestamp", "Source", "Poll Version",
+        "Submission ID", "Central Timestamp", "Source", "Poll Version",
         ...POLL_TOPICS.map((topic) => topic.label),
         "Other response",
       ],

@@ -81,7 +81,7 @@ export default function HomepagePoll() {
       <input className="hp-field" type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       {message && <p className="form-message error" role="alert">{message}</p>}
       <button className="btn-teal" type="submit" disabled={status === "busy"}>
-        {status === "busy" ? "SUBMITTING…" : "SUBMIT MY CHOICES"}
+        {status === "busy" ? "Submitting…" : "Submit my choices"}
       </button>
     </form>
   );
