@@ -33,9 +33,12 @@ GSA_API_KEY=""
 TURNSTILE_SECRET_KEY=""
 
 # Private Google Sheet storage for the homepage poll and resource-suggestion
-# form. Create two tabs named exactly "Homepage Poll" and
-# "Resource Suggestions", then share the spreadsheet with the service account
-# email as an Editor. Keep the private key in a Wrangler secret in production.
-GOOGLE_SHEETS_ID=""
-GOOGLE_SERVICE_ACCOUNT_EMAIL=""
-GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY=""
+# form, via a KEYLESS Google Apps Script Web App (no service-account key, so
+# Google's "Secure by Default" org policy can stay ON). Setup steps are in
+# docs/apps-script-sheets.gs. The Sheet needs two tabs named exactly
+# "Homepage Poll" and "Resource Suggestions".
+#   SHEETS_WEBAPP_URL   = the Apps Script Web App deployment URL (ends in /exec)
+#   SHEETS_WEBAPP_TOKEN = the shared secret; must match the script's
+#                         SHEETS_WEBAPP_TOKEN Script Property exactly
+SHEETS_WEBAPP_URL=""
+SHEETS_WEBAPP_TOKEN=""
